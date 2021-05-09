@@ -1,0 +1,16 @@
+[package]
+name = "midi_synth"
+version = "0.1.0"
+authors = ["Ryan McCampbell <rmccampbell7@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.40"
+cpal = "0.13.3"
+ctrlc = "3.1.9"
+midir = "0.7.0"
+structopt = "0.3.21"
+thiserror = "1.0.24"
+wmidi = "4.0.5"
