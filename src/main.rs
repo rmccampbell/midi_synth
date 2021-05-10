@@ -1,9 +1,10 @@
 #![allow(unused_imports)]
 #![allow(dead_code)]
 #![allow(unused_variables)]
+use std::collections::HashMap;
 use std::convert::TryFrom;
 use std::f32::consts::TAU;
-use std::sync::mpsc::{channel, Receiver, Sender};
+use std::sync::mpsc::{self, Receiver, Sender};
 use std::sync::Arc;
 use std::sync::Mutex;
 use std::thread;
@@ -31,52 +32,89 @@ struct Opt {
 }
 
 #[derive(Error, Debug)]
-enum MidiSynthError {
-    #[error("No output device available")]
-    OutputDeviceError,
-    #[error("No output device available")]
-    InputPortError,
-}
+#[error("Requested or default output device not available")]
+struct OutputDeviceError;
 
-use MidiSynthError::*;
+#[derive(Error, Debug)]
+#[error("Requested midi input port not available")]
+struct InputPortError;
 
 struct Synth {
     num_channels: usize,
     sample_rate: usize,
     index: usize,
     start_time: Option<Instant>,
-    receiver: Receiver<MidiMessage<'static>>,
+    receiver: Receiver<(MidiMessage<'static>, Instant)>,
+    channel_states: [MidiChannelState; 16],
+}
+
+#[derive(Default)]
+struct MidiChannelState {
+    notes: HashMap<u8, Note>,
+}
+
+#[derive(Clone)]
+struct Note {
+    frequency: f32,
+    velocity: u8,
+    on_time: f32,
+    off_time: Option<f32>,
 }
 
 impl Synth {
-    pub fn new(config: &StreamConfig, receiver: Receiver<MidiMessage<'static>>) -> Synth {
+    pub fn new(
+        config: &StreamConfig,
+        receiver: Receiver<(MidiMessage<'static>, Instant)>,
+    ) -> Synth {
         Synth {
             num_channels: config.channels as usize,
             sample_rate: config.sample_rate.0 as usize,
             index: 0,
             start_time: None,
             receiver,
+            channel_states: Default::default(),
         }
     }
 
-    // pub fn output_callback<T: Sample>(&mut self, data: &mut [T], _info: &cpal::OutputCallbackInfo) {
-    //     let freq = 440.0 * 2_f32.powf(-9. / 12.); // C4
-    //     let amp = 0.5;
-    //     let nsamples = data.len() / self.num_channels;
-    //     let i = Array::range(0.0, nsamples as f32, 1.0);
-    //     let t = (i + self.index as f32) / self.sample_rate as f32;
-    //     let y = t.mapv(|t| (TAU * freq * t).sin() * amp);
-    //     let out = y.map(Sample::from).insert_axis(Axis(1));
-    //     let out = out.broadcast((nsamples, self.num_channels)).unwrap();
-    //     data.copy_from_slice(out.as_standard_layout().as_slice().unwrap());
-    //     self.index += nsamples;
-    // }
+    fn process_messages(&mut self) {
+        let start_time = *self.start_time.get_or_insert_with(|| Instant::now());
+
+        while let Some((msg, time)) = match self.receiver.try_recv() {
+            Ok(pair) => Some(pair),
+            Err(mpsc::TryRecvError::Empty) => None,
+            Err(e) => panic!("{}", e),
+        } {
+            let time = (time - start_time).as_secs_f32();
+            if let Some(ch) = msg.channel() {
+                let channel_state = &mut self.channel_states[ch as usize];
+                match msg {
+                    MidiMessage::NoteOn(ch, note, velocity) => {
+                        channel_state.notes.insert(
+                            note.into(),
+                            Note {
+                                frequency: note.to_freq_f32(),
+                                velocity: velocity.into(),
+                                on_time: time,
+                                off_time: None,
+                            },
+                        );
+                    }
+                    MidiMessage::NoteOff(ch, note, _) => {
+                        channel_state.notes.remove(&note.into());
+                        // if let Some(note) = channel_state.notes.get_mut(&note.into()) {
+                        //     note.off_time = Some(time);
+                        // }
+                    }
+                    MidiMessage::PitchBendChange(ch, pitchbend) => {}
+                    MidiMessage::ProgramChange(ch, prog) => {}
+                    _ => {}
+                }
+            }
+        }
+    }
 
     pub fn output_callback<T: Sample>(&mut self, data: &mut [T], _info: &cpal::OutputCallbackInfo) {
-        let start_time = *self.start_time.get_or_insert_with(|| Instant::now());
-        // let t0 = self.index as f32 / self.sample_rate as f32;
-        // let t = start_time - start_time;
-        // t.as_secs_f32();
+        self.process_messages();
 
         let nsamples = data.len() / self.num_channels;
         for (i, frame) in data.chunks_exact_mut(self.num_channels).enumerate() {
@@ -89,19 +127,20 @@ impl Synth {
     }
 
     fn synthesize(&self, t: f32) -> f32 {
-        let freq = 440.0 * 2_f32.powf(-9. / 12.); // C4
-        let amp = 0.5;
-        return (TAU * freq * t).sin() * amp;
+        let mut y = 0.;
+        for channel_state in self.channel_states.iter() {
+            for note in channel_state.notes.values() {
+                let freq = note.frequency;
+                let amp = note.velocity as f32 / 127.;
+                y += (TAU * freq * t).sin() * amp;
+            }
+        }
+        y
     }
 }
 
-pub fn input_callback(timestamp: u64, message: &[u8], sender: &mut Sender<MidiMessage<'static>>) {
-    let message = MidiMessage::try_from(message).unwrap();
-    sender.send(message.to_owned()).unwrap();
-}
-
 fn wait_for_ctrlc() {
-    let (tx, rx) = channel();
+    let (tx, rx) = mpsc::channel();
     ctrlc::set_handler(move || {
         tx.send(()).unwrap();
     })
@@ -113,25 +152,47 @@ fn main() -> anyhow::Result<()> {
     let opt = Opt::from_args();
 
     let host = cpal::default_host();
-    let device = host.default_output_device().ok_or(OutputDeviceError)?;
-    let supported_config = device.default_output_config()?;
-    // let sample_format = supported_config.sample_format();
-    let config = supported_config.config();
-
-    let (sender, reciever) = channel();
-    let mut synth = Synth::new(&config, reciever);
+    if opt.list_output_devices {
+        let def_dev_name = host.default_output_device().and_then(|d| d.name().ok());
+        for dev in host.output_devices()? {
+            let isdef = Some(dev.name()?) == def_dev_name;
+            let c = if isdef { '*' } else { ' ' };
+            println!("{} {}", c, dev.name()?);
+        }
+        return Ok(());
+    }
 
     let mut midi_in = MidiInput::new("midi_synth")?;
     midi_in.ignore(midir::Ignore::All);
     let ports = midi_in.ports();
+    if opt.list_input_ports {
+        for port in ports {
+            println!("{}", midi_in.port_name(&port)?);
+        }
+        return Ok(());
+    }
+
+    let device = match opt.output_device {
+        None => host.default_output_device(),
+        Some(index) => host.output_devices()?.nth(index),
+    }
+    .ok_or(OutputDeviceError)?;
+    let supported_config = device.default_output_config()?;
+    // let sample_format = supported_config.sample_format();
+    let config = supported_config.config();
+
+    let (sender, receiver) = mpsc::channel();
+
     let port = ports.get(opt.input_port).ok_or(InputPortError)?;
     let input_callback = move |timestamp: u64, message: &[u8], _: &mut ()| {
-        let message = MidiMessage::try_from(message).unwrap();
-        println!("{:?}", message);
-        sender.send(message.to_owned()).unwrap();
+        let time = Instant::now();
+        let message = MidiMessage::try_from(message).unwrap().to_owned();
+        // println!("{:?}", message);
+        sender.send((message, time)).unwrap();
     };
     let midi_conn = midi_in.connect(&port, "midi_synth", input_callback, ());
 
+    let mut synth = Synth::new(&config, receiver);
     let err_fn = |err| eprintln!("An error occurred in the output audio stream: {}", err);
     let stream = device.build_output_stream(
         &config,
