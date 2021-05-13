@@ -8,6 +8,7 @@ edition = "2018"
 
 [dependencies]
 anyhow = "1.0.40"
+clap = "2.33.3"
 cpal = "0.13.3"
 ctrlc = "3.1.9"
 midir = "0.7.0"

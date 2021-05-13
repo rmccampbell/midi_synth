@@ -476,6 +476,7 @@ name = "midi_synth"
 version = "0.1.0"
 dependencies = [
  "anyhow",
+ "clap",
  "cpal",
  "ctrlc",
  "midir",
