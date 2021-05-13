@@ -205,9 +205,9 @@ impl MidiSynth {
         let mut y = 0.;
         for channel_state in self.midi_channel_states.iter() {
             for note in channel_state.notes.values() {
-                let freq = note.frequency;
+                let freq = note.frequency * 2_f32.powf(channel_state.pitch_bend / 6.);
                 let amp = note.velocity as f32 / 127.;
-                let off_time = note.off_time.unwrap_or(1e10);
+                let off_time = note.off_time.unwrap_or(f32::INFINITY);
                 let env = self.envelope(t - note.on_time, t - off_time);
                 y += amp * env * (self.waveform)(freq * t);
             }
