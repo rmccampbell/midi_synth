@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 use std::convert::TryFrom;
 use std::f32::consts::TAU;
-use std::sync::mpsc::{self, Receiver};
+use std::sync::mpsc::{self, Receiver, TryRecvError};
 use std::time::Instant;
 
 use clap::arg_enum;
@@ -141,8 +141,8 @@ impl MidiSynth {
         let start_time = *self.start_time.get_or_insert_with(|| Instant::now());
 
         while let Some((msg, time)) = match self.receiver.try_recv() {
-            Ok(pair) => Some(pair),
-            Err(mpsc::TryRecvError::Empty) => None,
+            Ok(data) => Some(data),
+            Err(TryRecvError::Empty) => None,
             Err(e) => panic!("{}", e),
         } {
             let time = time.saturating_duration_since(start_time).as_secs_f32();
