@@ -68,11 +68,11 @@ fn waveform_square(t: f32) -> f32 {
 }
 
 fn waveform_saw(t: f32) -> f32 {
-    (t - 0.5) % 1. * 2. - 1.
+    (t + 0.5) % 1. * 2. - 1.
 }
 
 fn waveform_tri(t: f32) -> f32 {
-    ((4. * t - 1.) % 4. - 2.).abs() - 1.
+    ((4. * t + 3.) % 4. - 2.).abs() - 1.
 }
 
 struct Adsr {
@@ -191,14 +191,13 @@ impl MidiSynth {
         self.process_messages();
         self.flush_notes();
 
-        let nsamples = data.len() / self.audio_channels;
-        for (i, frame) in data.chunks_exact_mut(self.audio_channels).enumerate() {
-            let t = (self.audio_index + i) as f32 / self.sample_rate as f32;
+        for frame in data.chunks_exact_mut(self.audio_channels) {
+            let t = self.audio_index as f32 / self.sample_rate as f32;
             let y = self.synthesize(t);
             let out = Sample::from(&y);
             frame.fill(out);
+            self.audio_index += 1;
         }
-        self.audio_index += nsamples;
     }
 
     fn synthesize(&self, t: f32) -> f32 {
