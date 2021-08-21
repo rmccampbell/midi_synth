@@ -37,15 +37,15 @@ struct Opts {
 #[derive(StructOpt, Debug)]
 struct SynthOpts {
     #[structopt(short, long, possible_values = &Waveform::variants(),
-                case_insensitive = true, default_value="Tri")]
+                case_insensitive = true, default_value = "Tri")]
     waveform: Waveform,
-    #[structopt(long, default_value = "0.05")]
+    #[structopt(short, long, default_value = "0.05")]
     attack: f32,
-    #[structopt(long, default_value = "0.2")]
+    #[structopt(short, long, default_value = "0.2")]
     decay: f32,
-    #[structopt(long, default_value = "0.8")]
+    #[structopt(short, long, default_value = "0.8")]
     sustain: f32,
-    #[structopt(long, default_value = "0.5")]
+    #[structopt(short, long, default_value = "0.5")]
     release: f32,
 }
 
