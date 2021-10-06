@@ -39,6 +39,8 @@ struct SynthOpts {
     #[structopt(short, long, possible_values = &Waveform::variants(),
                 case_insensitive = true, default_value = "Tri")]
     waveform: Waveform,
+    #[structopt(short, long, default_value = "0.5")]
+    pulse_width: f32,
     #[structopt(short, long, default_value = "0.05")]
     attack: f32,
     #[structopt(short, long, default_value = "0.2")]
@@ -56,23 +58,8 @@ arg_enum! {
         Square,
         Saw,
         Tri,
+        Pulse,
     }
-}
-
-fn waveform_sine(t: f32) -> f32 {
-    (TAU * t).sin()
-}
-
-fn waveform_square(t: f32) -> f32 {
-    1. - 2. * (2. * t % 2.).floor()
-}
-
-fn waveform_saw(t: f32) -> f32 {
-    (t + 0.5) % 1. * 2. - 1.
-}
-
-fn waveform_tri(t: f32) -> f32 {
-    ((4. * t + 3.) % 4. - 2.).abs() - 1.
 }
 
 struct Adsr {
@@ -102,7 +89,8 @@ struct MidiSynth {
     sample_rate: usize,
     audio_index: usize,
     start_time: Option<Instant>,
-    waveform: fn(f32) -> f32,
+    waveform: fn(&Self, f32) -> f32,
+    pulse_width: f32,
     adsr: Adsr,
     receiver: Receiver<(MidiMessage<'static>, Instant)>,
     midi_channel_states: [MidiChannelState; 16],
@@ -115,10 +103,11 @@ impl MidiSynth {
         receiver: Receiver<(MidiMessage<'static>, Instant)>,
     ) -> MidiSynth {
         let waveform = match opts.waveform {
-            Waveform::Sine => waveform_sine,
-            Waveform::Square => waveform_square,
-            Waveform::Saw => waveform_saw,
-            Waveform::Tri => waveform_tri,
+            Waveform::Sine => Self::waveform_sine,
+            Waveform::Square => Self::waveform_square,
+            Waveform::Saw => Self::waveform_saw,
+            Waveform::Tri => Self::waveform_tri,
+            Waveform::Pulse => Self::waveform_pulse,
         };
         MidiSynth {
             audio_channels: config.channels as usize,
@@ -126,6 +115,7 @@ impl MidiSynth {
             audio_index: 0,
             start_time: None,
             waveform,
+            pulse_width: opts.pulse_width,
             adsr: Adsr {
                 attack: opts.attack,
                 decay: opts.decay,
@@ -141,11 +131,10 @@ impl MidiSynth {
         let start_time = *self.start_time.get_or_insert_with(|| Instant::now());
 
         while let Some((msg, time)) = match self.receiver.try_recv() {
-            Ok(data) => Some(data),
             Err(TryRecvError::Empty) => None,
-            Err(e) => panic!("{}", e),
+            result => Some(result.unwrap()),
         } {
-            let time = time.saturating_duration_since(start_time).as_secs_f32();
+            let time = time.saturating_duration_since(start_time).as_secs_f32() + 0.01;
             let channels = &mut self.midi_channel_states;
             match msg {
                 MidiMessage::NoteOn(ch, note, velocity) => {
@@ -194,8 +183,7 @@ impl MidiSynth {
         for frame in data.chunks_exact_mut(self.audio_channels) {
             let t = self.audio_index as f32 / self.sample_rate as f32;
             let y = self.synthesize(t);
-            let out = Sample::from(&y);
-            frame.fill(out);
+            frame.fill(Sample::from(&y));
             self.audio_index += 1;
         }
     }
@@ -208,7 +196,7 @@ impl MidiSynth {
                 let amp = note.velocity as f32 / 127.;
                 let off_time = note.off_time.unwrap_or(f32::INFINITY);
                 let env = self.envelope(t - note.on_time, t - off_time);
-                y += amp * env * (self.waveform)(freq * t);
+                y += amp * env * (self.waveform)(self, freq * t);
             }
         }
         y
@@ -229,6 +217,26 @@ impl MidiSynth {
         } else {
             0.0
         }
+    }
+
+    fn waveform_sine(&self, t: f32) -> f32 {
+        (TAU * t).sin()
+    }
+
+    fn waveform_square(&self, t: f32) -> f32 {
+        1. - 2. * (2. * t % 2.).floor()
+    }
+
+    fn waveform_saw(&self, t: f32) -> f32 {
+        (t + 0.5) % 1. * 2. - 1.
+    }
+
+    fn waveform_tri(&self, t: f32) -> f32 {
+        ((4. * t + 3.) % 4. - 2.).abs() - 1.
+    }
+
+    fn waveform_pulse(&self, t: f32) -> f32 {
+        if t % 1. < self.pulse_width { -1. } else { 1. }
     }
 }
 
@@ -281,10 +289,10 @@ fn main() -> anyhow::Result<()> {
     let port = ports.get(opts.input_port).ok_or(InputPortError)?;
     let input_callback = move |_timestamp: u64, message: &[u8], _: &mut ()| {
         let time = Instant::now();
-        let message = MidiMessage::try_from(message).unwrap().to_owned();
+        let message = MidiMessage::try_from(message).unwrap();
+        sender.send((message.to_owned(), time)).unwrap();
         #[cfg(debug_assertions)]
         println!("{:?}", message);
-        sender.send((message, time)).unwrap();
     };
     let _midi_conn = midi_in.connect(&port, "midi_synth", input_callback, ());
 
@@ -307,7 +315,7 @@ fn main() -> anyhow::Result<()> {
     };
     stream.play()?;
 
-    println!("Waiting for Ctrl-C...");
+    println!("Recieving midi messages... Press Ctr+C to exit");
     wait_for_ctrlc();
     println!("Exiting");
 
