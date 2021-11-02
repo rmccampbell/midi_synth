@@ -72,7 +72,7 @@ struct Adsr {
 #[derive(Clone)]
 struct Note {
     frequency: f32,
-    velocity: u8,
+    velocity: f32,
     on_time: f32,
     off_time: Option<f32>,
 }
@@ -142,7 +142,7 @@ impl MidiSynth {
                         note,
                         Note {
                             frequency: note.to_freq_f32(),
-                            velocity: velocity.into(),
+                            velocity: u8::from(velocity) as f32 / 127.,
                             on_time: time,
                             off_time: None,
                         },
@@ -193,7 +193,7 @@ impl MidiSynth {
         for channel_state in self.midi_channel_states.iter() {
             for note in channel_state.notes.values() {
                 let freq = note.frequency * 2_f32.powf(channel_state.pitch_bend / 6.);
-                let amp = note.velocity as f32 / 127.;
+                let amp = note.velocity;
                 let off_time = note.off_time.unwrap_or(f32::INFINITY);
                 let env = self.envelope(t - note.on_time, t - off_time);
                 y += amp * env * (self.waveform)(self, freq * t);
