@@ -30,6 +30,9 @@ struct Opts {
     list_input_ports: bool,
     #[structopt(short = "L", long)]
     list_output_devices: bool,
+    #[cfg(debug_assertions)]
+    #[structopt(short = "D", long)]
+    debug: bool,
     #[structopt(flatten)]
     synth_opts: SynthOpts,
 }
@@ -69,7 +72,6 @@ struct Adsr {
     release: f32,
 }
 
-#[derive(Clone)]
 struct Note {
     frequency: f32,
     velocity: f32,
@@ -251,6 +253,8 @@ fn wait_for_ctrlc() {
 
 fn main() -> anyhow::Result<()> {
     let opts = Opts::from_args();
+    #[cfg(debug_assertions)]
+    let debug = opts.debug;
 
     if opts.list_output_devices {
         let host = cpal::default_host();
@@ -292,7 +296,9 @@ fn main() -> anyhow::Result<()> {
         let message = MidiMessage::try_from(message).unwrap();
         sender.send((message.to_owned(), time)).unwrap();
         #[cfg(debug_assertions)]
-        println!("{:?}", message);
+        if debug {
+            println!("{:?}", message);
+        }
     };
     let _midi_conn = midi_in.connect(&port, "midi_synth", input_callback, ());
 
@@ -304,7 +310,7 @@ fn main() -> anyhow::Result<()> {
         device.build_output_stream(
             &config,
             move |data, info| synth.output_callback::<T>(data, info),
-            |err| eprintln!("Error in audio output stream: {}", err),
+            |err| eprintln!("Error: audio output stream: {}", err),
         )
     }
     let synth = MidiSynth::new(opts.synth_opts, &config, receiver);
@@ -315,7 +321,7 @@ fn main() -> anyhow::Result<()> {
     };
     stream.play()?;
 
-    println!("Recieving midi messages... Press Ctr+C to exit");
+    println!("Receiving midi messages... Press Ctr+C to exit");
     wait_for_ctrlc();
     println!("Exiting");
 
