@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 use std::convert::TryFrom;
-use std::f32::consts::TAU;
+use std::f64::consts::TAU;
 use std::sync::mpsc::{self, Receiver, TryRecvError};
 use std::time::Instant;
 
@@ -43,17 +43,17 @@ struct SynthOpts {
                 case_insensitive = true, default_value = "Tri")]
     waveform: Waveform,
     #[structopt(short, long, default_value = "0.5")]
-    pulse_width: f32,
+    pulse_width: f64,
     #[structopt(short, long, default_value = "0.05")]
-    attack: f32,
+    attack: f64,
     #[structopt(short, long, default_value = "0.2")]
-    decay: f32,
+    decay: f64,
     #[structopt(short, long, default_value = "0.8")]
-    sustain: f32,
+    sustain: f64,
     #[structopt(short, long, default_value = "0.5")]
-    release: f32,
+    release: f64,
     #[structopt(short = "A", long, default_value = "0.5")]
-    amplitude: f32,
+    amplitude: f64,
 }
 
 arg_enum! {
@@ -68,23 +68,23 @@ arg_enum! {
 }
 
 struct Adsr {
-    attack: f32,
-    decay: f32,
-    sustain: f32,
-    release: f32,
+    attack: f64,
+    decay: f64,
+    sustain: f64,
+    release: f64,
 }
 
 struct Note {
-    frequency: f32,
-    velocity: f32,
-    on_time: f32,
-    off_time: Option<f32>,
+    frequency: f64,
+    velocity: f64,
+    on_time: f64,
+    off_time: Option<f64>,
 }
 
 #[derive(Default)]
 struct MidiChannelState {
     notes: HashMap<wmidi::Note, Note>,
-    pitch_bend: f32,
+    pitch_bend: f64,
     program: u8,
 }
 
@@ -93,15 +93,15 @@ struct MidiSynth {
     sample_rate: usize,
     audio_index: usize,
     start_time: Option<Instant>,
-    waveform: fn(&Self, f32) -> f32,
-    pulse_width: f32,
+    waveform: fn(&Self, f64) -> f64,
+    pulse_width: f64,
     adsr: Adsr,
-    amplitude: f32,
+    amplitude: f64,
     receiver: Receiver<(MidiMessage<'static>, Instant)>,
     midi_channel_states: [MidiChannelState; 16],
 }
 
-const DELAY: f32 = 0.1;
+const DELAY: f64 = 0.1;
 
 impl MidiSynth {
     pub fn new(
@@ -156,8 +156,8 @@ impl MidiSynth {
         self.flush_notes();
 
         for frame in data.chunks_exact_mut(self.audio_channels) {
-            let t = self.audio_index as f32 / self.sample_rate as f32;
-            let y = self.synthesize(t);
+            let t = self.audio_index as f64 / self.sample_rate as f64;
+            let y = self.synthesize(t) as f32;
             frame.fill(Sample::from(&y));
             self.audio_index += 1;
         }
@@ -170,15 +170,15 @@ impl MidiSynth {
             Err(TryRecvError::Empty) => None,
             result => Some(result.unwrap()),
         } {
-            let time = time.saturating_duration_since(start_time).as_secs_f32() + DELAY;
+            let time = time.saturating_duration_since(start_time).as_secs_f64() + DELAY;
             let channels = &mut self.midi_channel_states;
             match msg {
                 MidiMessage::NoteOn(ch, note, velocity) => {
                     channels[ch as usize].notes.insert(
                         note,
                         Note {
-                            frequency: note.to_freq_f32(),
-                            velocity: u8::from(velocity) as f32 / 127.,
+                            frequency: note.to_freq_f64(),
+                            velocity: u8::from(velocity) as f64 / 127.,
                             on_time: time,
                             off_time: None,
                         },
@@ -192,7 +192,7 @@ impl MidiSynth {
                 }
                 MidiMessage::PitchBendChange(ch, pitch_bend) => {
                     let pitch_bend: u16 = pitch_bend.into();
-                    channels[ch as usize].pitch_bend = pitch_bend as f32 / 8192.0 - 1.0;
+                    channels[ch as usize].pitch_bend = pitch_bend as f64 / 8192.0 - 1.0;
                 }
                 MidiMessage::ProgramChange(ch, prog) => {
                     channels[ch as usize].program = prog.into();
@@ -204,7 +204,7 @@ impl MidiSynth {
     }
 
     fn flush_notes(&mut self) {
-        let t = self.audio_index as f32 / self.sample_rate as f32;
+        let t = self.audio_index as f64 / self.sample_rate as f64;
         let release = self.adsr.release;
         for ch in self.midi_channel_states.iter_mut() {
             ch.notes
@@ -212,14 +212,14 @@ impl MidiSynth {
         }
     }
 
-    fn synthesize(&self, t: f32) -> f32 {
+    fn synthesize(&self, t: f64) -> f64 {
         let mut y = 0.;
         for channel_state in self.midi_channel_states.iter() {
             for note in channel_state.notes.values() {
-                let freq = note.frequency * 2_f32.powf(channel_state.pitch_bend / 6.);
+                let freq = note.frequency * 2_f64.powf(channel_state.pitch_bend / 6.);
                 let amp = note.velocity * self.amplitude;
                 let t_on = t - note.on_time;
-                let t_off = t - note.off_time.unwrap_or(f32::INFINITY);
+                let t_off = t - note.off_time.unwrap_or(f64::INFINITY);
                 let env = self.envelope(t_on, t_off);
                 y += amp * env * (self.waveform)(self, freq * t_on);
             }
@@ -227,7 +227,7 @@ impl MidiSynth {
         y
     }
 
-    fn envelope(&self, t_on: f32, t_off: f32) -> f32 {
+    fn envelope(&self, t_on: f64, t_off: f64) -> f64 {
         let adsr = &self.adsr;
         if t_on < 0.0 {
             0.0
@@ -244,23 +244,23 @@ impl MidiSynth {
         }
     }
 
-    fn waveform_sine(&self, t: f32) -> f32 {
+    fn waveform_sine(&self, t: f64) -> f64 {
         (TAU * t).sin()
     }
 
-    fn waveform_square(&self, t: f32) -> f32 {
+    fn waveform_square(&self, t: f64) -> f64 {
         1. - 2. * (2. * t % 2.).floor()
     }
 
-    fn waveform_saw(&self, t: f32) -> f32 {
+    fn waveform_saw(&self, t: f64) -> f64 {
         (t + 0.5) % 1. * 2. - 1.
     }
 
-    fn waveform_tri(&self, t: f32) -> f32 {
+    fn waveform_tri(&self, t: f64) -> f64 {
         ((4. * t + 3.) % 4. - 2.).abs() - 1.
     }
 
-    fn waveform_pulse(&self, t: f32) -> f32 {
+    fn waveform_pulse(&self, t: f64) -> f64 {
         if t % 1. < self.pulse_width { -1. } else { 1. }
     }
 }
