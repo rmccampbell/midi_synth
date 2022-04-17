@@ -2,16 +2,16 @@
 name = "midi_synth"
 version = "0.1.0"
 authors = ["Ryan McCampbell <rmccampbell7@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-anyhow = "1.0.43"
-clap = "2.33.3"
+anyhow = "1.0.52"
+clap = "2.34.0"
 cpal = "0.13.4"
-ctrlc = "3.2.0"
+ctrlc = "3.2.1"
 midir = "0.7.0"
-structopt = "0.3.23"
-thiserror = "1.0.28"
+structopt = "0.3.25"
+thiserror = "1.0.30"
 wmidi = "4.0.6"
