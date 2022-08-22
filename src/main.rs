@@ -4,11 +4,10 @@ use std::f64::consts::TAU;
 use std::sync::mpsc::{self, Receiver, TryRecvError};
 use std::time::Instant;
 
-use clap::arg_enum;
 use cpal::traits::{DeviceTrait, HostTrait, StreamTrait};
 use cpal::{Device, Sample, SampleFormat, Stream, StreamConfig};
 use midir::MidiInput;
-use structopt::StructOpt;
+use clap::{Parser, ValueEnum};
 use thiserror::Error;
 use wmidi::MidiMessage;
 
@@ -20,51 +19,50 @@ struct OutputDeviceError;
 #[error("Requested midi input port not available")]
 struct InputPortError;
 
-#[derive(StructOpt, Debug)]
+/// A simple midi synthesizer
+#[derive(Parser, Debug)]
+#[clap(author, version, about)]
 struct Opts {
-    #[structopt(short, long, default_value = "0")]
+    #[clap(short, long, default_value_t = 0)]
     input_port: usize,
-    #[structopt(short, long)]
+    #[clap(short, long)]
     output_device: Option<usize>,
-    #[structopt(short = "l", long)]
+    #[clap(short = 'l', long)]
     list_input_ports: bool,
-    #[structopt(short = "L", long)]
+    #[clap(short = 'L', long)]
     list_output_devices: bool,
     #[cfg(debug_assertions)]
-    #[structopt(short = "D", long)]
+    #[clap(short = 'D', long)]
     debug: bool,
-    #[structopt(flatten)]
+    #[clap(flatten)]
     synth_opts: SynthOpts,
 }
 
-#[derive(StructOpt, Debug)]
+#[derive(Parser, Debug)]
 struct SynthOpts {
-    #[structopt(short, long, possible_values = &Waveform::variants(),
-                case_insensitive = true, default_value = "Tri")]
+    #[clap(short, long, value_enum, default_value_t = Waveform::Tri)]
     waveform: Waveform,
-    #[structopt(short, long, default_value = "0.5")]
+    #[clap(short, long, default_value_t = 0.5)]
     pulse_width: f64,
-    #[structopt(short, long, default_value = "0.05")]
+    #[clap(short, long, default_value_t = 0.05)]
     attack: f64,
-    #[structopt(short, long, default_value = "0.2")]
+    #[clap(short, long, default_value_t = 0.2)]
     decay: f64,
-    #[structopt(short, long, default_value = "0.8")]
+    #[clap(short, long, default_value_t = 0.8)]
     sustain: f64,
-    #[structopt(short, long, default_value = "0.5")]
+    #[clap(short, long, default_value_t = 0.5)]
     release: f64,
-    #[structopt(short = "A", long, default_value = "0.5")]
+    #[clap(short = 'A', long, default_value_t = 0.5)]
     amplitude: f64,
 }
 
-arg_enum! {
-    #[derive(Debug)]
-    enum Waveform {
-        Sine,
-        Square,
-        Saw,
-        Tri,
-        Pulse,
-    }
+#[derive(ValueEnum, Copy, Clone, Debug)]
+enum Waveform {
+    Sine,
+    Square,
+    Saw,
+    Tri,
+    Pulse,
 }
 
 struct Adsr {
@@ -91,7 +89,7 @@ struct MidiChannelState {
 struct MidiSynth {
     audio_channels: usize,
     sample_rate: usize,
-    audio_index: usize,
+    sample_index: usize,
     start_time: Option<Instant>,
     waveform: fn(&Self, f64) -> f64,
     pulse_width: f64,
@@ -119,7 +117,7 @@ impl MidiSynth {
         MidiSynth {
             audio_channels: config.channels as usize,
             sample_rate: config.sample_rate.0 as usize,
-            audio_index: 0,
+            sample_index: 0,
             start_time: None,
             waveform,
             pulse_width: opts.pulse_width,
@@ -156,11 +154,14 @@ impl MidiSynth {
         self.flush_notes();
 
         for frame in data.chunks_exact_mut(self.audio_channels) {
-            let t = self.audio_index as f64 / self.sample_rate as f64;
-            let y = self.synthesize(t) as f32;
+            let y = self.synthesize(self.sample_time()) as f32;
             frame.fill(Sample::from(&y));
-            self.audio_index += 1;
+            self.sample_index += 1;
         }
+    }
+
+    fn sample_time(&self) -> f64 {
+        self.sample_index as f64 / self.sample_rate as f64
     }
 
     fn process_messages(&mut self) {
@@ -204,7 +205,7 @@ impl MidiSynth {
     }
 
     fn flush_notes(&mut self) {
-        let t = self.audio_index as f64 / self.sample_rate as f64;
+        let t = self.sample_time();
         let release = self.adsr.release;
         for ch in self.midi_channel_states.iter_mut() {
             ch.notes
@@ -275,7 +276,7 @@ fn wait_for_ctrlc() -> anyhow::Result<()> {
 }
 
 fn main() -> anyhow::Result<()> {
-    let opts = Opts::from_args();
+    let opts = Opts::parse();
     #[cfg(debug_assertions)]
     let debug = opts.debug;
 
@@ -328,7 +329,7 @@ fn main() -> anyhow::Result<()> {
         sender.send((message.to_owned(), time)).unwrap();
         #[cfg(debug_assertions)]
         if debug {
-            println!("{:?}", message);
+            println!("{} {:?}", _timestamp, message);
         }
     };
     let _midi_conn = midi_in.connect(&port, "midi_synth", input_callback, ());
