@@ -4,10 +4,10 @@ use std::f64::consts::TAU;
 use std::sync::mpsc::{self, Receiver, TryRecvError};
 use std::time::Instant;
 
+use clap::{Parser, ValueEnum};
 use cpal::traits::{DeviceTrait, HostTrait, StreamTrait};
 use cpal::{Device, Sample, SampleFormat, Stream, StreamConfig};
 use midir::MidiInput;
-use clap::{Parser, ValueEnum};
 use thiserror::Error;
 use wmidi::MidiMessage;
 
@@ -65,11 +65,46 @@ enum Waveform {
     Pulse,
 }
 
-struct Adsr {
+impl Into<fn(f64, &WaveProps) -> f64> for Waveform {
+    fn into(self) -> fn(f64, &WaveProps) -> f64 {
+        match self {
+            Waveform::Sine => waveform_sine,
+            Waveform::Square => waveform_square,
+            Waveform::Saw => waveform_saw,
+            Waveform::Tri => waveform_tri,
+            Waveform::Pulse => waveform_pulse,
+        }
+    }
+}
+
+fn waveform_sine(t: f64, _: &WaveProps) -> f64 {
+    (TAU * t).sin()
+}
+
+fn waveform_square(t: f64, _: &WaveProps) -> f64 {
+    1. - 2. * (2. * t % 2.).floor()
+}
+
+fn waveform_saw(t: f64, _: &WaveProps) -> f64 {
+    (t + 0.5) % 1. * 2. - 1.
+}
+
+fn waveform_tri(t: f64, _: &WaveProps) -> f64 {
+    ((4. * t + 3.) % 4. - 2.).abs() - 1.
+}
+
+fn waveform_pulse(t: f64, w: &WaveProps) -> f64 {
+    if t % 1. < w.pulse_width { -1. } else { 1. }
+}
+
+struct WaveProps {
+    waveform: fn(f64, &Self) -> f64,
+    pulse_width: f64,
     attack: f64,
     decay: f64,
     sustain: f64,
     release: f64,
+    amplitude: f64,
 }
 
 struct Note {
@@ -91,10 +126,7 @@ struct MidiSynth {
     sample_rate: usize,
     sample_index: usize,
     start_time: Option<Instant>,
-    waveform: fn(&Self, f64) -> f64,
-    pulse_width: f64,
-    adsr: Adsr,
-    amplitude: f64,
+    wave_props: WaveProps,
     receiver: Receiver<(MidiMessage<'static>, Instant)>,
     midi_channel_states: [MidiChannelState; 16],
 }
@@ -107,27 +139,20 @@ impl MidiSynth {
         config: &StreamConfig,
         receiver: Receiver<(MidiMessage<'static>, Instant)>,
     ) -> MidiSynth {
-        let waveform = match opts.waveform {
-            Waveform::Sine => Self::waveform_sine,
-            Waveform::Square => Self::waveform_square,
-            Waveform::Saw => Self::waveform_saw,
-            Waveform::Tri => Self::waveform_tri,
-            Waveform::Pulse => Self::waveform_pulse,
-        };
         MidiSynth {
             audio_channels: config.channels as usize,
             sample_rate: config.sample_rate.0 as usize,
             sample_index: 0,
             start_time: None,
-            waveform,
-            pulse_width: opts.pulse_width,
-            adsr: Adsr {
+            wave_props: WaveProps {
+                waveform: opts.waveform.into(),
+                pulse_width: opts.pulse_width,
                 attack: opts.attack,
                 decay: opts.decay,
                 sustain: opts.sustain,
                 release: opts.release,
+                amplitude: opts.amplitude,
             },
-            amplitude: opts.amplitude,
             receiver,
             midi_channel_states: Default::default(),
         }
@@ -206,7 +231,7 @@ impl MidiSynth {
 
     fn flush_notes(&mut self) {
         let t = self.sample_time();
-        let release = self.adsr.release;
+        let release = self.wave_props.release;
         for ch in self.midi_channel_states.iter_mut() {
             ch.notes
                 .retain(|_, n| n.off_time.map_or(true, |off_t| t - off_t < release));
@@ -214,55 +239,36 @@ impl MidiSynth {
     }
 
     fn synthesize(&self, t: f64) -> f64 {
+        let w = &self.wave_props;
         let mut y = 0.;
         for channel_state in self.midi_channel_states.iter() {
             for note in channel_state.notes.values() {
                 let freq = note.frequency * 2_f64.powf(channel_state.pitch_bend / 6.);
-                let amp = note.velocity * self.amplitude;
+                let amp = note.velocity * w.amplitude;
                 let t_on = t - note.on_time;
                 let t_off = t - note.off_time.unwrap_or(f64::INFINITY);
                 let env = self.envelope(t_on, t_off);
-                y += amp * env * (self.waveform)(self, freq * t_on);
+                y += amp * env * (w.waveform)(freq * t_on, w);
             }
         }
         y
     }
 
     fn envelope(&self, t_on: f64, t_off: f64) -> f64 {
-        let adsr = &self.adsr;
+        let w = &self.wave_props;
         if t_on < 0.0 {
             0.0
-        } else if t_on < adsr.attack {
-            t_on / adsr.attack
-        } else if t_on < adsr.attack + adsr.decay {
-            1. - (1. - adsr.sustain) * (t_on - adsr.attack) / adsr.decay
+        } else if t_on < w.attack {
+            t_on / w.attack
+        } else if t_on < w.attack + w.decay {
+            1. - (1. - w.sustain) * (t_on - w.attack) / w.decay
         } else if t_off < 0.0 {
-            adsr.sustain
-        } else if t_off < adsr.release {
-            adsr.sustain * (1. - t_off / adsr.release)
+            w.sustain
+        } else if t_off < w.release {
+            w.sustain * (1. - t_off / w.release)
         } else {
             0.0
         }
-    }
-
-    fn waveform_sine(&self, t: f64) -> f64 {
-        (TAU * t).sin()
-    }
-
-    fn waveform_square(&self, t: f64) -> f64 {
-        1. - 2. * (2. * t % 2.).floor()
-    }
-
-    fn waveform_saw(&self, t: f64) -> f64 {
-        (t + 0.5) % 1. * 2. - 1.
-    }
-
-    fn waveform_tri(&self, t: f64) -> f64 {
-        ((4. * t + 3.) % 4. - 2.).abs() - 1.
-    }
-
-    fn waveform_pulse(&self, t: f64) -> f64 {
-        if t % 1. < self.pulse_width { -1. } else { 1. }
     }
 }
 
