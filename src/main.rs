@@ -4,9 +4,10 @@ use std::f64::consts::TAU;
 use std::sync::mpsc::{self, Receiver, TryRecvError};
 use std::time::Instant;
 
+use anyhow::anyhow;
 use clap::{Parser, ValueEnum};
 use cpal::traits::{DeviceTrait, HostTrait, StreamTrait};
-use cpal::{Device, Sample, SampleFormat, Stream, StreamConfig};
+use cpal::{Device, FromSample, Sample, SampleFormat, SizedSample, Stream, StreamConfig};
 use midir::MidiInput;
 use thiserror::Error;
 use wmidi::MidiMessage;
@@ -158,15 +159,16 @@ impl MidiSynth {
         }
     }
 
-    pub fn make_stream<T: Sample>(
+    pub fn make_stream<T: SizedSample + FromSample<f32>>(
         mut self,
         device: &Device,
         config: &StreamConfig,
     ) -> Result<Stream, cpal::BuildStreamError> {
         device.build_output_stream(
-            &config,
+            config,
             move |data, info| self.output_callback::<T>(data, info),
             Self::error_callback,
+            None,
         )
     }
 
@@ -174,13 +176,17 @@ impl MidiSynth {
         eprintln!("Error: audio output stream: {}", err);
     }
 
-    fn output_callback<T: Sample>(&mut self, data: &mut [T], _info: &cpal::OutputCallbackInfo) {
+    fn output_callback<T: Sample + FromSample<f32>>(
+        &mut self,
+        data: &mut [T],
+        _info: &cpal::OutputCallbackInfo,
+    ) {
         self.process_messages();
         self.flush_notes();
 
         for frame in data.chunks_exact_mut(self.audio_channels) {
             let y = self.synthesize(self.sample_time()) as f32;
-            frame.fill(Sample::from(&y));
+            frame.fill(T::from_sample(y));
             self.sample_index += 1;
         }
     }
@@ -312,17 +318,17 @@ fn main() -> anyhow::Result<()> {
     }
     .ok_or(OutputDeviceError)?;
     let supported_config = device.default_output_config()?;
-    let sample_format = supported_config.sample_format();
     let config = supported_config.config();
 
     let (sender, receiver) = mpsc::channel();
 
     let synth = MidiSynth::new(opts.synth_opts, &config, receiver);
-    let stream = match sample_format {
-        SampleFormat::F32 => synth.make_stream::<f32>(&device, &config),
-        SampleFormat::I16 => synth.make_stream::<i16>(&device, &config),
-        SampleFormat::U16 => synth.make_stream::<u16>(&device, &config),
-    }?;
+    let stream = match supported_config.sample_format() {
+        SampleFormat::F32 => synth.make_stream::<f32>(&device, &config)?,
+        SampleFormat::I16 => synth.make_stream::<i16>(&device, &config)?,
+        SampleFormat::U16 => synth.make_stream::<u16>(&device, &config)?,
+        format => Err(anyhow!("Unsupported sample format '{format}'"))?,
+    };
     stream.play()?;
 
     let mut midi_in = MidiInput::new("midi_synth")?;
