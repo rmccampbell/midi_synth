@@ -111,15 +111,25 @@ struct WaveProps {
 struct Note {
     frequency: f64,
     velocity: f64,
+    phase: f64,
     on_time: f64,
     off_time: Option<f64>,
 }
 
-#[derive(Default)]
 struct MidiChannelState {
     notes: HashMap<wmidi::Note, Note>,
     pitch_bend: f64,
     program: u8,
+}
+
+impl Default for MidiChannelState {
+    fn default() -> Self {
+        MidiChannelState {
+            notes: HashMap::new(),
+            pitch_bend: 1.,
+            program: 0,
+        }
+    }
 }
 
 struct MidiSynth {
@@ -187,7 +197,7 @@ impl MidiSynth {
         for frame in data.chunks_exact_mut(self.audio_channels) {
             let y = self.synthesize(self.sample_time()) as f32;
             frame.fill(T::from_sample(y));
-            self.sample_index += 1;
+            self.next_sample();
         }
     }
 
@@ -211,6 +221,7 @@ impl MidiSynth {
                         Note {
                             frequency: note.to_freq_f64(),
                             velocity: u8::from(velocity) as f64 / 127.,
+                            phase: 0.,
                             on_time: time,
                             off_time: None,
                         },
@@ -224,7 +235,9 @@ impl MidiSynth {
                 }
                 MidiMessage::PitchBendChange(ch, pitch_bend) => {
                     let pitch_bend: u16 = pitch_bend.into();
-                    channels[ch as usize].pitch_bend = pitch_bend as f64 / 8192.0 - 1.0;
+                    let pitch_bend_norm = pitch_bend as f64 / 8192.0 - 1.0;
+                    let pitch_bend_mult = (pitch_bend_norm / 6.).exp2();
+                    channels[ch as usize].pitch_bend = pitch_bend_mult;
                 }
                 MidiMessage::ProgramChange(ch, prog) => {
                     channels[ch as usize].program = prog.into();
@@ -249,15 +262,25 @@ impl MidiSynth {
         let mut y = 0.;
         for channel_state in self.midi_channel_states.iter() {
             for note in channel_state.notes.values() {
-                let freq = note.frequency * 2_f64.powf(channel_state.pitch_bend / 6.);
                 let amp = note.velocity * w.amplitude;
                 let t_on = t - note.on_time;
                 let t_off = t - note.off_time.unwrap_or(f64::INFINITY);
                 let env = self.envelope(t_on, t_off);
-                y += amp * env * (w.waveform)(freq * t_on, w);
+                y += amp * env * (w.waveform)(note.phase, w);
             }
         }
         y
+    }
+
+    fn next_sample(&mut self) {
+        self.sample_index += 1;
+        let delta_t = 1. / self.sample_rate as f64;
+        for channel_state in self.midi_channel_states.iter_mut() {
+            for note in channel_state.notes.values_mut() {
+                let freq = note.frequency * channel_state.pitch_bend;
+                note.phase += freq * delta_t;
+            }
+        }
     }
 
     fn envelope(&self, t_on: f64, t_off: f64) -> f64 {
