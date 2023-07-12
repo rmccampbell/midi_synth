@@ -117,7 +117,7 @@ struct Note {
 }
 
 struct MidiChannelState {
-    notes: HashMap<wmidi::Note, Note>,
+    notes: HashMap<wmidi::Note, Vec<Note>>,
     pitch_bend: f64,
     program: u8,
 }
@@ -216,8 +216,7 @@ impl MidiSynth {
             let channels = &mut self.midi_channel_states;
             match msg {
                 MidiMessage::NoteOn(ch, note, velocity) => {
-                    channels[ch as usize].notes.insert(
-                        note,
+                    channels[ch as usize].notes.entry(note).or_default().push(
                         Note {
                             frequency: note.to_freq_f64(),
                             velocity: u8::from(velocity) as f64 / 127.,
@@ -228,9 +227,10 @@ impl MidiSynth {
                     );
                 }
                 MidiMessage::NoteOff(ch, note, _) => {
-                    // channels[ch as usize].notes.remove(&note);
-                    if let Some(note) = channels[ch as usize].notes.get_mut(&note) {
-                        note.off_time = Some(time);
+                    if let Some(notes) = channels[ch as usize].notes.get_mut(&note) {
+                        notes.iter_mut()
+                            .find(|n| n.off_time.is_none())
+                            .map(|n| n.off_time = Some(time));
                     }
                 }
                 MidiMessage::PitchBendChange(ch, pitch_bend) => {
@@ -252,8 +252,11 @@ impl MidiSynth {
         let t = self.sample_time();
         let release = self.wave_props.release;
         for ch in self.midi_channel_states.iter_mut() {
-            ch.notes
-                .retain(|_, n| n.off_time.map_or(true, |off_t| t - off_t < release));
+            ch.notes.retain(|_, notes| {
+                notes.retain(
+                    |n| n.off_time.map_or(true, |off_t| t - off_t < release));
+                !notes.is_empty()
+            });
         }
     }
 
@@ -261,7 +264,7 @@ impl MidiSynth {
         let w = &self.wave_props;
         let mut y = 0.;
         for channel_state in self.midi_channel_states.iter() {
-            for note in channel_state.notes.values() {
+            for note in channel_state.notes.values().flatten() {
                 let amp = note.velocity * w.amplitude;
                 let t_on = t - note.on_time;
                 let t_off = t - note.off_time.unwrap_or(f64::INFINITY);
@@ -276,7 +279,7 @@ impl MidiSynth {
         self.sample_index += 1;
         let delta_t = 1. / self.sample_rate as f64;
         for channel_state in self.midi_channel_states.iter_mut() {
-            for note in channel_state.notes.values_mut() {
+            for note in channel_state.notes.values_mut().flatten() {
                 let freq = note.frequency * channel_state.pitch_bend;
                 note.phase += freq * delta_t;
             }
