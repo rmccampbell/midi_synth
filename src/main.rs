@@ -1,24 +1,15 @@
 use std::collections::HashMap;
 use std::convert::TryFrom;
 use std::f64::consts::TAU;
-use std::sync::mpsc::{self, Receiver, TryRecvError};
-use std::time::Instant;
+use std::sync::mpsc::{self, Receiver};
+use std::time::{Duration, Instant};
 
 use anyhow::anyhow;
 use clap::{Parser, ValueEnum};
 use cpal::traits::{DeviceTrait, HostTrait, StreamTrait};
-use cpal::{Device, FromSample, Sample, SampleFormat, SizedSample, Stream, StreamConfig};
+use cpal::{Device, FromSample, Sample, SampleFormat, SizedSample, Stream, SupportedStreamConfig};
 use midir::MidiInput;
-use thiserror::Error;
 use wmidi::MidiMessage;
-
-#[derive(Error, Debug)]
-#[error("Requested or default output device not available")]
-struct OutputDeviceError;
-
-#[derive(Error, Debug)]
-#[error("Requested midi input port not available")]
-struct InputPortError;
 
 /// A simple midi synthesizer
 #[derive(Parser, Debug)]
@@ -66,8 +57,10 @@ enum Waveform {
     Pulse,
 }
 
-impl Into<fn(f64, &WaveProps) -> f64> for Waveform {
-    fn into(self) -> fn(f64, &WaveProps) -> f64 {
+type WaveformFunc = fn(f64, &WaveProps) -> f64;
+
+impl Into<WaveformFunc> for Waveform {
+    fn into(self) -> WaveformFunc {
         match self {
             Waveform::Sine => waveform_sine,
             Waveform::Square => waveform_square,
@@ -95,11 +88,15 @@ fn waveform_tri(t: f64, _: &WaveProps) -> f64 {
 }
 
 fn waveform_pulse(t: f64, w: &WaveProps) -> f64 {
-    if t % 1. < w.pulse_width { -1. } else { 1. }
+    if t % 1. < w.pulse_width {
+        1.
+    } else {
+        -1.
+    }
 }
 
 struct WaveProps {
-    waveform: fn(f64, &Self) -> f64,
+    waveform: WaveformFunc,
     pulse_width: f64,
     attack: f64,
     decay: f64,
@@ -108,7 +105,7 @@ struct WaveProps {
     amplitude: f64,
 }
 
-struct Note {
+struct NoteState {
     frequency: f64,
     velocity: f64,
     phase: f64,
@@ -117,7 +114,7 @@ struct Note {
 }
 
 struct MidiChannelState {
-    notes: HashMap<wmidi::Note, Vec<Note>>,
+    notes: HashMap<wmidi::Note, Vec<NoteState>>,
     pitch_bend: f64,
     program: u8,
 }
@@ -133,11 +130,10 @@ impl Default for MidiChannelState {
 }
 
 struct MidiSynth {
-    audio_channels: usize,
-    sample_rate: usize,
+    stream_config: SupportedStreamConfig,
+    wave_props: WaveProps,
     sample_index: usize,
     start_time: Option<Instant>,
-    wave_props: WaveProps,
     receiver: Receiver<(MidiMessage<'static>, Instant)>,
     midi_channel_states: [MidiChannelState; 16],
 }
@@ -147,14 +143,11 @@ const DELAY: f64 = 0.1;
 impl MidiSynth {
     pub fn new(
         opts: SynthOpts,
-        config: &StreamConfig,
+        stream_config: SupportedStreamConfig,
         receiver: Receiver<(MidiMessage<'static>, Instant)>,
     ) -> MidiSynth {
         MidiSynth {
-            audio_channels: config.channels as usize,
-            sample_rate: config.sample_rate.0 as usize,
-            sample_index: 0,
-            start_time: None,
+            stream_config,
             wave_props: WaveProps {
                 waveform: opts.waveform.into(),
                 pulse_width: opts.pulse_width,
@@ -164,18 +157,47 @@ impl MidiSynth {
                 release: opts.release,
                 amplitude: opts.amplitude,
             },
+            sample_index: 0,
+            start_time: None,
             receiver,
             midi_channel_states: Default::default(),
         }
     }
 
-    pub fn make_stream<T: SizedSample + FromSample<f32>>(
+    fn audio_channels(&self) -> usize {
+        self.stream_config.channels().into()
+    }
+
+    fn sample_rate(&self) -> f64 {
+        self.stream_config.sample_rate().0.into()
+    }
+
+    fn sample_time(&self) -> f64 {
+        self.sample_index as f64 / self.sample_rate()
+    }
+
+    pub fn make_stream(self, device: &Device) -> anyhow::Result<Stream> {
+        Ok(match self.stream_config.sample_format() {
+            SampleFormat::I8 => self.make_stream_fmt::<i8>(device)?,
+            SampleFormat::I16 => self.make_stream_fmt::<i16>(device)?,
+            SampleFormat::I32 => self.make_stream_fmt::<i32>(device)?,
+            SampleFormat::I64 => self.make_stream_fmt::<i64>(device)?,
+            SampleFormat::U8 => self.make_stream_fmt::<u8>(device)?,
+            SampleFormat::U16 => self.make_stream_fmt::<u16>(device)?,
+            SampleFormat::U32 => self.make_stream_fmt::<u32>(device)?,
+            SampleFormat::U64 => self.make_stream_fmt::<u64>(device)?,
+            SampleFormat::F32 => self.make_stream_fmt::<f32>(device)?,
+            SampleFormat::F64 => self.make_stream_fmt::<f64>(device)?,
+            format => Err(anyhow!("Unsupported sample format '{format}'"))?,
+        })
+    }
+
+    pub fn make_stream_fmt<T: SizedSample + FromSample<f32>>(
         mut self,
         device: &Device,
-        config: &StreamConfig,
     ) -> Result<Stream, cpal::BuildStreamError> {
         device.build_output_stream(
-            config,
+            &self.stream_config.config(),
             move |data, info| self.output_callback::<T>(data, info),
             Self::error_callback,
             None,
@@ -194,53 +216,47 @@ impl MidiSynth {
         self.process_messages();
         self.flush_notes();
 
-        for frame in data.chunks_exact_mut(self.audio_channels) {
+        for frame in data.chunks_exact_mut(self.audio_channels()) {
             let y = self.synthesize(self.sample_time()) as f32;
             frame.fill(T::from_sample(y));
             self.next_sample();
         }
     }
 
-    fn sample_time(&self) -> f64 {
-        self.sample_index as f64 / self.sample_rate as f64
-    }
-
     fn process_messages(&mut self) {
         let start_time = *self.start_time.get_or_insert_with(Instant::now);
 
-        while let Some((msg, time)) = match self.receiver.try_recv() {
-            Err(TryRecvError::Empty) => None,
-            result => Some(result.unwrap()),
-        } {
+        for (msg, time) in self.receiver.try_iter() {
             let time = time.saturating_duration_since(start_time).as_secs_f64() + DELAY;
-            let channels = &mut self.midi_channel_states;
+            let Some(chan) = msg.channel() else { continue };
+            let chan_state = &mut self.midi_channel_states[chan as usize];
             match msg {
-                MidiMessage::NoteOn(ch, note, velocity) => {
-                    channels[ch as usize].notes.entry(note).or_default().push(
-                        Note {
-                            frequency: note.to_freq_f64(),
-                            velocity: u8::from(velocity) as f64 / 127.,
-                            phase: 0.,
-                            on_time: time,
-                            off_time: None,
-                        },
-                    );
+                MidiMessage::NoteOn(_ch, note, velocity) => {
+                    let notes = chan_state.notes.entry(note).or_default();
+                    notes.push(NoteState {
+                        frequency: note.to_freq_f64(),
+                        velocity: u8::from(velocity) as f64 / 127.,
+                        phase: 0.,
+                        on_time: time,
+                        off_time: None,
+                    });
                 }
-                MidiMessage::NoteOff(ch, note, _) => {
-                    if let Some(notes) = channels[ch as usize].notes.get_mut(&note) {
-                        notes.iter_mut()
+                MidiMessage::NoteOff(_ch, note, _) => {
+                    if let Some(notes) = chan_state.notes.get_mut(&note) {
+                        notes
+                            .iter_mut()
                             .find(|n| n.off_time.is_none())
                             .map(|n| n.off_time = Some(time));
                     }
                 }
-                MidiMessage::PitchBendChange(ch, pitch_bend) => {
+                MidiMessage::PitchBendChange(_ch, pitch_bend) => {
                     let pitch_bend: u16 = pitch_bend.into();
                     let pitch_bend_norm = pitch_bend as f64 / 8192.0 - 1.0;
                     let pitch_bend_mult = (pitch_bend_norm / 6.).exp2();
-                    channels[ch as usize].pitch_bend = pitch_bend_mult;
+                    chan_state.pitch_bend = pitch_bend_mult;
                 }
-                MidiMessage::ProgramChange(ch, prog) => {
-                    channels[ch as usize].program = prog.into();
+                MidiMessage::ProgramChange(_ch, prog) => {
+                    chan_state.program = prog.into();
                 }
                 MidiMessage::ControlChange(_ch, _ctrl, _val) => {}
                 _ => {}
@@ -253,8 +269,7 @@ impl MidiSynth {
         let release = self.wave_props.release;
         for ch in self.midi_channel_states.iter_mut() {
             ch.notes.retain(|_, notes| {
-                notes.retain(
-                    |n| n.off_time.map_or(true, |off_t| t - off_t < release));
+                notes.retain(|n| n.off_time.map_or(true, |off_t| t - off_t < release));
                 !notes.is_empty()
             });
         }
@@ -277,7 +292,7 @@ impl MidiSynth {
 
     fn next_sample(&mut self) {
         self.sample_index += 1;
-        let delta_t = 1. / self.sample_rate as f64;
+        let delta_t = 1. / self.sample_rate();
         for channel_state in self.midi_channel_states.iter_mut() {
             for note in channel_state.notes.values_mut().flatten() {
                 let freq = note.frequency * channel_state.pitch_bend;
@@ -320,6 +335,7 @@ fn main() -> anyhow::Result<()> {
 
     if opts.list_output_devices {
         let host = cpal::default_host();
+        println!("Host: {:?}", host.id());
         let def_dev_name = host.default_output_device().and_then(|d| d.name().ok());
         for dev in host.output_devices()? {
             let isdef = Some(dev.name()?) == def_dev_name;
@@ -342,35 +358,35 @@ fn main() -> anyhow::Result<()> {
         None => host.default_output_device(),
         Some(index) => host.output_devices()?.nth(index),
     }
-    .ok_or(OutputDeviceError)?;
-    let supported_config = device.default_output_config()?;
-    let config = supported_config.config();
-
+    .ok_or(anyhow!("Requested or default output device not available"))?;
+    let config = device.default_output_config()?;
     let (sender, receiver) = mpsc::channel();
 
-    let synth = MidiSynth::new(opts.synth_opts, &config, receiver);
-    let stream = match supported_config.sample_format() {
-        SampleFormat::F32 => synth.make_stream::<f32>(&device, &config)?,
-        SampleFormat::I16 => synth.make_stream::<i16>(&device, &config)?,
-        SampleFormat::U16 => synth.make_stream::<u16>(&device, &config)?,
-        format => Err(anyhow!("Unsupported sample format '{format}'"))?,
-    };
+    let synth = MidiSynth::new(opts.synth_opts, config, receiver);
+    let stream = synth.make_stream(&device)?;
     stream.play()?;
 
     let mut midi_in = MidiInput::new("midi_synth")?;
     midi_in.ignore(midir::Ignore::All);
     let ports = midi_in.ports();
-    let port = ports.get(opts.input_port).ok_or(InputPortError)?;
-    let input_callback = move |_timestamp: u64, message: &[u8], _: &mut ()| {
-        let time = Instant::now();
+    let port = ports
+        .get(opts.input_port)
+        .ok_or(anyhow!("Requested midi input port not available"))?;
+
+    let mut ts_start: Option<Instant> = None;
+    let input_callback = move |timestamp_us: u64, message: &[u8], _: &mut ()| {
+        let timestamp = Duration::from_micros(timestamp_us);
+        let ts_start = *ts_start.get_or_insert_with(|| Instant::now() - timestamp);
+        let time = ts_start + timestamp;
+
         let message = MidiMessage::try_from(message).unwrap();
         sender.send((message.to_owned(), time)).unwrap();
         #[cfg(debug_assertions)]
         if debug {
-            println!("{} {:?}", _timestamp, message);
+            println!("{:?} {:?}", time, message);
         }
     };
-    let _midi_conn = midi_in.connect(&port, "midi_synth", input_callback, ());
+    let _midi_conn = midi_in.connect(port, "midi_synth", input_callback, ())?;
 
     println!("Receiving midi messages... Press Ctr+C to exit");
     wait_for_ctrlc()?;

@@ -11,6 +11,5 @@ anyhow = "1.0.70"
 clap = { version = "4.1.11", features = ["derive"] }
 cpal = "0.15.1"
 ctrlc = "3.2.5"
-midir = "0.9.1"
-thiserror = "1.0.40"
+midir = "0.10.0"
 wmidi = "4.0.6"
