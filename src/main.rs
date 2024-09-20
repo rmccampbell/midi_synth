@@ -1,14 +1,16 @@
 use std::collections::HashMap;
 use std::convert::TryFrom;
 use std::f64::consts::TAU;
-use std::sync::mpsc::{self, Receiver};
+use std::sync::mpsc::{self, Receiver, Sender};
 use std::time::{Duration, Instant};
 
 use anyhow::anyhow;
 use clap::{Parser, ValueEnum};
 use cpal::traits::{DeviceTrait, HostTrait, StreamTrait};
 use cpal::{Device, FromSample, Sample, SampleFormat, SizedSample, Stream, SupportedStreamConfig};
-use midir::MidiInput;
+#[cfg(unix)]
+use midir::os::unix::VirtualInput;
+use midir::{MidiInput, MidiInputConnection};
 use wmidi::MidiMessage;
 
 /// A simple midi synthesizer
@@ -17,6 +19,9 @@ use wmidi::MidiMessage;
 struct Opts {
     #[clap(short, long, default_value_t = 0)]
     input_port: usize,
+    #[cfg(unix)]
+    #[clap(short, long, num_args=0..=1, default_missing_value="midi_synth")]
+    virtual_port: Option<String>,
     #[clap(short, long)]
     output_device: Option<usize>,
     #[clap(short = 'l', long)]
@@ -30,7 +35,7 @@ struct Opts {
     synth_opts: SynthOpts,
 }
 
-#[derive(Parser, Debug)]
+#[derive(Parser, Debug, Clone, Copy)]
 struct SynthOpts {
     #[clap(short, long, value_enum, default_value_t = Waveform::Tri)]
     waveform: Waveform,
@@ -319,6 +324,46 @@ impl MidiSynth {
     }
 }
 
+fn make_midi_connection(
+    sender: Sender<(MidiMessage<'static>, Instant)>,
+    opts: &Opts,
+) -> anyhow::Result<MidiInputConnection<()>> {
+    #[cfg(debug_assertions)]
+    let debug = opts.debug;
+
+    let mut ts_start: Option<Instant> = None;
+    let input_callback = move |timestamp_us: u64, message: &[u8], _: &mut ()| {
+        let timestamp = Duration::from_micros(timestamp_us);
+        let ts_start = *ts_start.get_or_insert_with(|| Instant::now() - timestamp);
+        let time = ts_start + timestamp;
+
+        let message = MidiMessage::try_from(message).unwrap();
+        sender.send((message.to_owned(), time)).unwrap();
+        #[cfg(debug_assertions)]
+        if debug {
+            println!("{:?} {:?}", time, message);
+        }
+    };
+
+    let mut midi_in = MidiInput::new("midi_synth")?;
+    midi_in.ignore(midir::Ignore::All);
+
+    #[cfg(unix)]
+    if let Some(name) = &opts.virtual_port {
+        return Ok(midi_in
+            .create_virtual(name, input_callback, ())
+            .map_err(|e| midir::ConnectError::new(e.kind(), ()))?);
+    }
+
+    let ports = midi_in.ports();
+    let port = ports
+        .get(opts.input_port)
+        .ok_or(anyhow!("Requested midi input port not available"))?;
+    Ok(midi_in
+        .connect(port, "midi_synth", input_callback, ())
+        .map_err(|e| midir::ConnectError::new(e.kind(), ()))?)
+}
+
 fn wait_for_ctrlc() -> anyhow::Result<()> {
     let (tx, rx) = mpsc::channel();
     ctrlc::set_handler(move || {
@@ -330,8 +375,6 @@ fn wait_for_ctrlc() -> anyhow::Result<()> {
 
 fn main() -> anyhow::Result<()> {
     let opts = Opts::parse();
-    #[cfg(debug_assertions)]
-    let debug = opts.debug;
 
     if opts.list_output_devices {
         let host = cpal::default_host();
@@ -366,27 +409,7 @@ fn main() -> anyhow::Result<()> {
     let stream = synth.make_stream(&device)?;
     stream.play()?;
 
-    let mut midi_in = MidiInput::new("midi_synth")?;
-    midi_in.ignore(midir::Ignore::All);
-    let ports = midi_in.ports();
-    let port = ports
-        .get(opts.input_port)
-        .ok_or(anyhow!("Requested midi input port not available"))?;
-
-    let mut ts_start: Option<Instant> = None;
-    let input_callback = move |timestamp_us: u64, message: &[u8], _: &mut ()| {
-        let timestamp = Duration::from_micros(timestamp_us);
-        let ts_start = *ts_start.get_or_insert_with(|| Instant::now() - timestamp);
-        let time = ts_start + timestamp;
-
-        let message = MidiMessage::try_from(message).unwrap();
-        sender.send((message.to_owned(), time)).unwrap();
-        #[cfg(debug_assertions)]
-        if debug {
-            println!("{:?} {:?}", time, message);
-        }
-    };
-    let _midi_conn = midi_in.connect(port, "midi_synth", input_callback, ())?;
+    let _midi_conn = make_midi_connection(sender, &opts)?;
 
     println!("Receiving midi messages... Press Ctr+C to exit");
     wait_for_ctrlc()?;
