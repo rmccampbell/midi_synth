@@ -1,6 +1,7 @@
 use std::collections::HashMap;
 use std::convert::TryFrom;
 use std::f64::consts::TAU;
+use std::fmt::{Debug, Display};
 use std::sync::mpsc::{self, Receiver, Sender};
 use std::time::{Duration, Instant};
 
@@ -12,6 +13,32 @@ use cpal::{Device, FromSample, Sample, SampleFormat, SizedSample, Stream, Suppor
 use midir::os::unix::VirtualInput;
 use midir::{MidiInput, MidiInputConnection};
 use wmidi::MidiMessage;
+
+struct SignedDuration {
+    dur: Duration,
+    neg: bool,
+}
+
+impl Display for SignedDuration {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "{}{:?}", if self.neg { "-" } else { "" }, self.dur)
+    }
+}
+
+fn signed_secs_f64(secs: f64) -> SignedDuration {
+    SignedDuration {
+        dur: Duration::from_secs_f64(secs.abs()),
+        neg: secs < 0.,
+    }
+}
+
+fn signed_time_diff(x: Instant, y: Instant) -> SignedDuration {
+    if x >= y {
+        SignedDuration { dur: x - y, neg: false }
+    } else {
+        SignedDuration { dur: y - x, neg: true }
+    }
+}
 
 /// A simple midi synthesizer
 #[derive(Parser, Debug)]
@@ -28,9 +55,6 @@ struct Opts {
     list_input_ports: bool,
     #[clap(short = 'L', long)]
     list_output_devices: bool,
-    #[cfg(debug_assertions)]
-    #[clap(short = 'D', long)]
-    debug: bool,
     #[clap(flatten)]
     synth_opts: SynthOpts,
 }
@@ -51,6 +75,9 @@ struct SynthOpts {
     release: f64,
     #[clap(short = 'A', long, default_value_t = 0.5)]
     amplitude: f64,
+    #[cfg_attr(feature = "debug", clap(short = 'D', long))]
+    #[cfg_attr(not(feature = "debug"), clap(skip))]
+    debug: bool,
 }
 
 #[derive(ValueEnum, Copy, Clone, Debug)]
@@ -134,6 +161,10 @@ impl Default for MidiChannelState {
     }
 }
 
+trait SupportedSample: Sample<Signed: FromSample<f64>> + SizedSample + FromSample<f64> {}
+
+impl<T: Sample<Signed: FromSample<f64>> + SizedSample + FromSample<f64>> SupportedSample for T {}
+
 struct MidiSynth {
     stream_config: SupportedStreamConfig,
     wave_props: WaveProps,
@@ -141,11 +172,12 @@ struct MidiSynth {
     start_time: Option<Instant>,
     receiver: Receiver<(MidiMessage<'static>, Instant)>,
     midi_channel_states: [MidiChannelState; 16],
+    debug: bool,
 }
 
-const DELAY: f64 = 0.1;
-
 impl MidiSynth {
+    const DELAY: f64 = 0.05;
+
     pub fn new(
         opts: SynthOpts,
         stream_config: SupportedStreamConfig,
@@ -166,6 +198,7 @@ impl MidiSynth {
             start_time: None,
             receiver,
             midi_channel_states: Default::default(),
+            debug: opts.debug,
         }
     }
 
@@ -193,11 +226,14 @@ impl MidiSynth {
             SampleFormat::U64 => self.make_stream_fmt::<u64>(device)?,
             SampleFormat::F32 => self.make_stream_fmt::<f32>(device)?,
             SampleFormat::F64 => self.make_stream_fmt::<f64>(device)?,
-            format => Err(anyhow!("Unsupported sample format '{format}'"))?,
+            format => {
+                eprintln!("Warning: Unsupported sample format {format}, falling back to f32.");
+                self.make_stream_fmt::<f32>(device)?
+            }
         })
     }
 
-    pub fn make_stream_fmt<T: SizedSample + FromSample<f32>>(
+    fn make_stream_fmt<T: SupportedSample>(
         mut self,
         device: &Device,
     ) -> Result<Stream, cpal::BuildStreamError> {
@@ -213,26 +249,61 @@ impl MidiSynth {
         eprintln!("Error: audio output stream: {}", err);
     }
 
-    fn output_callback<T: Sample + FromSample<f32>>(
+    fn output_callback<T: SupportedSample>(
         &mut self,
         data: &mut [T],
-        _info: &cpal::OutputCallbackInfo,
+        info: &cpal::OutputCallbackInfo,
     ) {
-        self.process_messages();
+        let start_time = *self.start_time.get_or_insert_with(Instant::now);
+        let fn_start = Instant::now();
+        let samp_time = self.sample_time();
+
+        let any_messages = self.process_messages(start_time);
         self.flush_notes();
 
         for frame in data.chunks_exact_mut(self.audio_channels()) {
-            let y = self.synthesize(self.sample_time()) as f32;
+            let y = self.synthesize(self.sample_time());
             frame.fill(T::from_sample(y));
             self.next_sample();
         }
+
+        // data.fill(T::EQUILIBRIUM);
+        // for channel_state in self.midi_channel_states.iter() {
+        //     for note in channel_state.notes.values().flatten() {
+        //         self.synthesize_note(note, channel_state, data);
+        //     }
+        // }
+        // self.advance(data.len() / self.audio_channels())
+
+        if cfg!(feature = "debug") && self.debug {
+            let nframes = data.len() / self.audio_channels();
+            let seq_num = self.sample_index / nframes;
+            if any_messages || seq_num % 10 == 0 {
+                let ts = &info.timestamp();
+                let real_time = (fn_start - start_time).as_secs_f64();
+                println!(
+                    "Output {seq_num}: nframes: {nframes}, latency: {:?}, compute time: {:?}, time drift: {}",
+                    ts.playback.duration_since(&ts.callback).unwrap(),
+                    fn_start.elapsed(),
+                    signed_secs_f64(samp_time - real_time)
+                );
+            }
+        }
     }
 
-    fn process_messages(&mut self) {
-        let start_time = *self.start_time.get_or_insert_with(Instant::now);
-
+    fn process_messages(&mut self, start_time: Instant) -> bool {
+        let mut any_messages = false;
         for (msg, time) in self.receiver.try_iter() {
-            let time = time.saturating_duration_since(start_time).as_secs_f64() + DELAY;
+            any_messages = true;
+            let rel_time = time.saturating_duration_since(start_time).as_secs_f64();
+            let sched_time = rel_time + Self::DELAY;
+            if cfg!(feature = "debug") && self.debug {
+                println!(
+                    "Process message: {msg:?}, time: {rel_time}, sample time delta: {}",
+                    signed_secs_f64(rel_time - self.sample_time())
+                );
+            }
+
             let Some(chan) = msg.channel() else { continue };
             let chan_state = &mut self.midi_channel_states[chan as usize];
             match msg {
@@ -242,7 +313,7 @@ impl MidiSynth {
                         frequency: note.to_freq_f64(),
                         velocity: u8::from(velocity) as f64 / 127.,
                         phase: 0.,
-                        on_time: time,
+                        on_time: sched_time,
                         off_time: None,
                     });
                 }
@@ -251,7 +322,7 @@ impl MidiSynth {
                         notes
                             .iter_mut()
                             .find(|n| n.off_time.is_none())
-                            .map(|n| n.off_time = Some(time));
+                            .map(|n| n.off_time = Some(sched_time));
                     }
                 }
                 MidiMessage::PitchBendChange(_ch, pitch_bend) => {
@@ -267,6 +338,7 @@ impl MidiSynth {
                 _ => {}
             }
         }
+        any_messages
     }
 
     fn flush_notes(&mut self) {
@@ -306,6 +378,38 @@ impl MidiSynth {
         }
     }
 
+    // fn synthesize_note<T: SupportedSample>(
+    //     &self,
+    //     note: &NoteState,
+    //     channel_state: &MidiChannelState,
+    //     data: &mut [T],
+    // ) {
+    //     let w = &self.wave_props;
+    //     let amp = note.velocity * w.amplitude;
+    //     let freq = note.frequency * channel_state.pitch_bend;
+    //     let (on, off) = (note.on_time, note.off_time.unwrap_or(f64::INFINITY));
+    //     let t0 = self.sample_index as f64 / self.sample_rate();
+    //     for (i, frame) in data.chunks_exact_mut(self.audio_channels()).enumerate() {
+    //         let delta_t = i as f64 / self.sample_rate();
+    //         let t = t0 + delta_t;
+    //         let env = self.envelope(t - on, t - off);
+    //         let y = amp * env * (w.waveform)(note.phase + freq * delta_t, w);
+    //         let y = T::Signed::from_sample(y);
+    //         frame.iter_mut().for_each(|s| *s = (*s).add_amp(y));
+    //     }
+    // }
+
+    // fn advance(&mut self, nframes: usize) {
+    //     self.sample_index += nframes;
+    //     let delta_t = nframes as f64 / self.sample_rate();
+    //     for channel_state in self.midi_channel_states.iter_mut() {
+    //         for note in channel_state.notes.values_mut().flatten() {
+    //             let freq = note.frequency * channel_state.pitch_bend;
+    //             note.phase += freq * delta_t;
+    //         }
+    //     }
+    // }
+
     fn envelope(&self, t_on: f64, t_off: f64) -> f64 {
         let w = &self.wave_props;
         if t_on < 0.0 {
@@ -328,8 +432,7 @@ fn make_midi_connection(
     sender: Sender<(MidiMessage<'static>, Instant)>,
     opts: &Opts,
 ) -> anyhow::Result<MidiInputConnection<()>> {
-    #[cfg(debug_assertions)]
-    let debug = opts.debug;
+    let debug = opts.synth_opts.debug;
 
     let mut ts_start: Option<Instant> = None;
     let input_callback = move |timestamp_us: u64, message: &[u8], _: &mut ()| {
@@ -339,9 +442,12 @@ fn make_midi_connection(
 
         let message = MidiMessage::try_from(message).unwrap();
         sender.send((message.to_owned(), time)).unwrap();
-        #[cfg(debug_assertions)]
-        if debug {
-            println!("{:?} {:?}", time, message);
+
+        if cfg!(feature = "debug") && debug {
+            println!(
+                "Midi callback: {message:?}, time: {timestamp:?}, time drift: {}",
+                signed_time_diff(time, Instant::now()),
+            );
         }
     };
 
@@ -402,9 +508,10 @@ fn main() -> anyhow::Result<()> {
         Some(index) => host.output_devices()?.nth(index),
     }
     .ok_or(anyhow!("Requested or default output device not available"))?;
-    let config = device.default_output_config()?;
+
     let (sender, receiver) = mpsc::channel();
 
+    let config = device.default_output_config()?;
     let synth = MidiSynth::new(opts.synth_opts, config, receiver);
     let stream = synth.make_stream(&device)?;
     stream.play()?;

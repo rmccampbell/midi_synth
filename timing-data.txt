@@ -1,0 +1,4544 @@
+window: 22ms, time: 117.3µs, drift: -111.1µs
+window: 10ms, time: 73.8µs, drift: 2.03ms
+window: 10ms, time: 54.8µs, drift: 1.6192ms
+window: 10ms, time: 48µs, drift: 2.0924ms
+window: 10ms, time: 34.6µs, drift: 1.8076ms
+window: 10ms, time: 40.2µs, drift: 1.9275ms
+window: 10ms, time: 43.6µs, drift: 2.2626ms
+window: 10ms, time: 42.1µs, drift: 2.1834ms
+window: 10ms, time: 58.5µs, drift: 1.7724ms
+window: 10ms, time: 55.3µs, drift: 1.808ms
+window: 10ms, time: 45.7µs, drift: 2.0988ms
+window: 10ms, time: 67µs, drift: 2.1067ms
+window: 10ms, time: 48µs, drift: 1.9264ms
+window: 10ms, time: 44.2µs, drift: 2.0431ms
+window: 10ms, time: 51.9µs, drift: 1.6066ms
+window: 10ms, time: 58.1µs, drift: 1.9445ms
+window: 10ms, time: 96.8µs, drift: 1.9007ms
+window: 10ms, time: 48µs, drift: -1.592ms
+window: 10ms, time: 43.3µs, drift: -1.7427ms
+window: 10ms, time: 99.2µs, drift: -1.3041ms
+window: 10ms, time: 44µs, drift: -1.5365ms
+window: 10ms, time: 43.5µs, drift: -1.4753ms
+window: 10ms, time: 49.6µs, drift: -1.8846ms
+window: 10ms, time: 43.4µs, drift: -1.6807ms
+window: 10ms, time: 96.9µs, drift: -2.0783ms
+window: 10ms, time: 58.9µs, drift: -1.9573ms
+window: 10ms, time: 43.8µs, drift: -1.8893ms
+window: 10ms, time: 55.2µs, drift: -1.381ms
+window: 10ms, time: 66.6µs, drift: -2.0905ms
+window: 10ms, time: 62.4µs, drift: -1.1919ms
+window: 10ms, time: 42.5µs, drift: -1.5534ms
+window: 10ms, time: 43.9µs, drift: -1.5123ms
+window: 10ms, time: 45.1µs, drift: -1.7618ms
+window: 10ms, time: 53µs, drift: -1.861ms
+window: 10ms, time: 35.3µs, drift: -1.6341ms
+window: 10ms, time: 31.1µs, drift: -1.2475ms
+window: 10ms, time: 30.6µs, drift: -1.7255ms
+window: 10ms, time: 27.7µs, drift: -1.4261ms
+window: 10ms, time: 30.6µs, drift: -1.2869ms
+window: 10ms, time: 44.3µs, drift: -1.2559ms
+window: 10ms, time: 28µs, drift: -1.6316ms
+window: 10ms, time: 28.8µs, drift: -1.3643ms
+window: 10ms, time: 25.8µs, drift: -1.0476ms
+window: 10ms, time: 29.3µs, drift: -1.2379ms
+window: 10ms, time: 39.6µs, drift: -1.1976ms
+window: 10ms, time: 48.9µs, drift: -1.4366ms
+window: 10ms, time: 31.3µs, drift: -1.2237ms
+window: 10ms, time: 45.9µs, drift: -1.4068ms
+window: 10ms, time: 30.9µs, drift: -1.2662ms
+window: 10ms, time: 46.2µs, drift: -1.3073ms
+window: 10ms, time: 27.8µs, drift: -1.2259ms
+window: 10ms, time: 30.9µs, drift: -1.3932ms
+window: 10ms, time: 48.6µs, drift: -1.6528ms
+window: 10ms, time: 29.2µs, drift: -1.3364ms
+window: 10ms, time: 36.8µs, drift: -1.1599ms
+window: 10ms, time: 25.3µs, drift: -1.4331ms
+window: 10ms, time: 29.1µs, drift: -1.5529ms
+window: 10ms, time: 26.8µs, drift: -1.2466ms
+window: 10ms, time: 31.3µs, drift: -1.5721ms
+window: 10ms, time: 58.3µs, drift: -1.4099ms
+window: 10ms, time: 31.4µs, drift: -1.6748ms
+window: 10ms, time: 33µs, drift: -1.4346ms
+window: 10ms, time: 29.5µs, drift: -1.5583ms
+window: 10ms, time: 31.5µs, drift: -1.2707ms
+window: 10ms, time: 53.6µs, drift: -1.4798ms
+window: 10ms, time: 30.4µs, drift: -1.4558ms
+window: 10ms, time: 33.8µs, drift: -1.2415ms
+window: 10ms, time: 29.5µs, drift: -1.4823ms
+window: 10ms, time: 31.7µs, drift: -1.3149ms
+window: 10ms, time: 49.2µs, drift: -1.3807ms
+window: 10ms, time: 29.7µs, drift: -1.1762ms
+window: 10ms, time: 35.6µs, drift: -1.3877ms
+window: 10ms, time: 29.4µs, drift: -1.463ms
+window: 10ms, time: 31.1µs, drift: -1.4337ms
+window: 10ms, time: 49.6µs, drift: -1.5031ms
+window: 10ms, time: 30.1µs, drift: -1.1615ms
+window: 10ms, time: 31.5µs, drift: -1.7166ms
+window: 10ms, time: 29.8µs, drift: -1.5211ms
+window: 10ms, time: 31.3µs, drift: -1.3129ms
+window: 10ms, time: 49.1µs, drift: -1.5858ms
+window: 10ms, time: 31.2µs, drift: -1.2354ms
+window: 10ms, time: 33.2µs, drift: -1.4867ms
+window: 10ms, time: 31.4µs, drift: -1.7428ms
+window: 10ms, time: 33.6µs, drift: -1.4022ms
+window: 10ms, time: 49.1µs, drift: -1.2009ms
+window: 10ms, time: 29.7µs, drift: -1.2403ms
+window: 10ms, time: 35.7µs, drift: -1.4627ms
+window: 10ms, time: 29.7µs, drift: -1.5564ms
+window: 10ms, time: 35.6µs, drift: -1.3598ms
+window: 10ms, time: 28.8µs, drift: -1.7535ms
+window: 10ms, time: 31.9µs, drift: -1.3829ms
+window: 10ms, time: 31.1µs, drift: -1.3678ms
+window: 10ms, time: 29.7µs, drift: -1.6017ms
+window: 10ms, time: 31µs, drift: -1.3084ms
+window: 10ms, time: 51.9µs, drift: -1.3808ms
+window: 10ms, time: 29.1µs, drift: -1.379ms
+window: 10ms, time: 33.8µs, drift: -1.669ms
+window: 10ms, time: 28µs, drift: -1.3379ms
+window: 10ms, time: 31.3µs, drift: -1.4197ms
+window: 10ms, time: 29.6µs, drift: -1.5635ms
+window: 10ms, time: 29.5µs, drift: -1.3379ms
+window: 10ms, time: 35.6µs, drift: -1.8697ms
+window: 10ms, time: 38.3µs, drift: -1.2659ms
+window: 10ms, time: 21.9µs, drift: -1.2402ms
+window: 10ms, time: 31.5µs, drift: -1.7509ms
+window: 10ms, time: 32µs, drift: -1.7197ms
+window: 10ms, time: 38.2µs, drift: -1.3528ms
+window: 10ms, time: 33.6µs, drift: -1.2095ms
+window: 10ms, time: 35.5µs, drift: -1.7105ms
+window: 10ms, time: 52.4µs, drift: -1.4367ms
+window: 10ms, time: 31µs, drift: -1.6277ms
+window: 10ms, time: 33.5µs, drift: -1.3582ms
+window: 10ms, time: 29.6µs, drift: -1.3952ms
+window: 10ms, time: 31.3µs, drift: -1.4887ms
+window: 10ms, time: 46.9µs, drift: -1.1683ms
+window: 10ms, time: 30.7µs, drift: -1.1154ms
+window: 10ms, time: 33.5µs, drift: -1.7192ms
+window: 10ms, time: 29.3µs, drift: -1.3625ms
+window: 10ms, time: 51.6µs, drift: -1.6427ms
+window: 10ms, time: 38.7µs, drift: -1.2979ms
+window: 10ms, time: 29.2µs, drift: -1.53ms
+window: 10ms, time: 33.1µs, drift: -1.3054ms
+window: 10ms, time: 29.2µs, drift: -1.4072ms
+window: 10ms, time: 33.5µs, drift: -1.1015ms
+window: 10ms, time: 49.4µs, drift: -1.2288ms
+window: 10ms, time: 32.3µs, drift: -1.3982ms
+window: 10ms, time: 33.4µs, drift: -1.3535ms
+window: 10ms, time: 29.2µs, drift: -1.3692ms
+window: 10ms, time: 29.8µs, drift: -1.5346ms
+window: 10ms, time: 90.8µs, drift: -1.5166ms
+window: 10ms, time: 25.5µs, drift: -1.4305ms
+window: 10ms, time: 14.8µs, drift: -939.1µs
+window: 10ms, time: 31.1µs, drift: -1.2287ms
+window: 10ms, time: 14.4µs, drift: -696.8µs
+window: 10ms, time: 58.5µs, drift: -904.1µs
+window: 10ms, time: 14.6µs, drift: -919.9µs
+window: 10ms, time: 14.7µs, drift: -931.8µs
+window: 10ms, time: 21.7µs, drift: -953.9µs
+window: 10ms, time: 14.5µs, drift: -800.1µs
+window: 10ms, time: 14.7µs, drift: -1.1069ms
+window: 10ms, time: 14.2µs, drift: -905.8µs
+window: 10ms, time: 14.6µs, drift: -941.7µs
+Midi callback drift: -15µs
+Message time diff: 3.4228ms
+window: 10ms, time: 145.1µs, drift: -1.1091ms
+window: 10ms, time: 12.7µs, drift: -1.6982ms
+window: 10ms, time: 14.6µs, drift: -1.1781ms
+window: 10ms, time: 18.5µs, drift: -968.5µs
+window: 10ms, time: 24.1µs, drift: -1.2565ms
+window: 10ms, time: 35.2µs, drift: -1.6223ms
+window: 10ms, time: 37.9µs, drift: -1.6523ms
+window: 10ms, time: 47.4µs, drift: -2.0318ms
+Midi callback drift: -1.051ms
+Midi callback drift: -585µs
+Midi callback drift: -959µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.0671ms, drift: -2.7992ms
+window: 10ms, time: 66.2µs, drift: -1.2502ms
+window: 10ms, time: 88µs, drift: -1.8976ms
+window: 10ms, time: 65.4µs, drift: -1.166ms
+window: 10ms, time: 150.5µs, drift: -1.8059ms
+window: 10ms, time: 35.7µs, drift: -1.1183ms
+window: 10ms, time: 51.7µs, drift: -1.3628ms
+window: 10ms, time: 65.4µs, drift: -1.5033ms
+window: 10ms, time: 65.4µs, drift: -1.4245ms
+window: 10ms, time: 64.8µs, drift: -1.6443ms
+window: 10ms, time: 87.5µs, drift: -2.2452ms
+window: 10ms, time: 79.2µs, drift: -1.8591ms
+Midi callback drift: -1.139ms
+Midi callback drift: 60µs
+Midi callback drift: -745µs
+Midi callback drift: -422µs
+Midi callback drift: -228µs
+Midi callback drift: -822µs
+Midi callback drift: -434µs
+Message time diff: 3.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+Message time diff: -1.5772ms
+Midi callback drift: -861µs
+window: 10ms, time: 1.9509ms, drift: -3.4376ms
+Midi callback drift: -1.086ms
+Message time diff: 7.4228ms
+window: 10ms, time: 242.6µs, drift: -1.6434ms
+window: 10ms, time: 271.8µs, drift: -1.8651ms
+window: 10ms, time: 166.1µs, drift: -1.7851ms
+window: 10ms, time: 165.3µs, drift: -2.3071ms
+window: 10ms, time: 146.8µs, drift: -1.6048ms
+Midi callback drift: -737µs
+Midi callback drift: -296µs
+Midi callback drift: -842µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.5115ms, drift: -2.9923ms
+window: 10ms, time: 245.8µs, drift: -2.1998ms
+window: 10ms, time: 185.5µs, drift: -2.1283ms
+window: 10ms, time: 138.8µs, drift: -1.2996ms
+window: 10ms, time: 174.7µs, drift: -2.0033ms
+window: 10ms, time: 154.1µs, drift: -1.6268ms
+Midi callback drift: -818µs
+Midi callback drift: -1.459ms
+Midi callback drift: -1.089ms
+Midi callback drift: -864µs
+Midi callback drift: -1.316ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 2.0361ms, drift: -3.516ms
+window: 10ms, time: 206µs, drift: -2.0391ms
+window: 10ms, time: 187µs, drift: -1.9041ms
+window: 10ms, time: 231.5µs, drift: -2.0683ms
+window: 10ms, time: 190µs, drift: -2.0379ms
+window: 10ms, time: 336.3µs, drift: -1.9395ms
+Midi callback drift: -835µs
+Midi callback drift: -1.587ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 757.2µs, drift: -2.2503ms
+window: 10ms, time: 188.2µs, drift: -1.4795ms
+window: 10ms, time: 189.1µs, drift: -1.6778ms
+Midi callback drift: -624µs
+Midi callback drift: -1.178ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 504µs, drift: -1.7258ms
+window: 10ms, time: 174.7µs, drift: -1.4858ms
+window: 10ms, time: 235.5µs, drift: -1.5457ms
+Midi callback drift: -1.199ms
+Midi callback drift: -906µs
+Midi callback drift: -708µs
+Midi callback drift: -1.388ms
+Midi callback drift: -23µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Midi callback drift: -655µs
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+Midi callback drift: -693µs
+window: 10ms, time: 2.6549ms, drift: -3.8336ms
+Midi callback drift: -406µs
+Message time diff: 6.4228ms
+window: 10ms, time: 887.7µs, drift: -2.1267ms
+window: 10ms, time: 251.7µs, drift: -1.5389ms
+window: 10ms, time: 304.5µs, drift: -2.2427ms
+window: 10ms, time: 368.3µs, drift: -2.3062ms
+window: 10ms, time: 269.7µs, drift: -2.006ms
+window: 10ms, time: 329.1µs, drift: -2.1328ms
+window: 10ms, time: 277µs, drift: -1.7105ms
+window: 10ms, time: 411.6µs, drift: -2.0542ms
+window: 10ms, time: 373.5µs, drift: -1.8188ms
+window: 10ms, time: 383.6µs, drift: -1.8849ms
+window: 10ms, time: 310.8µs, drift: -1.6316ms
+Midi callback drift: -774µs
+Midi callback drift: -1.547ms
+Midi callback drift: -1.273ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.3565ms, drift: -2.7566ms
+window: 10ms, time: 526.5µs, drift: -2.1742ms
+window: 10ms, time: 401.8µs, drift: -2.0634ms
+window: 10ms, time: 332.9µs, drift: -1.6588ms
+window: 10ms, time: 330.8µs, drift: -1.9715ms
+window: 10ms, time: 332µs, drift: -1.6124ms
+window: 10ms, time: 361.9µs, drift: -2.5376ms
+window: 10ms, time: 358.4µs, drift: -2.1973ms
+window: 10ms, time: 316.6µs, drift: -1.7434ms
+window: 10ms, time: 216.3µs, drift: -1.8476ms
+window: 10ms, time: 348.1µs, drift: -2.0252ms
+window: 10ms, time: 368.6µs, drift: -1.9004ms
+Midi callback drift: -3µs
+Midi callback drift: -834µs
+Midi callback drift: -527µs
+Midi callback drift: -176µs
+Midi callback drift: -843µs
+Midi callback drift: -428µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -831µs
+Midi callback drift: -1.21ms
+window: 10ms, time: 2.7834ms, drift: -3.9065ms
+Midi callback drift: -1.346ms
+Message time diff: 7.4228ms
+Message time diff: 7.4228ms
+window: 10ms, time: 780.6µs, drift: -2.0587ms
+window: 10ms, time: 396.5µs, drift: -2.3493ms
+window: 10ms, time: 361.6µs, drift: -1.9053ms
+window: 10ms, time: 567.4µs, drift: -2.5271ms
+window: 10ms, time: 146µs, drift: -1.6918ms
+window: 10ms, time: 265.5µs, drift: -1.3932ms
+window: 10ms, time: 430.6µs, drift: -1.8139ms
+window: 10ms, time: 397.6µs, drift: -2.0628ms
+window: 10ms, time: 395.6µs, drift: -1.9824ms
+window: 10ms, time: 418.6µs, drift: -2.4497ms
+window: 10ms, time: 562.5µs, drift: -1.9446ms
+Midi callback drift: -657µs
+Midi callback drift: -274µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.3763ms, drift: -2.512ms
+window: 10ms, time: 291µs, drift: -1.7038ms
+window: 10ms, time: 270.3µs, drift: -2.1168ms
+window: 10ms, time: 304.1µs, drift: -2.0289ms
+window: 10ms, time: 275.1µs, drift: -1.8256ms
+window: 10ms, time: 279.3µs, drift: -1.6287ms
+window: 10ms, time: 240.7µs, drift: -1.3064ms
+window: 10ms, time: 288.5µs, drift: -1.7067ms
+window: 10ms, time: 364.9µs, drift: -1.7709ms
+window: 10ms, time: 336.5µs, drift: -1.6571ms
+window: 10ms, time: 385.4µs, drift: -2.1325ms
+window: 10ms, time: 383.6µs, drift: -2.0223ms
+Midi callback drift: -1.244ms
+Midi callback drift: -979µs
+Midi callback drift: -1.46ms
+Midi callback drift: -1.154ms
+Midi callback drift: -1.566ms
+Midi callback drift: -215µs
+Midi callback drift: -920µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+Midi callback drift: -518µs
+Midi callback drift: -298µs
+window: 10ms, time: 2.4491ms, drift: -3.9511ms
+Midi callback drift: -437µs
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+window: 10ms, time: 1.0134ms, drift: -2.3519ms
+window: 10ms, time: 341.6µs, drift: -1.5375ms
+window: 10ms, time: 438.6µs, drift: -1.6272ms
+window: 10ms, time: 398.6µs, drift: -1.3851ms
+window: 10ms, time: 371.7µs, drift: -1.8635ms
+window: 10ms, time: 423.2µs, drift: -2.0576ms
+window: 10ms, time: 407µs, drift: -2.2733ms
+window: 10ms, time: 430.5µs, drift: -2.2253ms
+window: 10ms, time: 413.7µs, drift: -2.1007ms
+window: 10ms, time: 343.3µs, drift: -1.8238ms
+window: 10ms, time: 397.9µs, drift: -2.2972ms
+Midi callback drift: -647µs
+Midi callback drift: -217µs
+Midi callback drift: -932µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.4251ms, drift: -3.218ms
+window: 10ms, time: 337.7µs, drift: -1.893ms
+window: 10ms, time: 278.4µs, drift: -1.9293ms
+window: 10ms, time: 630.1µs, drift: -1.8944ms
+window: 10ms, time: 454.5µs, drift: -2.1907ms
+window: 10ms, time: 326.1µs, drift: -1.3775ms
+window: 10ms, time: 734.9µs, drift: -2.6201ms
+window: 10ms, time: 104.5µs, drift: -858.6µs
+window: 10ms, time: 98.9µs, drift: -827.7µs
+window: 10ms, time: 141.7µs, drift: -1.112ms
+window: 10ms, time: 208µs, drift: -1.6339ms
+window: 10ms, time: 356.4µs, drift: -1.8195ms
+Midi callback drift: -684µs
+Midi callback drift: -163µs
+Midi callback drift: -779µs
+Midi callback drift: -58µs
+Midi callback drift: -652µs
+Midi callback drift: -1.116ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.7534ms, drift: -3.2012ms
+window: 10ms, time: 522.9µs, drift: -1.9027ms
+window: 10ms, time: 315.8µs, drift: -1.7901ms
+window: 10ms, time: 359.5µs, drift: -2.1235ms
+window: 10ms, time: 354.2µs, drift: -2.3402ms
+window: 10ms, time: 384µs, drift: -2.2798ms
+window: 10ms, time: 368.8µs, drift: -1.6608ms
+window: 10ms, time: 389.4µs, drift: -2.2109ms
+window: 10ms, time: 315.6µs, drift: -2.0635ms
+window: 10ms, time: 420.7µs, drift: -2.4422ms
+window: 10ms, time: 335.9µs, drift: -2.1316ms
+window: 10ms, time: 397.1µs, drift: -2.3841ms
+Midi callback drift: -118µs
+Midi callback drift: -743µs
+Midi callback drift: -408µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.8182ms, drift: -3.1261ms
+window: 10ms, time: 224.1µs, drift: -1.4696ms
+window: 10ms, time: 360.8µs, drift: -2.0972ms
+window: 10ms, time: 284.5µs, drift: -1.9274ms
+window: 10ms, time: 354µs, drift: -2.2081ms
+window: 10ms, time: 372.1µs, drift: -2.1219ms
+window: 10ms, time: 310.1µs, drift: -2.0315ms
+window: 10ms, time: 306.8µs, drift: -1.7445ms
+window: 10ms, time: 364.6µs, drift: -2.0341ms
+window: 10ms, time: 307.4µs, drift: -1.7813ms
+window: 10ms, time: 90.1µs, drift: -1.1743ms
+window: 10ms, time: 101.4µs, drift: -1.0826ms
+Midi callback drift: -436µs
+Midi callback drift: -615µs
+Midi callback drift: -678µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 230.3µs, drift: -959.1µs
+window: 10ms, time: 109.7µs, drift: -894.3µs
+window: 10ms, time: 152.4µs, drift: -1.6442ms
+window: 10ms, time: 315.1µs, drift: -1.6928ms
+window: 10ms, time: 306.3µs, drift: -1.69ms
+window: 10ms, time: 417.5µs, drift: -2.4377ms
+window: 10ms, time: 342.1µs, drift: -2.174ms
+window: 10ms, time: 433.3µs, drift: -1.978ms
+window: 10ms, time: 353.1µs, drift: -1.8531ms
+window: 10ms, time: 281µs, drift: -1.35ms
+window: 10ms, time: 187.2µs, drift: -1.5454ms
+window: 10ms, time: 355.3µs, drift: -2.221ms
+Midi callback drift: -814µs
+Midi callback drift: -1.427ms
+Midi callback drift: -1.137ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.7098ms, drift: -3.0479ms
+window: 10ms, time: 305.3µs, drift: -1.753ms
+window: 10ms, time: 250.9µs, drift: -1.5771ms
+window: 10ms, time: 281.4µs, drift: -1.7131ms
+window: 10ms, time: 296.4µs, drift: -1.8776ms
+window: 10ms, time: 282.8µs, drift: -1.7352ms
+window: 10ms, time: 270.4µs, drift: -1.5198ms
+window: 10ms, time: 258.9µs, drift: -1.7403ms
+window: 10ms, time: 284.6µs, drift: -2.0649ms
+window: 10ms, time: 248.8µs, drift: -1.8532ms
+window: 10ms, time: 228µs, drift: -1.901ms
+window: 10ms, time: 296.9µs, drift: -1.7239ms
+Midi callback drift: -560µs
+Midi callback drift: -986µs
+Midi callback drift: -395µs
+Midi callback drift: -1.011ms
+Midi callback drift: -615µs
+Midi callback drift: -1.028ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 3.3441ms, drift: -5.1848ms
+window: 10ms, time: 345.8µs, drift: -1.7431ms
+window: 10ms, time: 262.1µs, drift: -1.5772ms
+window: 10ms, time: 232.1µs, drift: -1.5473ms
+window: 10ms, time: 241.7µs, drift: -1.7393ms
+window: 10ms, time: 281.4µs, drift: -1.6568ms
+window: 10ms, time: 307µs, drift: -1.9581ms
+window: 10ms, time: 422.9µs, drift: -2.5774ms
+window: 10ms, time: 489.6µs, drift: -1.7936ms
+window: 10ms, time: 377.7µs, drift: -1.7698ms
+window: 10ms, time: 378.5µs, drift: -2.0267ms
+window: 10ms, time: 425.9µs, drift: -2.2478ms
+Midi callback drift: -522µs
+Midi callback drift: -116µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.1655ms, drift: -2.4771ms
+window: 10ms, time: 198µs, drift: -1.9779ms
+window: 10ms, time: 234.9µs, drift: -1.5437ms
+window: 10ms, time: 216.2µs, drift: -1.633ms
+window: 10ms, time: 175.1µs, drift: -1.6639ms
+window: 10ms, time: 261.1µs, drift: -1.7665ms
+window: 10ms, time: 265.8µs, drift: -1.8416ms
+window: 10ms, time: 289.4µs, drift: -1.8803ms
+window: 10ms, time: 238.3µs, drift: -1.6533ms
+window: 10ms, time: 289.4µs, drift: -1.9583ms
+window: 10ms, time: 237.7µs, drift: -1.6474ms
+window: 10ms, time: 218.4µs, drift: -2.0457ms
+Midi callback drift: -753µs
+Midi callback drift: -471µs
+Midi callback drift: -42µs
+Midi callback drift: -531µs
+Midi callback drift: -1.11ms
+Midi callback drift: -728µs
+Midi callback drift: -286µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -819µs
+window: 10ms, time: 2.2026ms, drift: -3.4848ms
+Midi callback drift: 15µs
+Midi callback drift: -175µs
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+window: 10ms, time: 459.6µs, drift: -1.7226ms
+window: 10ms, time: 299.7µs, drift: -1.8739ms
+window: 10ms, time: 305.8µs, drift: -1.5652ms
+window: 10ms, time: 364.7µs, drift: -1.829ms
+window: 10ms, time: 348.5µs, drift: -1.996ms
+window: 10ms, time: 308.4µs, drift: -2.0756ms
+window: 10ms, time: 315.3µs, drift: -1.7384ms
+window: 10ms, time: 214.1µs, drift: -1.6179ms
+window: 10ms, time: 201.8µs, drift: -1.1573ms
+window: 10ms, time: 193.4µs, drift: -1.3856ms
+window: 10ms, time: 379.8µs, drift: -1.9099ms
+Midi callback drift: -798µs
+Midi callback drift: -1.669ms
+Midi callback drift: -1.286ms
+Midi callback drift: -1.7ms
+Midi callback drift: -1.981ms
+Midi callback drift: -2.258ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 2.5802ms, drift: -3.8613ms
+window: 10ms, time: 343.3µs, drift: -1.8734ms
+window: 10ms, time: 314.6µs, drift: -1.7381ms
+window: 10ms, time: 324.1µs, drift: -1.8265ms
+window: 10ms, time: 382.5µs, drift: -1.8111ms
+window: 10ms, time: 347.5µs, drift: -1.5899ms
+window: 10ms, time: 350.2µs, drift: -1.7948ms
+window: 10ms, time: 318.4µs, drift: -1.9034ms
+window: 10ms, time: 397.1µs, drift: -2.2173ms
+window: 10ms, time: 349.8µs, drift: -1.7343ms
+window: 10ms, time: 387µs, drift: -1.7938ms
+window: 10ms, time: 383.9µs, drift: -1.9467ms
+Midi callback drift: -901µs
+Midi callback drift: -656µs
+Midi callback drift: -424µs
+Midi callback drift: -1.158ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.6069ms, drift: -3.4401ms
+window: 10ms, time: 380.2µs, drift: -1.564ms
+window: 10ms, time: 320.2µs, drift: -1.7413ms
+window: 10ms, time: 381.8µs, drift: -1.8859ms
+window: 10ms, time: 394.2µs, drift: -1.9629ms
+window: 10ms, time: 337.5µs, drift: -2.1764ms
+window: 10ms, time: 319.2µs, drift: -1.5288ms
+window: 10ms, time: 381.5µs, drift: -1.8103ms
+window: 10ms, time: 310.7µs, drift: -1.9211ms
+window: 10ms, time: 319.3µs, drift: -1.8478ms
+window: 10ms, time: 350µs, drift: -1.7094ms
+window: 10ms, time: 429.3µs, drift: -2.4207ms
+Midi callback drift: -974µs
+Midi callback drift: -424µs
+Midi callback drift: -1.071ms
+Midi callback drift: -741µs
+Midi callback drift: -463µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 2.3861ms, drift: -3.8583ms
+window: 10ms, time: 372.7µs, drift: -1.9148ms
+window: 10ms, time: 385.7µs, drift: -1.9867ms
+window: 10ms, time: 381µs, drift: -2.0359ms
+window: 10ms, time: 438.1µs, drift: -2.1622ms
+window: 10ms, time: 447.3µs, drift: -2.1529ms
+window: 10ms, time: 404.2µs, drift: -2.1037ms
+window: 10ms, time: 368.9µs, drift: -1.7916ms
+window: 10ms, time: 362.4µs, drift: -1.8376ms
+window: 10ms, time: 322.5µs, drift: -1.7461ms
+window: 10ms, time: 258.9µs, drift: -1.3906ms
+window: 10ms, time: 429.9µs, drift: -2.2001ms
+Midi callback drift: -1.079ms
+Midi callback drift: -755µs
+Midi callback drift: -1.568ms
+Midi callback drift: -224µs
+Midi callback drift: -910µs
+Midi callback drift: -350µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 1.8915ms, drift: -3.2808ms
+window: 10ms, time: 381.1µs, drift: -1.6598ms
+window: 10ms, time: 479.7µs, drift: -2.1963ms
+window: 10ms, time: 502.1µs, drift: -2.4117ms
+window: 10ms, time: 331.4µs, drift: -1.8275ms
+window: 10ms, time: 390.1µs, drift: -1.835ms
+window: 10ms, time: 454.3µs, drift: -1.8804ms
+window: 10ms, time: 430.1µs, drift: -1.7881ms
+window: 10ms, time: 519.5µs, drift: -2.4308ms
+window: 10ms, time: 478.7µs, drift: -1.9987ms
+window: 10ms, time: 454.5µs, drift: -2.0893ms
+window: 10ms, time: 331.7µs, drift: -1.8131ms
+Midi callback drift: -727µs
+Midi callback drift: -380µs
+Midi callback drift: -59µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 2.2176ms, drift: -3.9559ms
+window: 10ms, time: 308.9µs, drift: -1.8341ms
+window: 10ms, time: 372.5µs, drift: -2.2018ms
+window: 10ms, time: 410.3µs, drift: -2.0618ms
+window: 10ms, time: 338.7µs, drift: -2.0313ms
+window: 10ms, time: 337.7µs, drift: -1.8092ms
+window: 10ms, time: 420.6µs, drift: -2.1184ms
+window: 10ms, time: 411.8µs, drift: -2.2308ms
+window: 10ms, time: 345.7µs, drift: -1.9854ms
+window: 10ms, time: 403.6µs, drift: -1.8686ms
+window: 10ms, time: 446.5µs, drift: -2.0147ms
+window: 10ms, time: 196.2µs, drift: -970.2µs
+Midi callback drift: -230µs
+Midi callback drift: -373µs
+Midi callback drift: -615µs
+Midi callback drift: -771µs
+Midi callback drift: -851µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 995.3µs, drift: -2.0102ms
+window: 10ms, time: 108.9µs, drift: -1.1956ms
+window: 10ms, time: 94.7µs, drift: -1.3282ms
+window: 10ms, time: 94µs, drift: -1.0237ms
+window: 10ms, time: 110.2µs, drift: -908.4µs
+window: 10ms, time: 211.9µs, drift: -1.204ms
+window: 10ms, time: 101.2µs, drift: -1.5389ms
+window: 10ms, time: 197.4µs, drift: -1.6047ms
+window: 10ms, time: 223.3µs, drift: -1.5877ms
+window: 10ms, time: 248.4µs, drift: -1.2543ms
+window: 10ms, time: 158.6µs, drift: -1.4837ms
+window: 10ms, time: 190.7µs, drift: -1.7119ms
+Midi callback drift: -899µs
+Midi callback drift: -1.135ms
+Midi callback drift: -515µs
+Midi callback drift: -956µs
+Midi callback drift: -1.307ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.0661ms, drift: -2.3056ms
+window: 10ms, time: 213.2µs, drift: -1.7046ms
+window: 10ms, time: 166.5µs, drift: -1.2993ms
+window: 10ms, time: 127.7µs, drift: -1.1008ms
+window: 10ms, time: 199.4µs, drift: -1.4056ms
+window: 10ms, time: 510.2µs, drift: -1.7234ms
+window: 10ms, time: 252.3µs, drift: -2.102ms
+window: 10ms, time: 294.1µs, drift: -1.8151ms
+window: 10ms, time: 461.9µs, drift: -1.7581ms
+window: 10ms, time: 339.6µs, drift: -2.171ms
+window: 10ms, time: 293.4µs, drift: -1.961ms
+window: 10ms, time: 391.1µs, drift: -2.2321ms
+Midi callback drift: -965µs
+Midi callback drift: -762µs
+Midi callback drift: -507µs
+Midi callback drift: -1.204ms
+Midi callback drift: -697µs
+Midi callback drift: -324µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -1.001ms
+Midi callback drift: -1.031ms
+window: 10ms, time: 2.3604ms, drift: -3.6221ms
+Message time diff: 7.4228ms
+window: 10ms, time: 980.7µs, drift: -2.5565ms
+window: 10ms, time: 377.9µs, drift: -2.5974ms
+window: 10ms, time: 381.3µs, drift: -2.2065ms
+window: 10ms, time: 376.9µs, drift: -2.0526ms
+window: 10ms, time: 430.5µs, drift: -1.7186ms
+window: 10ms, time: 539.9µs, drift: -2.3071ms
+window: 10ms, time: 360.8µs, drift: -2.0521ms
+window: 10ms, time: 631.1µs, drift: -2.271ms
+window: 10ms, time: 413.5µs, drift: -1.6287ms
+window: 10ms, time: 387.1µs, drift: -2.0059ms
+window: 10ms, time: 381.5µs, drift: -1.9978ms
+Midi callback drift: -907µs
+Midi callback drift: -1.501ms
+Midi callback drift: -211µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.5789ms, drift: -2.8687ms
+window: 10ms, time: 266.4µs, drift: -2.1154ms
+window: 10ms, time: 354.7µs, drift: -2.0681ms
+window: 10ms, time: 291.9µs, drift: -1.6228ms
+window: 10ms, time: 570.5µs, drift: -2.5158ms
+window: 10ms, time: 500.3µs, drift: -1.9433ms
+window: 10ms, time: 249.1µs, drift: -1.4295ms
+window: 10ms, time: 152.4µs, drift: -1.3565ms
+window: 10ms, time: 248.5µs, drift: -1.6889ms
+window: 10ms, time: 348µs, drift: -2.2332ms
+window: 10ms, time: 270.5µs, drift: -1.7657ms
+window: 10ms, time: 318.4µs, drift: -2.1692ms
+Midi callback drift: -735µs
+Midi callback drift: -438µs
+Midi callback drift: -1.054ms
+Midi callback drift: -694µs
+Midi callback drift: -257µs
+Midi callback drift: -780µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+window: 10ms, time: 1.7391ms, drift: -3.1403ms
+window: 10ms, time: 312.6µs, drift: -1.523ms
+window: 10ms, time: 413.1µs, drift: -2.2542ms
+window: 10ms, time: 363.7µs, drift: -2.0801ms
+window: 10ms, time: 338.6µs, drift: -1.8415ms
+window: 10ms, time: 372.6µs, drift: -1.7679ms
+window: 10ms, time: 374µs, drift: -2.0618ms
+window: 10ms, time: 369.7µs, drift: -1.8268ms
+window: 10ms, time: 326.3µs, drift: -2.0247ms
+window: 10ms, time: 284.7µs, drift: -1.7467ms
+window: 10ms, time: 441µs, drift: -1.7507ms
+window: 10ms, time: 314.1µs, drift: -1.8664ms
+Midi callback drift: -805µs
+Midi callback drift: -520µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.5323ms, drift: -3.261ms
+window: 10ms, time: 363.1µs, drift: -1.8748ms
+window: 10ms, time: 319.4µs, drift: -1.8479ms
+window: 10ms, time: 299.3µs, drift: -2.2248ms
+window: 10ms, time: 399.1µs, drift: -2.3772ms
+window: 10ms, time: 406.8µs, drift: -1.9067ms
+window: 10ms, time: 345.4µs, drift: -2.0043ms
+window: 10ms, time: 394.1µs, drift: -1.7792ms
+window: 10ms, time: 375µs, drift: -2.1745ms
+window: 10ms, time: 297.5µs, drift: -1.631ms
+window: 10ms, time: 359.8µs, drift: -2.0725ms
+window: 10ms, time: 329.8µs, drift: -1.896ms
+Midi callback drift: -709µs
+Midi callback drift: -206µs
+Midi callback drift: -723µs
+Midi callback drift: -390µs
+Midi callback drift: -1.068ms
+Midi callback drift: -1.438ms
+Midi callback drift: -720µs
+Midi callback drift: -924µs
+Midi callback drift: -57µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 1.8639ms, drift: -3.1351ms
+window: 10ms, time: 409.4µs, drift: -1.8349ms
+window: 10ms, time: 344.2µs, drift: -1.7877ms
+window: 10ms, time: 458µs, drift: -2.2323ms
+window: 10ms, time: 415µs, drift: -2.0423ms
+window: 10ms, time: 343.7µs, drift: -1.8384ms
+window: 10ms, time: 459.2µs, drift: -1.8744ms
+window: 10ms, time: 347.3µs, drift: -2.3259ms
+window: 10ms, time: 295.8µs, drift: -1.5374ms
+window: 10ms, time: 415.5µs, drift: -1.667ms
+window: 10ms, time: 348.9µs, drift: -1.8599ms
+window: 10ms, time: 323.8µs, drift: -1.7203ms
+Midi callback drift: -857µs
+Midi callback drift: -1.399ms
+Midi callback drift: -1.027ms
+Midi callback drift: -1.536ms
+Midi callback drift: -198µs
+Midi callback drift: -761µs
+Midi callback drift: -1.232ms
+Midi callback drift: -639µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 1.7567ms, drift: -3.4249ms
+window: 10ms, time: 247.8µs, drift: -1.4813ms
+window: 10ms, time: 297.4µs, drift: -1.8388ms
+window: 10ms, time: 389.6µs, drift: -1.7155ms
+window: 10ms, time: 402.4µs, drift: -2.014ms
+window: 10ms, time: 301.4µs, drift: -1.5203ms
+window: 10ms, time: 433.6µs, drift: -2.2967ms
+window: 10ms, time: 327.4µs, drift: -2.1504ms
+window: 10ms, time: 388.9µs, drift: -1.7862ms
+window: 10ms, time: 433.1µs, drift: -2.225ms
+window: 10ms, time: 327.1µs, drift: -1.7543ms
+window: 10ms, time: 402.3µs, drift: -1.7282ms
+Midi callback drift: -670µs
+Midi callback drift: -348µs
+Midi callback drift: -134µs
+Midi callback drift: -586µs
+Midi callback drift: -1.021ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.7899ms, drift: -3.241ms
+window: 10ms, time: 367.8µs, drift: -1.5949ms
+window: 10ms, time: 530.7µs, drift: -2.251ms
+window: 10ms, time: 340µs, drift: -1.7129ms
+window: 10ms, time: 409.4µs, drift: -2.4295ms
+window: 10ms, time: 407.6µs, drift: -2.0678ms
+window: 10ms, time: 572.6µs, drift: -2.3336ms
+window: 10ms, time: 383.5µs, drift: -1.8934ms
+window: 10ms, time: 399.7µs, drift: -1.6356ms
+window: 10ms, time: 314.1µs, drift: -1.5932ms
+window: 10ms, time: 410µs, drift: -2.2623ms
+window: 10ms, time: 317.4µs, drift: -1.969ms
+Midi callback drift: -671µs
+Midi callback drift: -227µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.4456ms, drift: -3.1134ms
+window: 10ms, time: 314.7µs, drift: -1.6191ms
+window: 10ms, time: 237.5µs, drift: -1.6136ms
+window: 10ms, time: 315.7µs, drift: -2.0249ms
+window: 10ms, time: 424.2µs, drift: -1.7962ms
+window: 10ms, time: 420.3µs, drift: -1.9095ms
+window: 10ms, time: 324µs, drift: -1.8892ms
+window: 10ms, time: 291.7µs, drift: -1.6959ms
+window: 10ms, time: 380.8µs, drift: -2.4737ms
+window: 10ms, time: 458.2µs, drift: -2.1949ms
+window: 10ms, time: 480.2µs, drift: -2.2874ms
+window: 10ms, time: 301.3µs, drift: -2.0868ms
+Midi callback drift: -1.125ms
+Midi callback drift: -860µs
+Midi callback drift: -443µs
+Midi callback drift: -964µs
+Midi callback drift: -1.231ms
+Midi callback drift: -503µs
+Midi callback drift: -98µs
+Midi callback drift: -574µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+Midi callback drift: -230µs
+window: 10ms, time: 3.5724ms, drift: -4.8538ms
+window: 10ms, time: 408.1µs, drift: -1.6197ms
+window: 10ms, time: 526.2µs, drift: -1.7474ms
+window: 10ms, time: 492µs, drift: -2.4396ms
+window: 10ms, time: 421.2µs, drift: -1.8644ms
+window: 10ms, time: 534.7µs, drift: -2.2432ms
+window: 10ms, time: 446.4µs, drift: -2.0336ms
+window: 10ms, time: 410.2µs, drift: -2.1951ms
+window: 10ms, time: 442.8µs, drift: -2.064ms
+window: 10ms, time: 480.5µs, drift: -1.9938ms
+window: 10ms, time: 449.2µs, drift: -1.7314ms
+window: 10ms, time: 454.7µs, drift: -2.1911ms
+Midi callback drift: -1.221ms
+Midi callback drift: -1.25ms
+Midi callback drift: -889µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.6072ms, drift: -2.979ms
+window: 10ms, time: 452.2µs, drift: -1.8836ms
+window: 10ms, time: 414.7µs, drift: -1.9139ms
+window: 10ms, time: 450.4µs, drift: -2.0577ms
+window: 10ms, time: 410.6µs, drift: -1.9169ms
+window: 10ms, time: 318.9µs, drift: -1.4416ms
+window: 10ms, time: 410.4µs, drift: -1.9257ms
+window: 10ms, time: 342.8µs, drift: -2.1403ms
+window: 10ms, time: 341.2µs, drift: -1.6389ms
+window: 10ms, time: 375.4µs, drift: -1.8558ms
+window: 10ms, time: 316.1µs, drift: -1.86ms
+window: 10ms, time: 459.6µs, drift: -2.2092ms
+Midi callback drift: -650µs
+Midi callback drift: -1.102ms
+Midi callback drift: -707µs
+Midi callback drift: -460µs
+Midi callback drift: -1.189ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.7676ms, drift: -3.0924ms
+window: 10ms, time: 377.6µs, drift: -1.8987ms
+window: 10ms, time: 310.6µs, drift: -2.1053ms
+window: 10ms, time: 341.1µs, drift: -1.6129ms
+window: 10ms, time: 392.8µs, drift: -2.2879ms
+window: 10ms, time: 398.4µs, drift: -2.0395ms
+window: 10ms, time: 385.6µs, drift: -2.1196ms
+window: 10ms, time: 345.2µs, drift: -1.9777ms
+window: 10ms, time: 165.6µs, drift: -1.2657ms
+window: 10ms, time: 240.2µs, drift: -1.6788ms
+window: 10ms, time: 324.3µs, drift: -2.1572ms
+window: 10ms, time: 610.3µs, drift: -2.7156ms
+Midi callback drift: -1.208ms
+Midi callback drift: -981µs
+Midi callback drift: -857µs
+Midi callback drift: -526µs
+Midi callback drift: -53µs
+Midi callback drift: -432µs
+Midi callback drift: -831µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.135ms, drift: -3.5461ms
+window: 10ms, time: 319.3µs, drift: -1.5966ms
+window: 10ms, time: 433.4µs, drift: -2.3504ms
+window: 10ms, time: 433.5µs, drift: -2.1889ms
+window: 10ms, time: 440.9µs, drift: -2.2232ms
+window: 10ms, time: 281.7µs, drift: -1.8941ms
+window: 10ms, time: 450.2µs, drift: -2.1246ms
+window: 10ms, time: 397.8µs, drift: -2.4363ms
+window: 10ms, time: 328.9µs, drift: -2.0965ms
+window: 10ms, time: 330.7µs, drift: -1.8023ms
+window: 10ms, time: 446.4µs, drift: -2.1145ms
+window: 10ms, time: 430.1µs, drift: -2.0384ms
+Midi callback drift: -773µs
+Midi callback drift: -1.415ms
+Midi callback drift: -901µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.8923ms, drift: -3.4934ms
+window: 10ms, time: 340.9µs, drift: -1.5249ms
+window: 10ms, time: 453.5µs, drift: -2.0713ms
+window: 10ms, time: 317µs, drift: -1.7152ms
+window: 10ms, time: 351.3µs, drift: -1.8475ms
+window: 10ms, time: 409.2µs, drift: -1.9995ms
+window: 10ms, time: 412.3µs, drift: -2.387ms
+window: 10ms, time: 678.1µs, drift: -2.6221ms
+window: 10ms, time: 328.5µs, drift: -2.1104ms
+window: 10ms, time: 345.2µs, drift: -1.6594ms
+window: 10ms, time: 458.5µs, drift: -2.4492ms
+window: 10ms, time: 457.5µs, drift: -1.8714ms
+Midi callback drift: -830µs
+Midi callback drift: -1.268ms
+Midi callback drift: -892µs
+Midi callback drift: -1.419ms
+Midi callback drift: -1.026ms
+Midi callback drift: -731µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 2.4874ms, drift: -3.9438ms
+window: 10ms, time: 351.3µs, drift: -2.0387ms
+window: 10ms, time: 324.2µs, drift: -1.8334ms
+window: 10ms, time: 428.3µs, drift: -1.9497ms
+window: 10ms, time: 391.4µs, drift: -1.5598ms
+window: 10ms, time: 433.8µs, drift: -1.8437ms
+window: 10ms, time: 389.9µs, drift: -2.3158ms
+window: 10ms, time: 308.5µs, drift: -2.0904ms
+window: 10ms, time: 387.5µs, drift: -1.865ms
+window: 10ms, time: 425.2µs, drift: -2.1699ms
+window: 10ms, time: 434.3µs, drift: -2.5711ms
+window: 10ms, time: 340.5µs, drift: -1.9253ms
+Midi callback drift: -667µs
+Midi callback drift: -236µs
+Midi callback drift: -14µs
+Midi callback drift: -716µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.908ms, drift: -3.4972ms
+window: 10ms, time: 438.9µs, drift: -2.0224ms
+window: 10ms, time: 340.9µs, drift: -1.7382ms
+window: 10ms, time: 425.2µs, drift: -2.0291ms
+window: 10ms, time: 368.2µs, drift: -2.1043ms
+window: 10ms, time: 302.1µs, drift: -1.6115ms
+window: 10ms, time: 390.2µs, drift: -2.3037ms
+window: 10ms, time: 360.5µs, drift: -1.7493ms
+window: 10ms, time: 432.3µs, drift: -2.4952ms
+window: 10ms, time: 390.6µs, drift: -1.829ms
+window: 10ms, time: 300µs, drift: -1.5901ms
+window: 10ms, time: 280.8µs, drift: -1.4242ms
+Midi callback drift: -586µs
+Midi callback drift: -241µs
+Midi callback drift: -749µs
+Midi callback drift: -1.064ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.4308ms, drift: -2.8809ms
+window: 10ms, time: 495.6µs, drift: -1.7254ms
+window: 10ms, time: 294µs, drift: -1.7046ms
+window: 10ms, time: 384.9µs, drift: -2.0173ms
+window: 10ms, time: 342.4µs, drift: -1.8071ms
+window: 10ms, time: 415.7µs, drift: -1.6978ms
+window: 10ms, time: 390.4µs, drift: -2.2399ms
+window: 10ms, time: 280.9µs, drift: -1.7611ms
+window: 10ms, time: 276.3µs, drift: -1.8443ms
+window: 10ms, time: 413.1µs, drift: -1.9826ms
+window: 10ms, time: 443.9µs, drift: -2.1761ms
+window: 10ms, time: 346.2µs, drift: -1.6546ms
+Midi callback drift: -583µs
+Midi callback drift: -282µs
+Midi callback drift: -766µs
+Midi callback drift: -228µs
+Midi callback drift: -515µs
+Midi callback drift: -843µs
+Midi callback drift: -1.115ms
+Midi callback drift: -1.337ms
+Midi callback drift: -651µs
+Midi callback drift: -942µs
+Midi callback drift: -220µs
+Midi callback drift: -559µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.6595ms, drift: -3.9642ms
+window: 10ms, time: 299.1µs, drift: -1.3482ms
+window: 10ms, time: 249.9µs, drift: -1.3607ms
+window: 10ms, time: 374.1µs, drift: -1.8604ms
+window: 10ms, time: 447.9µs, drift: -1.9412ms
+window: 10ms, time: 449.8µs, drift: -2.4077ms
+window: 10ms, time: 374.9µs, drift: -2.0114ms
+window: 10ms, time: 489.5µs, drift: -1.8733ms
+window: 10ms, time: 407.7µs, drift: -1.9654ms
+window: 10ms, time: 590.3µs, drift: -2.4174ms
+window: 10ms, time: 480.2µs, drift: -2.0183ms
+window: 10ms, time: 381.6µs, drift: -1.6966ms
+Midi callback drift: 38µs
+Midi callback drift: -601µs
+Midi callback drift: -333µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.6147ms, drift: -2.8832ms
+window: 10ms, time: 402.8µs, drift: -2.0262ms
+window: 10ms, time: 394.9µs, drift: -1.8924ms
+window: 10ms, time: 541.6µs, drift: -2.4162ms
+window: 10ms, time: 365.7µs, drift: -1.9974ms
+window: 10ms, time: 278.9µs, drift: -1.5407ms
+window: 10ms, time: 252.8µs, drift: -1.7154ms
+window: 10ms, time: 359.1µs, drift: -1.6959ms
+window: 10ms, time: 467.1µs, drift: -2.0441ms
+window: 10ms, time: 359.2µs, drift: -1.5509ms
+window: 10ms, time: 424.3µs, drift: -2.0749ms
+window: 10ms, time: 351µs, drift: -1.7068ms
+Midi callback drift: -757µs
+Midi callback drift: -1.129ms
+Midi callback drift: -533µs
+Midi callback drift: -781µs
+Midi callback drift: -1.349ms
+Midi callback drift: -795µs
+Midi callback drift: -1.029ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 3.1633ms, drift: -4.4111ms
+window: 10ms, time: 151.5µs, drift: -1.4244ms
+window: 10ms, time: 223.8µs, drift: -1.3422ms
+window: 10ms, time: 422.5µs, drift: -2.105ms
+window: 10ms, time: 462.6µs, drift: -2.308ms
+window: 10ms, time: 550.9µs, drift: -2.1758ms
+window: 10ms, time: 464.1µs, drift: -1.9097ms
+window: 10ms, time: 474µs, drift: -2.018ms
+window: 10ms, time: 448.1µs, drift: -2.2948ms
+window: 10ms, time: 507.7µs, drift: -2.3791ms
+window: 10ms, time: 428.2µs, drift: -2.0073ms
+window: 10ms, time: 424µs, drift: -1.9852ms
+Midi callback drift: -1.037ms
+Midi callback drift: -1.569ms
+Midi callback drift: -399µs
+Midi callback drift: -1.151ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.8526ms, drift: -2.9182ms
+window: 10ms, time: 360.5µs, drift: -1.7644ms
+window: 10ms, time: 434µs, drift: -1.7724ms
+window: 10ms, time: 291.1µs, drift: -1.6932ms
+window: 10ms, time: 474.3µs, drift: -2.0943ms
+window: 10ms, time: 383.8µs, drift: -1.711ms
+window: 10ms, time: 453.4µs, drift: -2.2281ms
+window: 10ms, time: 429.3µs, drift: -1.9746ms
+window: 10ms, time: 485.8µs, drift: -2.2232ms
+window: 10ms, time: 463.2µs, drift: -2.2695ms
+window: 10ms, time: 313.2µs, drift: -1.7317ms
+window: 10ms, time: 387µs, drift: -1.9311ms
+Midi callback drift: -37µs
+Midi callback drift: -566µs
+Midi callback drift: -311µs
+Midi callback drift: -1.035ms
+Midi callback drift: -569µs
+Midi callback drift: -28µs
+Midi callback drift: -574µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -965µs
+Midi callback drift: -1.085ms
+window: 10ms, time: 2.5537ms, drift: -3.7937ms
+Message time diff: 7.4228ms
+window: 10ms, time: 1.0405ms, drift: -2.4124ms
+window: 10ms, time: 519.6µs, drift: -2.1596ms
+window: 10ms, time: 395.4µs, drift: -1.6704ms
+window: 10ms, time: 513.9µs, drift: -2.0621ms
+window: 10ms, time: 125.6µs, drift: -1.112ms
+window: 10ms, time: 163.8µs, drift: -1.2854ms
+window: 10ms, time: 255.7µs, drift: -1.9269ms
+window: 10ms, time: 316.8µs, drift: -1.6858ms
+window: 10ms, time: 490.3µs, drift: -2.2838ms
+window: 10ms, time: 368.9µs, drift: -1.7916ms
+window: 10ms, time: 464.7µs, drift: -2.3836ms
+Midi callback drift: -937µs
+Midi callback drift: -610µs
+Midi callback drift: -291µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.0486ms, drift: -2.1779ms
+window: 10ms, time: 289.8µs, drift: -1.5898ms
+window: 10ms, time: 410.5µs, drift: -1.9376ms
+window: 10ms, time: 348.1µs, drift: -1.9705ms
+window: 10ms, time: 271.2µs, drift: -1.7057ms
+window: 10ms, time: 345.9µs, drift: -1.7961ms
+window: 10ms, time: 316.9µs, drift: -1.9466ms
+window: 10ms, time: 430.6µs, drift: -1.7447ms
+window: 10ms, time: 344.6µs, drift: -2.1151ms
+window: 10ms, time: 363.3µs, drift: -1.7871ms
+window: 10ms, time: 385.8µs, drift: -2.1847ms
+window: 10ms, time: 393µs, drift: -1.8956ms
+Midi callback drift: -647µs
+Midi callback drift: -309µs
+Midi callback drift: -1.113ms
+Midi callback drift: -583µs
+Midi callback drift: -399µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 1.9212ms, drift: -3.2718ms
+window: 10ms, time: 310.7µs, drift: -2.1424ms
+window: 10ms, time: 249.9µs, drift: -1.6123ms
+window: 10ms, time: 382.6µs, drift: -2.1575ms
+window: 10ms, time: 564.8µs, drift: -2.2627ms
+window: 10ms, time: 468.8µs, drift: -2.3127ms
+window: 10ms, time: 384µs, drift: -1.6276ms
+window: 10ms, time: 442.8µs, drift: -2.1671ms
+window: 10ms, time: 419.4µs, drift: -2.1625ms
+window: 10ms, time: 222.4µs, drift: -1.6003ms
+window: 10ms, time: 285.6µs, drift: -1.4874ms
+window: 10ms, time: 356.5µs, drift: -1.6616ms
+Midi callback drift: -532µs
+Midi callback drift: -1.038ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 1.2487ms, drift: -2.7838ms
+window: 10ms, time: 350.9µs, drift: -1.981ms
+window: 10ms, time: 289.6µs, drift: -1.5564ms
+window: 10ms, time: 334µs, drift: -1.7602ms
+window: 10ms, time: 320.3µs, drift: -1.9198ms
+window: 10ms, time: 426µs, drift: -1.7638ms
+window: 10ms, time: 274.1µs, drift: -1.804ms
+window: 10ms, time: 295µs, drift: -1.6434ms
+window: 10ms, time: 393.6µs, drift: -2.1683ms
+window: 10ms, time: 352.4µs, drift: -2.0139ms
+window: 10ms, time: 235.1µs, drift: -1.4533ms
+window: 10ms, time: 237.4µs, drift: -1.5123ms
+Midi callback drift: -642µs
+Midi callback drift: -1.211ms
+Midi callback drift: -787µs
+Midi callback drift: -1.277ms
+Midi callback drift: -906µs
+Midi callback drift: -1.412ms
+Midi callback drift: -888µs
+Midi callback drift: -404µs
+Midi callback drift: -872µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 3.0638ms, drift: -4.3238ms
+window: 10ms, time: 339.1µs, drift: -1.8432ms
+window: 10ms, time: 376.5µs, drift: -2.3033ms
+window: 10ms, time: 514.6µs, drift: -2.3385ms
+window: 10ms, time: 518µs, drift: -2.5052ms
+window: 10ms, time: 345µs, drift: -2.0976ms
+window: 10ms, time: 460.3µs, drift: -2.3112ms
+window: 10ms, time: 317.7µs, drift: -1.6994ms
+window: 10ms, time: 438.5µs, drift: -2.0059ms
+window: 10ms, time: 456.6µs, drift: -1.7294ms
+window: 10ms, time: 324.4µs, drift: -1.6437ms
+window: 10ms, time: 399.5µs, drift: -2.1413ms
+Midi callback drift: -523µs
+Midi callback drift: -952µs
+Midi callback drift: -451µs
+Midi callback drift: -1.098ms
+Midi callback drift: -578µs
+Midi callback drift: -839µs
+Midi callback drift: -1.164ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.7329ms, drift: -3.2008ms
+window: 10ms, time: 424.3µs, drift: -1.8137ms
+window: 10ms, time: 349.6µs, drift: -2.4309ms
+window: 10ms, time: 314.4µs, drift: -1.7265ms
+window: 10ms, time: 327.9µs, drift: -2.2079ms
+window: 10ms, time: 386.8µs, drift: -1.8459ms
+window: 10ms, time: 709.4µs, drift: -2.7466ms
+window: 10ms, time: 388.6µs, drift: -2.3454ms
+window: 10ms, time: 354.3µs, drift: -1.7273ms
+window: 10ms, time: 506.6µs, drift: -2.5091ms
+window: 10ms, time: 322.7µs, drift: -1.943ms
+window: 10ms, time: 505.2µs, drift: -2.4364ms
+Midi callback drift: -585µs
+Midi callback drift: -1.428ms
+Midi callback drift: -910µs
+Midi callback drift: -1.525ms
+Midi callback drift: -1.033ms
+Midi callback drift: -1.497ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 2.0215ms, drift: -3.4159ms
+window: 10ms, time: 344.2µs, drift: -1.9704ms
+window: 10ms, time: 452.8µs, drift: -2.1427ms
+window: 10ms, time: 344.3µs, drift: -1.7498ms
+window: 10ms, time: 762.3µs, drift: -2.6882ms
+window: 10ms, time: 455.9µs, drift: -1.9483ms
+window: 10ms, time: 327.3µs, drift: -1.9872ms
+window: 10ms, time: 419.2µs, drift: -2.052ms
+window: 10ms, time: 318.6µs, drift: -1.9118ms
+window: 10ms, time: 414.9µs, drift: -2.042ms
+window: 10ms, time: 381.3µs, drift: -2.3576ms
+window: 10ms, time: 345.5µs, drift: -1.8965ms
+Midi callback drift: -860µs
+Midi callback drift: -1.514ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 1.4018ms, drift: -2.8625ms
+window: 10ms, time: 373.9µs, drift: -1.9965ms
+window: 10ms, time: 617.6µs, drift: -2.076ms
+window: 10ms, time: 464.7µs, drift: -2.3536ms
+window: 10ms, time: 346.2µs, drift: -1.6183ms
+window: 10ms, time: 453.6µs, drift: -1.609ms
+window: 10ms, time: 375.4µs, drift: -2.341ms
+window: 10ms, time: 512.3µs, drift: -2.0464ms
+window: 10ms, time: 415.8µs, drift: -2.3354ms
+window: 10ms, time: 507.6µs, drift: -2.1525ms
+window: 10ms, time: 419.1µs, drift: -2.323ms
+window: 10ms, time: 378.3µs, drift: -1.7216ms
+Midi callback drift: -796µs
+Midi callback drift: -641µs
+Midi callback drift: -395µs
+Midi callback drift: -1.093ms
+Midi callback drift: -648µs
+Midi callback drift: -211µs
+Midi callback drift: -684µs
+Midi callback drift: -219µs
+Midi callback drift: -618µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+Message time diff: -1.5772ms
+Message time diff: -1.5772ms
+Midi callback drift: -861µs
+Midi callback drift: -125µs
+Midi callback drift: -209µs
+window: 10ms, time: 2.2821ms, drift: -3.8053ms
+Midi callback drift: -303µs
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+window: 10ms, time: 1.2458ms, drift: -2.2016ms
+window: 10ms, time: 317.4µs, drift: -1.3488ms
+window: 10ms, time: 474.7µs, drift: -2.0078ms
+window: 10ms, time: 495.5µs, drift: -2.3062ms
+window: 10ms, time: 641.4µs, drift: -2.327ms
+window: 10ms, time: 562.6µs, drift: -2.3186ms
+window: 10ms, time: 411.9µs, drift: -1.9606ms
+window: 10ms, time: 458.2µs, drift: -1.932ms
+window: 10ms, time: 420.3µs, drift: -1.584ms
+window: 10ms, time: 735.9µs, drift: -2.4327ms
+window: 10ms, time: 682.7µs, drift: -2.6439ms
+Midi callback drift: -841µs
+Midi callback drift: -391µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.218ms, drift: -2.7373ms
+window: 10ms, time: 507.2µs, drift: -1.8152ms
+window: 10ms, time: 379.7µs, drift: -1.7373ms
+window: 10ms, time: 717.1µs, drift: -2.6082ms
+window: 10ms, time: 460.8µs, drift: -1.9352ms
+window: 10ms, time: 340.2µs, drift: -1.6164ms
+window: 10ms, time: 466.6µs, drift: -2.1752ms
+window: 10ms, time: 533.1µs, drift: -2.0621ms
+window: 10ms, time: 186.6µs, drift: -1.4417ms
+window: 10ms, time: 131.5µs, drift: -1.5396ms
+window: 10ms, time: 180µs, drift: -1.377ms
+window: 10ms, time: 210.1µs, drift: -1.3399ms
+Midi callback drift: -289µs
+Midi callback drift: -839µs
+Midi callback drift: -294µs
+Midi callback drift: -686µs
+Midi callback drift: -874µs
+Midi callback drift: -89µs
+Midi callback drift: -279µs
+Midi callback drift: -484µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.5416ms, drift: -2.7669ms
+window: 10ms, time: 672.9µs, drift: -1.7053ms
+window: 10ms, time: 436.4µs, drift: -2.3923ms
+window: 10ms, time: 428.1µs, drift: -1.9932ms
+window: 10ms, time: 422.6µs, drift: -2.0203ms
+window: 10ms, time: 479.7µs, drift: -2.2533ms
+window: 10ms, time: 615.2µs, drift: -2.2961ms
+window: 10ms, time: 482.1µs, drift: -2.4139ms
+window: 10ms, time: 333.2µs, drift: -1.8064ms
+window: 10ms, time: 472.6µs, drift: -1.9677ms
+window: 10ms, time: 400.1µs, drift: -1.8236ms
+window: 10ms, time: 752.2µs, drift: -2.501ms
+Midi callback drift: -266µs
+Midi callback drift: -1.041ms
+Midi callback drift: -777µs
+Midi callback drift: -566µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 2.306ms, drift: -4.0371ms
+window: 10ms, time: 512.2µs, drift: -1.7784ms
+window: 10ms, time: 333.1µs, drift: -1.5075ms
+window: 10ms, time: 446.6µs, drift: -2.1067ms
+window: 10ms, time: 611.5µs, drift: -2.171ms
+window: 10ms, time: 442.7µs, drift: -1.7556ms
+window: 10ms, time: 368µs, drift: -1.666ms
+window: 10ms, time: 424.2µs, drift: -2.0529ms
+window: 10ms, time: 491.9µs, drift: -2.4214ms
+window: 10ms, time: 798.9µs, drift: -2.1471ms
+window: 10ms, time: 435.4µs, drift: -1.9028ms
+window: 10ms, time: 369.2µs, drift: -1.6931ms
+Midi callback drift: -619µs
+Midi callback drift: -1.202ms
+Midi callback drift: -852µs
+Midi callback drift: -1.314ms
+Midi callback drift: -2.019ms
+Midi callback drift: -436µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 1.364ms, drift: -2.8298ms
+window: 10ms, time: 452µs, drift: -1.8023ms
+window: 10ms, time: 725.4µs, drift: -2.5159ms
+window: 10ms, time: 474.1µs, drift: -2.1263ms
+window: 10ms, time: 378.8µs, drift: -1.728ms
+window: 10ms, time: 401.3µs, drift: -1.8331ms
+window: 10ms, time: 306.7µs, drift: -1.6491ms
+window: 10ms, time: 382.9µs, drift: -1.5325ms
+window: 10ms, time: 539.4µs, drift: -2.4322ms
+window: 10ms, time: 408.2µs, drift: -1.6034ms
+window: 10ms, time: 409.4µs, drift: -1.7902ms
+window: 10ms, time: 493.3µs, drift: -2.4851ms
+Midi callback drift: -804µs
+Midi callback drift: -468µs
+Midi callback drift: -996µs
+Midi callback drift: -623µs
+Midi callback drift: -1.132ms
+Midi callback drift: -678µs
+Midi callback drift: -167µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 1.7481ms, drift: -2.9971ms
+window: 10ms, time: 375.4µs, drift: -2.0689ms
+window: 10ms, time: 267.4µs, drift: -1.5688ms
+window: 10ms, time: 207µs, drift: -1.0814ms
+window: 10ms, time: 201µs, drift: -1.1789ms
+window: 10ms, time: 424.2µs, drift: -1.588ms
+window: 10ms, time: 283.6µs, drift: -1.4052ms
+window: 10ms, time: 364.6µs, drift: -1.9353ms
+window: 10ms, time: 279.4µs, drift: -1.5682ms
+window: 10ms, time: 317.8µs, drift: -1.9325ms
+window: 10ms, time: 461.3µs, drift: -2.0923ms
+window: 10ms, time: 328.9µs, drift: -1.6595ms
+Midi callback drift: -802µs
+Midi callback drift: -1.384ms
+Midi callback drift: -846µs
+Midi callback drift: -491µs
+Midi callback drift: -978µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 2.0289ms, drift: -3.5139ms
+window: 10ms, time: 297.3µs, drift: -1.6972ms
+window: 10ms, time: 299.4µs, drift: -1.8509ms
+window: 10ms, time: 402.5µs, drift: -1.7575ms
+window: 10ms, time: 326µs, drift: -1.9063ms
+window: 10ms, time: 353.2µs, drift: -1.6801ms
+window: 10ms, time: 324µs, drift: -1.7151ms
+window: 10ms, time: 304µs, drift: -1.8455ms
+window: 10ms, time: 270.2µs, drift: -1.6565ms
+window: 10ms, time: 304.1µs, drift: -1.7299ms
+window: 10ms, time: 390.4µs, drift: -1.9969ms
+window: 10ms, time: 281.1µs, drift: -1.9592ms
+Midi callback drift: -785µs
+Midi callback drift: -1.226ms
+Midi callback drift: -678µs
+Midi callback drift: -423µs
+Midi callback drift: -828µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.3918ms, drift: -2.7468ms
+window: 10ms, time: 424.9µs, drift: -2.1243ms
+window: 10ms, time: 272µs, drift: -1.3559ms
+window: 10ms, time: 210µs, drift: -1.7852ms
+window: 10ms, time: 265.1µs, drift: -1.5785ms
+window: 10ms, time: 285.8µs, drift: -1.7614ms
+window: 10ms, time: 396µs, drift: -2.0181ms
+window: 10ms, time: 284µs, drift: -1.6918ms
+window: 10ms, time: 307.3µs, drift: -1.9748ms
+window: 10ms, time: 297.7µs, drift: -1.6055ms
+window: 10ms, time: 319.9µs, drift: -2.0008ms
+window: 10ms, time: 406.5µs, drift: -1.5022ms
+Midi callback drift: -500µs
+Midi callback drift: -279µs
+Midi callback drift: -758µs
+Midi callback drift: -459µs
+Midi callback drift: -970µs
+Midi callback drift: -469µs
+Midi callback drift: -745µs
+Midi callback drift: -25µs
+Midi callback drift: -186µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 1.7389ms, drift: -3.082ms
+window: 10ms, time: 350.9µs, drift: -1.4277ms
+window: 10ms, time: 301.2µs, drift: -1.4429ms
+window: 10ms, time: 391µs, drift: -1.7507ms
+window: 10ms, time: 315.1µs, drift: -1.9271ms
+window: 10ms, time: 303.8µs, drift: -1.527ms
+window: 10ms, time: 351.1µs, drift: -1.6337ms
+window: 10ms, time: 282.7µs, drift: -1.5926ms
+window: 10ms, time: 266.7µs, drift: -1.7789ms
+window: 10ms, time: 355.2µs, drift: -1.5076ms
+window: 10ms, time: 358.3µs, drift: -1.6449ms
+window: 10ms, time: 329.5µs, drift: -1.5186ms
+Midi callback drift: 166µs
+Midi callback drift: -405µs
+Midi callback drift: -14µs
+Midi callback drift: -676µs
+Midi callback drift: -1.255ms
+Midi callback drift: -888µs
+Midi callback drift: -393µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 1.7312ms, drift: -2.8543ms
+window: 10ms, time: 369.1µs, drift: -1.4723ms
+window: 10ms, time: 454.1µs, drift: -2.2552ms
+window: 10ms, time: 459.4µs, drift: -2.1797ms
+window: 10ms, time: 324.4µs, drift: -2.0008ms
+window: 10ms, time: 396.5µs, drift: -1.5405ms
+window: 10ms, time: 367.1µs, drift: -1.5361ms
+window: 10ms, time: 611.7µs, drift: -2.1791ms
+window: 10ms, time: 484.2µs, drift: -2.0185ms
+window: 10ms, time: 351.8µs, drift: -2.1763ms
+window: 10ms, time: 402µs, drift: -1.8787ms
+window: 10ms, time: 379.9µs, drift: -2.0746ms
+Midi callback drift: -824µs
+Midi callback drift: -314µs
+Midi callback drift: -810µs
+Midi callback drift: -428µs
+Midi callback drift: -1.044ms
+Midi callback drift: -562µs
+Midi callback drift: -205µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.3994ms, drift: -3.6813ms
+window: 10ms, time: 368.1µs, drift: -1.6654ms
+window: 10ms, time: 341.3µs, drift: -2.0629ms
+window: 10ms, time: 342.4µs, drift: -1.7613ms
+window: 10ms, time: 378.6µs, drift: -1.6504ms
+window: 10ms, time: 754.3µs, drift: -2.2574ms
+window: 10ms, time: 482.4µs, drift: -2.24ms
+window: 10ms, time: 633.7µs, drift: -2.0102ms
+window: 10ms, time: 139.7µs, drift: -1.4097ms
+window: 10ms, time: 281µs, drift: -1.6625ms
+window: 10ms, time: 380.1µs, drift: -1.7116ms
+window: 10ms, time: 485.8µs, drift: -2.3862ms
+Midi callback drift: -596µs
+Midi callback drift: -232µs
+Midi callback drift: -80µs
+Midi callback drift: -720µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.4421ms, drift: -2.7595ms
+window: 10ms, time: 481.3µs, drift: -2.0979ms
+window: 10ms, time: 401.1µs, drift: -1.953ms
+window: 10ms, time: 579.6µs, drift: -2.3251ms
+window: 10ms, time: 469.8µs, drift: -2.4269ms
+window: 10ms, time: 429.4µs, drift: -1.846ms
+window: 10ms, time: 430.2µs, drift: -2.32ms
+window: 10ms, time: 359.6µs, drift: -1.5148ms
+window: 10ms, time: 286.7µs, drift: -1.6972ms
+window: 10ms, time: 476µs, drift: -2.6446ms
+window: 10ms, time: 429.7µs, drift: -1.9942ms
+window: 10ms, time: 420µs, drift: -1.9771ms
+Midi callback drift: -614µs
+Midi callback drift: -261µs
+Midi callback drift: -814µs
+Midi callback drift: -244µs
+Midi callback drift: -533µs
+Midi callback drift: -875µs
+Midi callback drift: -1.278ms
+Midi callback drift: -1.419ms
+Midi callback drift: -741µs
+Midi callback drift: -23µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 1.8588ms, drift: -3.0028ms
+window: 10ms, time: 634.5µs, drift: -1.9715ms
+window: 10ms, time: 417.8µs, drift: -1.9885ms
+window: 10ms, time: 342.3µs, drift: -1.4034ms
+window: 10ms, time: 575.4µs, drift: -2.1338ms
+window: 10ms, time: 390.5µs, drift: -1.5358ms
+window: 10ms, time: 595.5µs, drift: -1.9447ms
+window: 10ms, time: 412.7µs, drift: -1.9484ms
+window: 10ms, time: 529.3µs, drift: -2.2283ms
+window: 10ms, time: 506.4µs, drift: -1.9302ms
+window: 10ms, time: 395.1µs, drift: -2.018ms
+window: 10ms, time: 780.9µs, drift: -2.4222ms
+Midi callback drift: -951µs
+Midi callback drift: -1.174ms
+Midi callback drift: -1.593ms
+Midi callback drift: -1.198ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 2.4092ms, drift: -4.0238ms
+window: 10ms, time: 353.7µs, drift: -1.4328ms
+window: 10ms, time: 562.2µs, drift: -1.9966ms
+window: 10ms, time: 429.6µs, drift: -1.937ms
+window: 10ms, time: 568µs, drift: -2.0227ms
+window: 10ms, time: 572.9µs, drift: -2.389ms
+window: 10ms, time: 387.7µs, drift: -2.0559ms
+window: 10ms, time: 426.6µs, drift: -2.0295ms
+window: 10ms, time: 420.8µs, drift: -1.9ms
+window: 10ms, time: 521µs, drift: -2.3525ms
+window: 10ms, time: 518.4µs, drift: -2.3352ms
+window: 10ms, time: 565.8µs, drift: -2.4856ms
+Midi callback drift: -982µs
+Midi callback drift: -591µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.3384ms, drift: -2.9676ms
+window: 10ms, time: 341.6µs, drift: -1.5357ms
+window: 10ms, time: 485.4µs, drift: -2.0075ms
+window: 10ms, time: 440.6µs, drift: -2.394ms
+window: 10ms, time: 411.1µs, drift: -2.0732ms
+window: 10ms, time: 491.9µs, drift: -2.1275ms
+window: 10ms, time: 409.4µs, drift: -1.9948ms
+window: 10ms, time: 373.9µs, drift: -2.4383ms
+window: 10ms, time: 501.3µs, drift: -2.6221ms
+window: 10ms, time: 376.1µs, drift: -1.9106ms
+window: 10ms, time: 460.8µs, drift: -2.4558ms
+window: 10ms, time: 362.3µs, drift: -2.1894ms
+Midi callback drift: -905µs
+Midi callback drift: -668µs
+Midi callback drift: -363µs
+Midi callback drift: -1.032ms
+Midi callback drift: -798µs
+Midi callback drift: -244µs
+Midi callback drift: -680µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.8443ms, drift: -4.426ms
+window: 10ms, time: 432.8µs, drift: -1.7697ms
+window: 10ms, time: 367.2µs, drift: -1.8465ms
+window: 10ms, time: 359µs, drift: -1.6525ms
+window: 10ms, time: 391.8µs, drift: -1.8388ms
+window: 10ms, time: 684.6µs, drift: -2.0665ms
+window: 10ms, time: 369.3µs, drift: -1.9238ms
+window: 10ms, time: 393.5µs, drift: -2.3851ms
+window: 10ms, time: 144.5µs, drift: -1.4546ms
+window: 10ms, time: 325.4µs, drift: -1.9147ms
+window: 10ms, time: 335.2µs, drift: -1.6985ms
+window: 10ms, time: 429.2µs, drift: -1.8483ms
+Midi callback drift: -926µs
+Midi callback drift: -1.565ms
+Midi callback drift: -1.196ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.3287ms, drift: -2.8699ms
+window: 10ms, time: 517µs, drift: -1.8556ms
+window: 10ms, time: 371.3µs, drift: -1.6177ms
+window: 10ms, time: 367.8µs, drift: -2.0851ms
+window: 10ms, time: 477.3µs, drift: -2.1844ms
+window: 10ms, time: 390.1µs, drift: -1.8011ms
+window: 10ms, time: 478.2µs, drift: -2.3715ms
+window: 10ms, time: 175.3µs, drift: -1.5479ms
+window: 10ms, time: 251.3µs, drift: -1.6432ms
+window: 10ms, time: 427.4µs, drift: -1.6598ms
+window: 10ms, time: 287µs, drift: -1.8707ms
+window: 10ms, time: 479.6µs, drift: -2.5331ms
+Midi callback drift: -1.02ms
+Midi callback drift: -611µs
+Midi callback drift: -262µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.7839ms, drift: -3.1147ms
+window: 10ms, time: 336.7µs, drift: -2.3239ms
+window: 10ms, time: 331.4µs, drift: -1.7458ms
+window: 10ms, time: 409.5µs, drift: -2.1919ms
+window: 10ms, time: 404.3µs, drift: -2.1014ms
+window: 10ms, time: 333.3µs, drift: -1.634ms
+window: 10ms, time: 581.7µs, drift: -2.0501ms
+window: 10ms, time: 411.4µs, drift: -2.5851ms
+window: 10ms, time: 336.5µs, drift: -2.0525ms
+window: 10ms, time: 336.7µs, drift: -1.8165ms
+window: 10ms, time: 365.7µs, drift: -1.7897ms
+window: 10ms, time: 345.7µs, drift: -1.7252ms
+Midi callback drift: -576µs
+Midi callback drift: -136µs
+Midi callback drift: -827µs
+Midi callback drift: -1.365ms
+Midi callback drift: -904µs
+Midi callback drift: -528µs
+Midi callback drift: -109µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -608µs
+window: 10ms, time: 2.928ms, drift: -4.0866ms
+Midi callback drift: -812µs
+Message time diff: 6.4228ms
+window: 10ms, time: 614.6µs, drift: -1.6573ms
+window: 10ms, time: 273.6µs, drift: -1.4947ms
+window: 10ms, time: 479.3µs, drift: -2.1879ms
+window: 10ms, time: 330.4µs, drift: -1.9575ms
+window: 10ms, time: 443.9µs, drift: -2.0816ms
+window: 10ms, time: 336µs, drift: -2.0782ms
+window: 10ms, time: 416.5µs, drift: -2.1788ms
+window: 10ms, time: 329.1µs, drift: -1.9398ms
+window: 10ms, time: 434.9µs, drift: -1.7763ms
+window: 10ms, time: 384.2µs, drift: -2.2037ms
+window: 10ms, time: 336.9µs, drift: -2.0004ms
+Midi callback drift: -698µs
+Midi callback drift: -220µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.5503ms, drift: -3.4716ms
+window: 10ms, time: 422.3µs, drift: -1.8337ms
+window: 10ms, time: 708.4µs, drift: -2.2472ms
+window: 10ms, time: 448.1µs, drift: -2.494ms
+window: 10ms, time: 335.7µs, drift: -1.8292ms
+window: 10ms, time: 501.4µs, drift: -2.1407ms
+window: 10ms, time: 363.4µs, drift: -2.2318ms
+window: 10ms, time: 657.7µs, drift: -2.2689ms
+window: 10ms, time: 417.4µs, drift: -2.1362ms
+window: 10ms, time: 336.5µs, drift: -1.7383ms
+window: 10ms, time: 431.1µs, drift: -2.0573ms
+window: 10ms, time: 337.1µs, drift: -1.701ms
+Midi callback drift: -885µs
+Midi callback drift: -770µs
+Midi callback drift: -223µs
+Midi callback drift: -853µs
+Midi callback drift: -1.623ms
+Midi callback drift: -1.174ms
+Midi callback drift: -538µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.1027ms, drift: -3.5931ms
+window: 10ms, time: 483.9µs, drift: -1.9046ms
+window: 10ms, time: 328.9µs, drift: -1.7782ms
+window: 10ms, time: 327.6µs, drift: -1.9135ms
+window: 10ms, time: 384.6µs, drift: -2.1629ms
+window: 10ms, time: 362.9µs, drift: -2.1409ms
+window: 10ms, time: 468.1µs, drift: -1.9602ms
+window: 10ms, time: 330.4µs, drift: -1.9123ms
+window: 10ms, time: 415µs, drift: -1.9189ms
+window: 10ms, time: 330.6µs, drift: -1.7541ms
+window: 10ms, time: 115µs, drift: -1.1974ms
+window: 10ms, time: 265.7µs, drift: -1.7447ms
+Midi callback drift: -701µs
+Midi callback drift: -521µs
+Midi callback drift: -238µs
+Midi callback drift: -816µs
+Midi callback drift: -1.507ms
+Midi callback drift: -964µs
+Midi callback drift: -491µs
+Midi callback drift: -716µs
+Midi callback drift: -926µs
+Midi callback drift: -240µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+window: 10ms, time: 1.6731ms, drift: -3.3791ms
+window: 10ms, time: 371.8µs, drift: -2.043ms
+window: 10ms, time: 335.4µs, drift: -1.8165ms
+window: 10ms, time: 376.3µs, drift: -1.9931ms
+window: 10ms, time: 468.6µs, drift: -2.5332ms
+window: 10ms, time: 367.5µs, drift: -1.4684ms
+window: 10ms, time: 278.9µs, drift: -1.9668ms
+window: 10ms, time: 422.8µs, drift: -2.2326ms
+window: 10ms, time: 422.8µs, drift: -2.1049ms
+window: 10ms, time: 580.8µs, drift: -2.5787ms
+window: 10ms, time: 396.1µs, drift: -1.517ms
+window: 10ms, time: 529.4µs, drift: -2.3052ms
+Midi callback drift: -430µs
+Midi callback drift: -850µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 1.0666ms, drift: -2.4019ms
+window: 10ms, time: 442.6µs, drift: -1.9659ms
+window: 10ms, time: 355.3µs, drift: -1.9617ms
+window: 10ms, time: 384.3µs, drift: -1.6888ms
+window: 10ms, time: 401.4µs, drift: -2.341ms
+window: 10ms, time: 355.3µs, drift: -1.8761ms
+window: 10ms, time: 458.6µs, drift: -1.9505ms
+window: 10ms, time: 513.4µs, drift: -2.6721ms
+window: 10ms, time: 321.8µs, drift: -1.9644ms
+window: 10ms, time: 418.6µs, drift: -1.7628ms
+window: 10ms, time: 382.8µs, drift: -2.0313ms
+window: 10ms, time: 475.6µs, drift: -2.2059ms
+Midi callback drift: -841µs
+Midi callback drift: -368µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.1455ms, drift: -2.5527ms
+window: 10ms, time: 289.8µs, drift: -1.4338ms
+window: 10ms, time: 237.3µs, drift: -1.8152ms
+window: 10ms, time: 332.1µs, drift: -1.6194ms
+window: 10ms, time: 483.7µs, drift: -2.304ms
+window: 10ms, time: 444µs, drift: -1.7256ms
+window: 10ms, time: 388.5µs, drift: -1.9142ms
+window: 10ms, time: 397.5µs, drift: -2.1325ms
+window: 10ms, time: 331.5µs, drift: -2.0048ms
+window: 10ms, time: 434.4µs, drift: -1.7707ms
+window: 10ms, time: 433.8µs, drift: -2.1649ms
+window: 10ms, time: 370.1µs, drift: -1.8337ms
+Midi callback drift: -918µs
+Midi callback drift: -443µs
+Midi callback drift: -1.219ms
+Midi callback drift: -856µs
+Midi callback drift: -456µs
+Midi callback drift: -140µs
+Midi callback drift: -647µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.5177ms, drift: -3.868ms
+window: 10ms, time: 351µs, drift: -1.2864ms
+window: 10ms, time: 580.4µs, drift: -2.4086ms
+window: 10ms, time: 367µs, drift: -2.2511ms
+window: 10ms, time: 350µs, drift: -2.0227ms
+window: 10ms, time: 466.2µs, drift: -2.5754ms
+window: 10ms, time: 303.3µs, drift: -1.6386ms
+window: 10ms, time: 337.1µs, drift: -1.5404ms
+window: 10ms, time: 349.3µs, drift: -1.6335ms
+window: 10ms, time: 273.2µs, drift: -1.698ms
+window: 10ms, time: 211.9µs, drift: -1.2456ms
+window: 10ms, time: 357.8µs, drift: -1.804ms
+Midi callback drift: -674µs
+Midi callback drift: -296µs
+Midi callback drift: -15µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 935.4µs, drift: -2.5204ms
+window: 10ms, time: 329.8µs, drift: -2.0225ms
+window: 10ms, time: 360.9µs, drift: -2.3052ms
+window: 10ms, time: 365.6µs, drift: -2.078ms
+window: 10ms, time: 320.3µs, drift: -1.6288ms
+window: 10ms, time: 377.4µs, drift: -1.9585ms
+window: 10ms, time: 392.4µs, drift: -2.3733ms
+window: 10ms, time: 297.3µs, drift: -1.7577ms
+window: 10ms, time: 379.2µs, drift: -2.1922ms
+window: 10ms, time: 273.2µs, drift: -1.6718ms
+window: 10ms, time: 279µs, drift: -1.8999ms
+window: 10ms, time: 344.4µs, drift: -2.2579ms
+Midi callback drift: -1.135ms
+Midi callback drift: -913µs
+Midi callback drift: -554µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.5902ms, drift: -2.9757ms
+window: 10ms, time: 351.5µs, drift: -1.7438ms
+window: 10ms, time: 154.6µs, drift: -1.7119ms
+window: 10ms, time: 244.7µs, drift: -1.673ms
+window: 10ms, time: 248.1µs, drift: -2.1859ms
+window: 10ms, time: 198.9µs, drift: -1.3079ms
+window: 10ms, time: 161.1µs, drift: -1.2347ms
+window: 10ms, time: 265.8µs, drift: -1.6439ms
+window: 10ms, time: 222.8µs, drift: -1.5174ms
+window: 10ms, time: 428.7µs, drift: -2.1697ms
+window: 10ms, time: 241.4µs, drift: -2.1603ms
+window: 10ms, time: 335.9µs, drift: -1.9178ms
+Midi callback drift: -857µs
+Midi callback drift: -536µs
+Midi callback drift: -289µs
+Midi callback drift: -830µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.7436ms, drift: -3.255ms
+window: 10ms, time: 223.1µs, drift: -1.6656ms
+window: 10ms, time: 286.6µs, drift: -1.6542ms
+window: 10ms, time: 264.3µs, drift: -1.5035ms
+window: 10ms, time: 287.4µs, drift: -1.781ms
+window: 10ms, time: 331.5µs, drift: -1.6648ms
+window: 10ms, time: 264.3µs, drift: -1.81ms
+window: 10ms, time: 316.3µs, drift: -1.7422ms
+window: 10ms, time: 264.5µs, drift: -1.6343ms
+window: 10ms, time: 354.2µs, drift: -2.1976ms
+window: 10ms, time: 284µs, drift: -1.8871ms
+window: 10ms, time: 328.2µs, drift: -1.9075ms
+Midi callback drift: -1.195ms
+Midi callback drift: -1.028ms
+Midi callback drift: -829µs
+Midi callback drift: -545µs
+Midi callback drift: -85µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.6135ms, drift: -3.9202ms
+window: 10ms, time: 227.5µs, drift: -1.2836ms
+window: 10ms, time: 340.3µs, drift: -1.8221ms
+window: 10ms, time: 286.3µs, drift: -1.6189ms
+window: 10ms, time: 315.7µs, drift: -1.919ms
+window: 10ms, time: 347.6µs, drift: -2.3091ms
+window: 10ms, time: 331.2µs, drift: -2.0303ms
+window: 10ms, time: 300.3µs, drift: -1.8757ms
+window: 10ms, time: 311.9µs, drift: -1.8862ms
+window: 10ms, time: 265.2µs, drift: -1.8232ms
+window: 10ms, time: 299µs, drift: -1.9055ms
+window: 10ms, time: 290.9µs, drift: -1.7053ms
+Midi callback drift: -814µs
+Midi callback drift: -1.212ms
+Midi callback drift: -613µs
+Midi callback drift: -910µs
+Midi callback drift: -1.294ms
+Midi callback drift: -645µs
+Midi callback drift: -894µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.5963ms, drift: -2.6318ms
+window: 10ms, time: 223.6µs, drift: -1.4227ms
+window: 10ms, time: 260µs, drift: -1.5355ms
+window: 10ms, time: 315.7µs, drift: -2.2442ms
+window: 10ms, time: 244µs, drift: -1.8473ms
+window: 10ms, time: 365.6µs, drift: -1.8367ms
+window: 10ms, time: 212.2µs, drift: -1.9098ms
+window: 10ms, time: 275µs, drift: -1.6373ms
+window: 10ms, time: 265.1µs, drift: -1.7808ms
+window: 10ms, time: 286.5µs, drift: -1.8068ms
+window: 10ms, time: 301.8µs, drift: -2.0003ms
+window: 10ms, time: 82.3µs, drift: -1.2451ms
+Midi callback drift: -925µs
+Midi callback drift: -355µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 564.9µs, drift: -1.9279ms
+window: 10ms, time: 230.9µs, drift: -1.6913ms
+window: 10ms, time: 273.2µs, drift: -1.5149ms
+window: 10ms, time: 372.3µs, drift: -2.0554ms
+window: 10ms, time: 304.5µs, drift: -1.7296ms
+window: 10ms, time: 282.8µs, drift: -1.9382ms
+window: 10ms, time: 322.2µs, drift: -2.1037ms
+window: 10ms, time: 253.1µs, drift: -1.8806ms
+window: 10ms, time: 275µs, drift: -1.7469ms
+window: 10ms, time: 277.6µs, drift: -1.7735ms
+window: 10ms, time: 292.4µs, drift: -1.7589ms
+window: 10ms, time: 307.9µs, drift: -2.4632ms
+Midi callback drift: -830µs
+Midi callback drift: -373µs
+Midi callback drift: -957µs
+Midi callback drift: -353µs
+Midi callback drift: -877µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.9325ms, drift: -3.2261ms
+window: 10ms, time: 305.2µs, drift: -1.9695ms
+window: 10ms, time: 247.8µs, drift: -1.8398ms
+window: 10ms, time: 275.4µs, drift: -1.6147ms
+window: 10ms, time: 285.7µs, drift: -2.0539ms
+window: 10ms, time: 263.5µs, drift: -1.8362ms
+window: 10ms, time: 304µs, drift: -2.3552ms
+window: 10ms, time: 304µs, drift: -2.1737ms
+window: 10ms, time: 282.6µs, drift: -1.7145ms
+window: 10ms, time: 341.7µs, drift: -2.1662ms
+window: 10ms, time: 297.4µs, drift: -1.8564ms
+window: 10ms, time: 339.7µs, drift: -1.9929ms
+Midi callback drift: -602µs
+Midi callback drift: -1.076ms
+Midi callback drift: -783µs
+Midi callback drift: -1.368ms
+Midi callback drift: -935µs
+Midi callback drift: -514µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 1.2784ms, drift: -2.4393ms
+window: 10ms, time: 295.6µs, drift: -1.9356ms
+window: 10ms, time: 393.4µs, drift: -1.7647ms
+window: 10ms, time: 351.3µs, drift: -1.9892ms
+window: 10ms, time: 397.1µs, drift: -2.3932ms
+window: 10ms, time: 337.6µs, drift: -1.791ms
+window: 10ms, time: 322.1µs, drift: -1.9448ms
+window: 10ms, time: 393.7µs, drift: -2.2901ms
+window: 10ms, time: 393.8µs, drift: -2.2381ms
+window: 10ms, time: 297.3µs, drift: -1.476ms
+window: 10ms, time: 453.3µs, drift: -2.0772ms
+window: 10ms, time: 298.3µs, drift: -1.5401ms
+window: 10ms, time: 716.2µs, drift: -2.6658ms
+window: 10ms, time: 361.2µs, drift: -2.1407ms
+window: 10ms, time: 251.3µs, drift: -1.6935ms
+window: 10ms, time: 312.9µs, drift: -2.1173ms
+window: 10ms, time: 308.5µs, drift: -2.2474ms
+window: 10ms, time: 327.7µs, drift: -1.8939ms
+window: 10ms, time: 365µs, drift: -2.5105ms
+window: 10ms, time: 298.8µs, drift: -1.8346ms
+window: 10ms, time: 329.1µs, drift: -2.219ms
+window: 10ms, time: 274µs, drift: -1.693ms
+window: 10ms, time: 328.1µs, drift: -2.0815ms
+window: 10ms, time: 219.2µs, drift: -1.5215ms
+Midi callback drift: -692µs
+Midi callback drift: -192µs
+Midi callback drift: -489µs
+Midi callback drift: -835µs
+Midi callback drift: -157µs
+Midi callback drift: -828µs
+Midi callback drift: -1.25ms
+Midi callback drift: -728µs
+Midi callback drift: -103µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 3.0262ms, drift: -4.2342ms
+window: 10ms, time: 383.4µs, drift: -1.4039ms
+window: 10ms, time: 492.9µs, drift: -1.8353ms
+window: 10ms, time: 386.3µs, drift: -2.0757ms
+window: 10ms, time: 409.3µs, drift: -2.1255ms
+window: 10ms, time: 381.1µs, drift: -1.9792ms
+window: 10ms, time: 319.4µs, drift: -2.1258ms
+window: 10ms, time: 394.6µs, drift: -1.6835ms
+window: 10ms, time: 470.3µs, drift: -2.3408ms
+window: 10ms, time: 427.4µs, drift: -1.6875ms
+window: 10ms, time: 473.3µs, drift: -2.7926ms
+window: 10ms, time: 302.6µs, drift: -1.8113ms
+Midi callback drift: 3µs
+Midi callback drift: -730µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.1068ms, drift: -2.1733ms
+window: 10ms, time: 334.4µs, drift: -1.9706ms
+window: 10ms, time: 342.7µs, drift: -2.2499ms
+window: 10ms, time: 377.1µs, drift: -2.5019ms
+window: 10ms, time: 299.2µs, drift: -1.8162ms
+window: 10ms, time: 355.3µs, drift: -1.5352ms
+window: 10ms, time: 372µs, drift: -2.233ms
+window: 10ms, time: 333.9µs, drift: -2.0097ms
+window: 10ms, time: 387.8µs, drift: -2.0177ms
+window: 10ms, time: 439.6µs, drift: -1.8938ms
+window: 10ms, time: 386.2µs, drift: -1.9376ms
+window: 10ms, time: 324.3µs, drift: -1.8238ms
+Midi callback drift: -868µs
+Midi callback drift: -1.412ms
+Midi callback drift: -1.194ms
+Midi callback drift: -683µs
+Midi callback drift: -1.096ms
+Midi callback drift: -1.422ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 2.5278ms, drift: -3.7183ms
+window: 10ms, time: 292.8µs, drift: -1.791ms
+window: 10ms, time: 273.7µs, drift: -1.8144ms
+window: 10ms, time: 276.6µs, drift: -1.4579ms
+window: 10ms, time: 351.6µs, drift: -2.2584ms
+window: 10ms, time: 217.1µs, drift: -1.4414ms
+window: 10ms, time: 107.4µs, drift: -1.2829ms
+window: 10ms, time: 157.7µs, drift: -1.0281ms
+window: 10ms, time: 95.7µs, drift: -1.1075ms
+window: 10ms, time: 142.2µs, drift: -1.1748ms
+window: 10ms, time: 180.3µs, drift: -1.8029ms
+window: 10ms, time: 282.7µs, drift: -1.865ms
+Midi callback drift: -971µs
+Midi callback drift: -565µs
+Midi callback drift: -1.166ms
+Midi callback drift: -794µs
+Midi callback drift: -1.243ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.6871ms, drift: -3.1988ms
+window: 10ms, time: 269.6µs, drift: -1.4401ms
+window: 10ms, time: 407.4µs, drift: -2.0879ms
+window: 10ms, time: 339.9µs, drift: -1.9207ms
+window: 10ms, time: 448.7µs, drift: -2.0943ms
+window: 10ms, time: 369.5µs, drift: -1.5173ms
+window: 10ms, time: 151.7µs, drift: -1.1192ms
+window: 10ms, time: 218.7µs, drift: -1.776ms
+window: 10ms, time: 292.1µs, drift: -1.7236ms
+window: 10ms, time: 385.5µs, drift: -1.9683ms
+window: 10ms, time: 370.8µs, drift: -2.1193ms
+window: 10ms, time: 408.9µs, drift: -2.0627ms
+Midi callback drift: -680µs
+Midi callback drift: -354µs
+Midi callback drift: -939µs
+Midi callback drift: -431µs
+Midi callback drift: -906µs
+Midi callback drift: -642µs
+Midi callback drift: -978µs
+Midi callback drift: -281µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 1.6167ms, drift: -2.8495ms
+window: 10ms, time: 307.5µs, drift: -1.4281ms
+window: 10ms, time: 414.5µs, drift: -1.6387ms
+window: 10ms, time: 499.5µs, drift: -1.7657ms
+window: 10ms, time: 369.8µs, drift: -2.1214ms
+window: 10ms, time: 295.6µs, drift: -1.8484ms
+window: 10ms, time: 427µs, drift: -1.8712ms
+window: 10ms, time: 557.1µs, drift: -2.2614ms
+window: 10ms, time: 469.8µs, drift: -2.3432ms
+window: 10ms, time: 307.5µs, drift: -1.3991ms
+window: 10ms, time: 316.6µs, drift: -1.8853ms
+window: 10ms, time: 420.5µs, drift: -1.9896ms
+Midi callback drift: -49µs
+Midi callback drift: -669µs
+Midi callback drift: -277µs
+Midi callback drift: -597µs
+Midi callback drift: -978µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.7283ms, drift: -2.7869ms
+window: 10ms, time: 419.8µs, drift: -1.7549ms
+window: 10ms, time: 486µs, drift: -2.0305ms
+window: 10ms, time: 423.4µs, drift: -1.8553ms
+window: 10ms, time: 222.1µs, drift: -1.4552ms
+window: 10ms, time: 470.5µs, drift: -2.0112ms
+window: 10ms, time: 455.6µs, drift: -2.073ms
+window: 10ms, time: 410.3µs, drift: -2.084ms
+window: 10ms, time: 292.8µs, drift: -1.8027ms
+window: 10ms, time: 425.2µs, drift: -1.7869ms
+window: 10ms, time: 473.5µs, drift: -2.4457ms
+window: 10ms, time: 567.4µs, drift: -2.613ms
+Midi callback drift: -78µs
+Midi callback drift: -816µs
+Midi callback drift: -354µs
+Midi callback drift: -977µs
+Midi callback drift: -1.439ms
+Midi callback drift: -920µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 2.7394ms, drift: -4.0632ms
+window: 10ms, time: 494.3µs, drift: -1.9272ms
+window: 10ms, time: 412µs, drift: -2.0053ms
+window: 10ms, time: 524.1µs, drift: -2.1025ms
+window: 10ms, time: 407.3µs, drift: -2.0804ms
+window: 10ms, time: 328.3µs, drift: -1.3871ms
+window: 10ms, time: 269.1µs, drift: -1.5023ms
+window: 10ms, time: 273.1µs, drift: -1.7932ms
+window: 10ms, time: 355.4µs, drift: -2.0378ms
+window: 10ms, time: 272.9µs, drift: -1.3852ms
+window: 10ms, time: 445.6µs, drift: -2.2444ms
+window: 10ms, time: 471.2µs, drift: -2.1036ms
+Midi callback drift: -631µs
+Midi callback drift: -76µs
+Midi callback drift: -852µs
+Midi callback drift: -513µs
+Midi callback drift: -1.107ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 3.005ms, drift: -4.2631ms
+window: 10ms, time: 365.2µs, drift: -1.7018ms
+window: 10ms, time: 407.4µs, drift: -1.7103ms
+window: 10ms, time: 334.5µs, drift: -1.9247ms
+window: 10ms, time: 368.1µs, drift: -2.033ms
+window: 10ms, time: 400.9µs, drift: -1.932ms
+window: 10ms, time: 376.8µs, drift: -1.8703ms
+window: 10ms, time: 411.8µs, drift: -2.1231ms
+window: 10ms, time: 367.2µs, drift: -1.8756ms
+window: 10ms, time: 492.6µs, drift: -2.3799ms
+window: 10ms, time: 443.2µs, drift: -2.2348ms
+window: 10ms, time: 461.2µs, drift: -2.1847ms
+Midi callback drift: -593µs
+Midi callback drift: -95µs
+Midi callback drift: -749µs
+Midi callback drift: -226µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.0549ms, drift: -2.38ms
+window: 10ms, time: 380.6µs, drift: -1.5367ms
+window: 10ms, time: 494.9µs, drift: -2.1694ms
+window: 10ms, time: 418.9µs, drift: -2.0786ms
+window: 10ms, time: 758µs, drift: -3.3324ms
+window: 10ms, time: 387.3µs, drift: -1.6882ms
+window: 10ms, time: 435.6µs, drift: -2.2407ms
+window: 10ms, time: 477µs, drift: -2.0765ms
+window: 10ms, time: 401.4µs, drift: -2.2103ms
+window: 10ms, time: 619.7µs, drift: -2.158ms
+window: 10ms, time: 459.5µs, drift: -2.4445ms
+window: 10ms, time: 423.8µs, drift: -2.0922ms
+Midi callback drift: -869µs
+Midi callback drift: -427µs
+Midi callback drift: -1.062ms
+Midi callback drift: -739µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.4568ms, drift: -2.6992ms
+window: 10ms, time: 290.4µs, drift: -1.6933ms
+window: 10ms, time: 445.8µs, drift: -2.3528ms
+window: 10ms, time: 522.8µs, drift: -2.3461ms
+window: 10ms, time: 334.7µs, drift: -1.6764ms
+window: 10ms, time: 400.7µs, drift: -1.5636ms
+window: 10ms, time: 362.9µs, drift: -2.4564ms
+window: 10ms, time: 704.8µs, drift: -2.0447ms
+window: 10ms, time: 361.7µs, drift: -1.9822ms
+window: 10ms, time: 494.3µs, drift: -2.1962ms
+window: 10ms, time: 399µs, drift: -1.6149ms
+window: 10ms, time: 397.6µs, drift: -1.8777ms
+Midi callback drift: -141µs
+Midi callback drift: 95µs
+Midi callback drift: -727µs
+Midi callback drift: -1.238ms
+Midi callback drift: -523µs
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 2.5263ms, drift: -3.758ms
+window: 10ms, time: 377.5µs, drift: -1.9225ms
+window: 10ms, time: 417.6µs, drift: -2.3854ms
+window: 10ms, time: 431.9µs, drift: -2.092ms
+window: 10ms, time: 353.6µs, drift: -1.8763ms
+window: 10ms, time: 463.4µs, drift: -2.1198ms
+window: 10ms, time: 415.2µs, drift: -1.8625ms
+Midi callback drift: 149µs
+Midi callback drift: -430µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 1.4379ms, drift: -2.9392ms
+window: 10ms, time: 395.9µs, drift: -1.7457ms
+window: 10ms, time: 398.5µs, drift: -1.6018ms
+window: 10ms, time: 366.9µs, drift: -1.8757ms
+window: 10ms, time: 447.1µs, drift: -2.1254ms
+Midi callback drift: -706µs
+Midi callback drift: -339µs
+Midi callback drift: -987µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.3942ms, drift: -3.1847ms
+window: 10ms, time: 288µs, drift: -1.5334ms
+Midi callback drift: -554µs
+Midi callback drift: -1.028ms
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+window: 10ms, time: 1.0036ms, drift: -2.2132ms
+window: 10ms, time: 482.2µs, drift: -1.8671ms
+window: 10ms, time: 352.3µs, drift: -1.8354ms
+window: 10ms, time: 327.6µs, drift: -1.8001ms
+window: 10ms, time: 436.2µs, drift: -2.08ms
+window: 10ms, time: 425.1µs, drift: -2.2128ms
+window: 10ms, time: 423.2µs, drift: -2.3736ms
+Midi callback drift: -535µs
+Midi callback drift: -284µs
+Midi callback drift: -843µs
+Midi callback drift: -491µs
+Midi callback drift: -18µs
+Midi callback drift: -338µs
+Midi callback drift: -799µs
+Message time diff: 7.4228ms
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+Message time diff: 5.4228ms
+Message time diff: 4.4228ms
+Message time diff: 4.4228ms
+Message time diff: 4.4228ms
+window: 10ms, time: 3.4915ms, drift: -4.8368ms
+window: 10ms, time: 310.4µs, drift: -1.8232ms
+window: 10ms, time: 460.4µs, drift: -1.9304ms
+Midi callback drift: -1.002ms
+Midi callback drift: -1.049ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 904.9µs, drift: -2.2918ms
+window: 10ms, time: 493.2µs, drift: -2.0189ms
+window: 10ms, time: 365.4µs, drift: -2.0009ms
+Midi callback drift: -690µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -1.27ms
+window: 10ms, time: 1.461ms, drift: -3.192ms
+window: 10ms, time: 387.6µs, drift: -1.9182ms
+window: 10ms, time: 337.6µs, drift: -1.6031ms
+window: 10ms, time: 662.4µs, drift: -2.8308ms
+window: 10ms, time: 325.7µs, drift: -1.9836ms
+window: 10ms, time: 387.1µs, drift: -1.9565ms
+window: 10ms, time: 541.7µs, drift: -2.0075ms
+Midi callback drift: -655µs
+Midi callback drift: -946µs
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+window: 10ms, time: 1.2589ms, drift: -2.8813ms
+window: 10ms, time: 282.5µs, drift: -1.5955ms
+Midi callback drift: -691µs
+Midi callback drift: -197µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.2996ms, drift: -2.9546ms
+window: 10ms, time: 407.3µs, drift: -1.4266ms
+window: 10ms, time: 382.2µs, drift: -1.85ms
+window: 10ms, time: 423.1µs, drift: -1.9732ms
+window: 10ms, time: 350.2µs, drift: -1.8298ms
+Midi callback drift: -616µs
+Midi callback drift: -188µs
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.3643ms, drift: -2.7897ms
+window: 10ms, time: 407.9µs, drift: -2.0858ms
+window: 10ms, time: 489.7µs, drift: -2.0238ms
+window: 10ms, time: 390.6µs, drift: -1.9864ms
+window: 10ms, time: 491.4µs, drift: -2.412ms
+window: 10ms, time: 386.4µs, drift: -1.9185ms
+window: 10ms, time: 371.1µs, drift: -1.7519ms
+Midi callback drift: -690µs
+Midi callback drift: -556µs
+Midi callback drift: -419µs
+Midi callback drift: -1.117ms
+Midi callback drift: -703µs
+Midi callback drift: -176µs
+Midi callback drift: -428µs
+Midi callback drift: 128µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+window: 10ms, time: 3.7335ms, drift: -4.8063ms
+window: 10ms, time: 443.3µs, drift: -1.5226ms
+window: 10ms, time: 569.8µs, drift: -2.3007ms
+window: 10ms, time: 573.5µs, drift: -2.7377ms
+window: 10ms, time: 395.6µs, drift: -1.6838ms
+window: 10ms, time: 493.9µs, drift: -2.1926ms
+window: 10ms, time: 577.7µs, drift: -2.2777ms
+window: 10ms, time: 814µs, drift: -2.9524ms
+window: 10ms, time: 498µs, drift: -2.2623ms
+window: 10ms, time: 430.6µs, drift: -1.8458ms
+window: 10ms, time: 522.5µs, drift: -2.4862ms
+window: 10ms, time: 195.7µs, drift: -1.1426ms
+Midi callback drift: -879µs
+Midi callback drift: -341µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.3302ms, drift: -2.4748ms
+window: 10ms, time: 291.5µs, drift: -1.4968ms
+window: 10ms, time: 380.5µs, drift: -1.8506ms
+window: 10ms, time: 443.3µs, drift: -1.9146ms
+window: 10ms, time: 355.8µs, drift: -1.8957ms
+window: 10ms, time: 552.8µs, drift: -2.2036ms
+window: 10ms, time: 541.1µs, drift: -2.0066ms
+window: 10ms, time: 383.8µs, drift: -1.9544ms
+window: 10ms, time: 482.8µs, drift: -2.4503ms
+window: 10ms, time: 303.8µs, drift: -1.5236ms
+window: 10ms, time: 402.9µs, drift: -1.7865ms
+window: 10ms, time: 500.5µs, drift: -2.0387ms
+Midi callback drift: 2µs
+Midi callback drift: -641µs
+Midi callback drift: -218µs
+Midi callback drift: -976µs
+Midi callback drift: -1.478ms
+Midi callback drift: -886µs
+Midi callback drift: -456µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.9546ms, drift: -4.3195ms
+window: 10ms, time: 405.8µs, drift: -1.5429ms
+window: 10ms, time: 277.7µs, drift: -1.7848ms
+window: 10ms, time: 370.3µs, drift: -2.1056ms
+window: 10ms, time: 426.4µs, drift: -1.8532ms
+window: 10ms, time: 390.8µs, drift: -1.8735ms
+window: 10ms, time: 466.1µs, drift: -2.0087ms
+window: 10ms, time: 460.3µs, drift: -2.0362ms
+window: 10ms, time: 512.6µs, drift: -1.9311ms
+window: 10ms, time: 368.5µs, drift: -1.7769ms
+window: 10ms, time: 306.4µs, drift: -1.7414ms
+window: 10ms, time: 408.7µs, drift: -2.2659ms
+Midi callback drift: -685µs
+Message time diff: 3.4228ms
+window: 10ms, time: 895.8µs, drift: -2.6019ms
+window: 10ms, time: 427.4µs, drift: -1.782ms
+window: 10ms, time: 359.5µs, drift: -2.2512ms
+window: 10ms, time: 316.7µs, drift: -1.5032ms
+window: 10ms, time: 351.1µs, drift: -2.2731ms
+window: 10ms, time: 303.3µs, drift: -1.852ms
+window: 10ms, time: 603.8µs, drift: -2.4382ms
+window: 10ms, time: 320.1µs, drift: -1.8837ms
+window: 10ms, time: 299.6µs, drift: -1.9505ms
+window: 10ms, time: 463.8µs, drift: -2.4394ms
+window: 10ms, time: 265µs, drift: -1.5002ms
+window: 10ms, time: 515.2µs, drift: -2.0769ms
+Midi callback drift: -731µs
+Midi callback drift: -414µs
+Midi callback drift: -1.128ms
+Midi callback drift: -600µs
+Midi callback drift: -1.223ms
+Midi callback drift: -802µs
+Midi callback drift: -235µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -712µs
+Midi callback drift: -1.301ms
+window: 10ms, time: 1.7015ms, drift: -2.9298ms
+Message time diff: 8.4228ms
+window: 10ms, time: 584.2µs, drift: -1.7191ms
+window: 10ms, time: 324.4µs, drift: -1.8156ms
+window: 10ms, time: 461.7µs, drift: -2.1298ms
+window: 10ms, time: 324.4µs, drift: -2.0078ms
+window: 10ms, time: 410.4µs, drift: -2.4233ms
+window: 10ms, time: 310µs, drift: -1.7396ms
+window: 10ms, time: 416µs, drift: -2.1241ms
+window: 10ms, time: 318.3µs, drift: -1.9819ms
+window: 10ms, time: 475.5µs, drift: -1.7622ms
+window: 10ms, time: 489.9µs, drift: -2.1242ms
+window: 10ms, time: 310.9µs, drift: -1.6331ms
+Midi callback drift: -117µs
+Midi callback drift: -774µs
+Midi callback drift: -522µs
+Midi callback drift: -1.263ms
+Midi callback drift: -80µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: -577.2µs
+window: 10ms, time: 1.4142ms, drift: -2.662ms
+window: 10ms, time: 388.8µs, drift: -1.7626ms
+window: 10ms, time: 594.5µs, drift: -2.3505ms
+window: 10ms, time: 524.8µs, drift: -2.239ms
+window: 10ms, time: 404.2µs, drift: -1.8444ms
+window: 10ms, time: 428.6µs, drift: -1.8758ms
+window: 10ms, time: 398.5µs, drift: -2.0396ms
+window: 10ms, time: 602.5µs, drift: -2.75ms
+window: 10ms, time: 440.5µs, drift: -2.2872ms
+window: 10ms, time: 343.7µs, drift: -1.8349ms
+window: 10ms, time: 325.8µs, drift: -2.0336ms
+window: 10ms, time: 380.6µs, drift: -2.0816ms
+Midi callback drift: -1.005ms
+Midi callback drift: -506µs
+Midi callback drift: -1.128ms
+Midi callback drift: -808µs
+Midi callback drift: -413µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 1.384ms, drift: -2.674ms
+window: 10ms, time: 820.7µs, drift: -2.1608ms
+window: 10ms, time: 378.4µs, drift: -1.7941ms
+window: 10ms, time: 390.2µs, drift: -2.2394ms
+window: 10ms, time: 430.6µs, drift: -1.9469ms
+window: 10ms, time: 431.2µs, drift: -2.0499ms
+window: 10ms, time: 358.2µs, drift: -2.3314ms
+window: 10ms, time: 356.8µs, drift: -2.1804ms
+window: 10ms, time: 434.2µs, drift: -2.0548ms
+window: 10ms, time: 358.7µs, drift: -2.0658ms
+window: 10ms, time: 761.6µs, drift: -2.7447ms
+window: 10ms, time: 443µs, drift: -2.0911ms
+Midi callback drift: -961µs
+Midi callback drift: -688µs
+Midi callback drift: -417µs
+Midi callback drift: -955µs
+Midi callback drift: -1.507ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 2.1423ms, drift: -3.697ms
+window: 10ms, time: 349.2µs, drift: -2.0159ms
+window: 10ms, time: 324µs, drift: -1.7799ms
+window: 10ms, time: 572.5µs, drift: -2.5137ms
+window: 10ms, time: 225.3µs, drift: -2.001ms
+window: 10ms, time: 252.6µs, drift: -1.5531ms
+window: 10ms, time: 239µs, drift: -1.3845ms
+window: 10ms, time: 339.3µs, drift: -2.0404ms
+window: 10ms, time: 257.2µs, drift: -1.3956ms
+window: 10ms, time: 211.1µs, drift: -1.673ms
+window: 10ms, time: 212.6µs, drift: -1.4167ms
+window: 10ms, time: 226.6µs, drift: -1.8656ms
+Midi callback drift: -962µs
+Midi callback drift: -546µs
+Midi callback drift: -9µs
+Midi callback drift: -640µs
+Midi callback drift: -1.18ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.7819ms, drift: -3.1378ms
+window: 10ms, time: 311.5µs, drift: -1.5076ms
+window: 10ms, time: 404.7µs, drift: -2.1114ms
+window: 10ms, time: 395.2µs, drift: -1.776ms
+window: 10ms, time: 274.8µs, drift: -1.4941ms
+window: 10ms, time: 445.5µs, drift: -1.7721ms
+window: 10ms, time: 332.7µs, drift: -2.4908ms
+window: 10ms, time: 431.5µs, drift: -2.1914ms
+window: 10ms, time: 334.9µs, drift: -1.9514ms
+window: 10ms, time: 364.2µs, drift: -1.7678ms
+window: 10ms, time: 481.9µs, drift: -2.3774ms
+window: 10ms, time: 404.7µs, drift: -2.3988ms
+Midi callback drift: -817µs
+Midi callback drift: -482µs
+Midi callback drift: -295µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.4723ms, drift: -3.0257ms
+window: 10ms, time: 269.3µs, drift: -1.3705ms
+window: 10ms, time: 452µs, drift: -2.4161ms
+window: 10ms, time: 420.9µs, drift: -2.4227ms
+window: 10ms, time: 713.9µs, drift: -2.5326ms
+window: 10ms, time: 366.9µs, drift: -1.7ms
+window: 10ms, time: 384.2µs, drift: -2.0319ms
+window: 10ms, time: 242µs, drift: -2.1064ms
+window: 10ms, time: 299.8µs, drift: -2.2396ms
+window: 10ms, time: 633.7µs, drift: -2.6024ms
+window: 10ms, time: 527.2µs, drift: -2.6018ms
+window: 10ms, time: 102µs, drift: -1.4657ms
+Midi callback drift: -913µs
+Midi callback drift: -1.322ms
+Midi callback drift: -664µs
+Midi callback drift: -1.025ms
+Midi callback drift: -495µs
+Midi callback drift: -892µs
+Midi callback drift: -1.083ms
+Midi callback drift: -405µs
+Midi callback drift: -605µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+window: 10ms, time: 966.6µs, drift: -2.2075ms
+window: 10ms, time: 269.5µs, drift: -1.1773ms
+window: 10ms, time: 393µs, drift: -1.6204ms
+window: 10ms, time: 361µs, drift: -1.9965ms
+window: 10ms, time: 350.7µs, drift: -2.2573ms
+window: 10ms, time: 400.6µs, drift: -2.4497ms
+window: 10ms, time: 325.7µs, drift: -1.8617ms
+window: 10ms, time: 383.2µs, drift: -2.0156ms
+window: 10ms, time: 278.2µs, drift: -1.3992ms
+window: 10ms, time: 302.6µs, drift: -1.8329ms
+window: 10ms, time: 395.6µs, drift: -2.3794ms
+window: 10ms, time: 402.8µs, drift: -2.3025ms
+Midi callback drift: -621µs
+Midi callback drift: -1.19ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 1.3174ms, drift: -2.717ms
+window: 10ms, time: 401.7µs, drift: -1.9842ms
+window: 10ms, time: 323µs, drift: -2.0534ms
+window: 10ms, time: 359.8µs, drift: -2.1217ms
+window: 10ms, time: 365.8µs, drift: -2.0767ms
+window: 10ms, time: 388.1µs, drift: -1.5376ms
+window: 10ms, time: 419µs, drift: -1.8158ms
+window: 10ms, time: 288.4µs, drift: -1.9842ms
+window: 10ms, time: 358.4µs, drift: -2.0474ms
+window: 10ms, time: 321.4µs, drift: -1.9669ms
+window: 10ms, time: 416.9µs, drift: -1.8718ms
+window: 10ms, time: 353.9µs, drift: -2.3079ms
+Midi callback drift: -1.145ms
+Midi callback drift: -712µs
+Midi callback drift: -469µs
+Midi callback drift: -1.096ms
+Midi callback drift: -743µs
+Midi callback drift: -284µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+Midi callback drift: 137µs
+Midi callback drift: -227µs
+window: 10ms, time: 2.5999ms, drift: -3.8949ms
+Midi callback drift: -380µs
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+window: 10ms, time: 1.5776ms, drift: -2.8238ms
+window: 10ms, time: 335.8µs, drift: -1.9165ms
+window: 10ms, time: 318.7µs, drift: -1.4241ms
+window: 10ms, time: 397.5µs, drift: -2.066ms
+window: 10ms, time: 431µs, drift: -1.8371ms
+window: 10ms, time: 392µs, drift: -1.7935ms
+window: 10ms, time: 264.5µs, drift: -1.19ms
+window: 10ms, time: 304.1µs, drift: -1.5909ms
+window: 10ms, time: 371.2µs, drift: -1.963ms
+window: 10ms, time: 352.4µs, drift: -2.0356ms
+window: 10ms, time: 445.7µs, drift: -2.0607ms
+Midi callback drift: -980µs
+Midi callback drift: -613µs
+Midi callback drift: -294µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.4774ms, drift: -2.5566ms
+window: 10ms, time: 387.4µs, drift: -1.5833ms
+window: 10ms, time: 417.5µs, drift: -1.68ms
+window: 10ms, time: 333.9µs, drift: -1.917ms
+window: 10ms, time: 355.4µs, drift: -1.7693ms
+window: 10ms, time: 313.7µs, drift: -1.5802ms
+window: 10ms, time: 618.7µs, drift: -2.7601ms
+window: 10ms, time: 381.7µs, drift: -2.2127ms
+window: 10ms, time: 299.7µs, drift: -1.7846ms
+window: 10ms, time: 450.5µs, drift: -2.3965ms
+window: 10ms, time: 355.9µs, drift: -1.9494ms
+window: 10ms, time: 587.9µs, drift: -2.2965ms
+Midi callback drift: -882µs
+Midi callback drift: -603µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.4067ms, drift: -3.2311ms
+window: 10ms, time: 247.6µs, drift: -1.6298ms
+window: 10ms, time: 355.2µs, drift: -1.9313ms
+window: 10ms, time: 309.1µs, drift: -1.5756ms
+window: 10ms, time: 611.7µs, drift: -2.4174ms
+window: 10ms, time: 523.2µs, drift: -1.8526ms
+window: 10ms, time: 300.3µs, drift: -1.575ms
+window: 10ms, time: 357.5µs, drift: -2.0497ms
+window: 10ms, time: 565.6µs, drift: -2.7609ms
+window: 10ms, time: 684.2µs, drift: -2.0234ms
+window: 10ms, time: 395.4µs, drift: -1.9576ms
+window: 10ms, time: 306.7µs, drift: -1.713ms
+Midi callback drift: -1.301ms
+Midi callback drift: -1.158ms
+Midi callback drift: -818µs
+Midi callback drift: -451µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 2.4081ms, drift: -3.6904ms
+window: 10ms, time: 265.4µs, drift: -1.7816ms
+window: 10ms, time: 391.1µs, drift: -1.7218ms
+window: 10ms, time: 383.3µs, drift: -2.3697ms
+window: 10ms, time: 295.3µs, drift: -1.8426ms
+window: 10ms, time: 346.4µs, drift: -1.8273ms
+window: 10ms, time: 313.5µs, drift: -1.8268ms
+window: 10ms, time: 577.2µs, drift: -2.199ms
+window: 10ms, time: 433.1µs, drift: -2.2178ms
+window: 10ms, time: 316.4µs, drift: -1.8555ms
+window: 10ms, time: 218.2µs, drift: -1.6938ms
+window: 10ms, time: 205.6µs, drift: -1.5135ms
+Midi callback drift: -1.427ms
+Midi callback drift: -1.336ms
+Midi callback drift: -253µs
+Midi callback drift: -1.052ms
+Midi callback drift: -687µs
+Midi callback drift: -1.098ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 3.0466ms, drift: -4.807ms
+window: 10ms, time: 393.6µs, drift: -1.4675ms
+window: 10ms, time: 363.8µs, drift: -1.7358ms
+window: 10ms, time: 404.9µs, drift: -1.9088ms
+window: 10ms, time: 313.1µs, drift: -1.7305ms
+window: 10ms, time: 590.3µs, drift: -2.5005ms
+window: 10ms, time: 389.9µs, drift: -2.0396ms
+window: 10ms, time: 262.6µs, drift: -1.6105ms
+window: 10ms, time: 350.5µs, drift: -1.9563ms
+window: 10ms, time: 406µs, drift: -1.7597ms
+window: 10ms, time: 537.3µs, drift: -2.0411ms
+window: 10ms, time: 424.5µs, drift: -2.2514ms
+Midi callback drift: -967µs
+Midi callback drift: -515µs
+Midi callback drift: -1.111ms
+Midi callback drift: -626µs
+Midi callback drift: -340µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 2.0845ms, drift: -3.2901ms
+window: 10ms, time: 312.6µs, drift: -1.5893ms
+window: 10ms, time: 237.5µs, drift: -1.4665ms
+window: 10ms, time: 459.8µs, drift: -1.7181ms
+window: 10ms, time: 477.5µs, drift: -2.1529ms
+window: 10ms, time: 291.6µs, drift: -1.5555ms
+window: 10ms, time: 442.9µs, drift: -2.3811ms
+window: 10ms, time: 318µs, drift: -1.6902ms
+window: 10ms, time: 554.8µs, drift: -2.0105ms
+window: 10ms, time: 367.6µs, drift: -1.909ms
+window: 10ms, time: 235.8µs, drift: -1.6097ms
+window: 10ms, time: 320µs, drift: -1.9022ms
+Midi callback drift: -779µs
+Midi callback drift: -1.301ms
+Midi callback drift: -1.022ms
+Midi callback drift: -1.724ms
+Midi callback drift: -238µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 2.5399ms, drift: -4.0342ms
+window: 10ms, time: 358.3µs, drift: -1.8129ms
+window: 10ms, time: 352.7µs, drift: -2.0053ms
+window: 10ms, time: 300.2µs, drift: -1.8543ms
+window: 10ms, time: 326.5µs, drift: -1.772ms
+window: 10ms, time: 609.2µs, drift: -2.1382ms
+window: 10ms, time: 392.1µs, drift: -1.9532ms
+window: 10ms, time: 362.9µs, drift: -1.9073ms
+window: 10ms, time: 412.6µs, drift: -2.3254ms
+window: 10ms, time: 301.3µs, drift: -1.6499ms
+window: 10ms, time: 364.7µs, drift: -1.9823ms
+window: 10ms, time: 603.8µs, drift: -2.8495ms
+Midi callback drift: -840µs
+Midi callback drift: -685µs
+Midi callback drift: -450µs
+Midi callback drift: -1.227ms
+Midi callback drift: 140µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: -577.2µs
+window: 10ms, time: 2.1097ms, drift: -3.1686ms
+window: 10ms, time: 210.2µs, drift: -1.569ms
+window: 10ms, time: 387.1µs, drift: -2.113ms
+window: 10ms, time: 351.5µs, drift: -1.8127ms
+window: 10ms, time: 729µs, drift: -2.6958ms
+window: 10ms, time: 472.4µs, drift: -1.882ms
+window: 10ms, time: 324µs, drift: -1.8671ms
+window: 10ms, time: 151.3µs, drift: -1.2609ms
+window: 10ms, time: 240.3µs, drift: -1.7313ms
+window: 10ms, time: 648.3µs, drift: -2.5275ms
+window: 10ms, time: 391.2µs, drift: -2.1309ms
+window: 10ms, time: 318.5µs, drift: -1.8322ms
+Midi callback drift: -750µs
+Midi callback drift: -1.478ms
+Midi callback drift: -1.038ms
+Midi callback drift: -1.53ms
+Midi callback drift: -196µs
+Midi callback drift: -861µs
+Midi callback drift: -314µs
+Midi callback drift: -827µs
+Midi callback drift: -1.368ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 3.9654ms, drift: -5.266ms
+window: 10ms, time: 218.1µs, drift: -1.2356ms
+window: 10ms, time: 292.5µs, drift: -2.1632ms
+window: 10ms, time: 412.5µs, drift: -2.1738ms
+window: 10ms, time: 318.9µs, drift: -1.7751ms
+window: 10ms, time: 538µs, drift: -2.1387ms
+window: 10ms, time: 409.4µs, drift: -1.8588ms
+window: 10ms, time: 840.2µs, drift: -2.5889ms
+window: 10ms, time: 572.9µs, drift: -2.3503ms
+window: 10ms, time: 341.9µs, drift: -1.3857ms
+window: 10ms, time: 317.5µs, drift: -1.9934ms
+window: 10ms, time: 347.4µs, drift: -1.8258ms
+Midi callback drift: -78µs
+Midi callback drift: 7µs
+Midi callback drift: -709µs
+Midi callback drift: -506µs
+Midi callback drift: -161µs
+Midi callback drift: -726µs
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.4034ms, drift: -3.9526ms
+window: 10ms, time: 411.7µs, drift: -2.0158ms
+window: 10ms, time: 322.9µs, drift: -1.8845ms
+window: 10ms, time: 418.1µs, drift: -1.9229ms
+window: 10ms, time: 421.3µs, drift: -1.8684ms
+window: 10ms, time: 464.4µs, drift: -2.3522ms
+window: 10ms, time: 638.7µs, drift: -2.624ms
+window: 10ms, time: 354.4µs, drift: -1.9053ms
+window: 10ms, time: 481.1µs, drift: -2.1248ms
+window: 10ms, time: 471µs, drift: -2.439ms
+window: 10ms, time: 388.1µs, drift: -2.2859ms
+window: 10ms, time: 492.2µs, drift: -2.2948ms
+Midi callback drift: -546µs
+Midi callback drift: -1.087ms
+Midi callback drift: -556µs
+Midi callback drift: -1.28ms
+Midi callback drift: -701µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 2.0232ms, drift: -3.21ms
+window: 10ms, time: 461.7µs, drift: -2.0781ms
+window: 10ms, time: 405.5µs, drift: -1.7974ms
+window: 10ms, time: 627.9µs, drift: -2.2292ms
+window: 10ms, time: 425.6µs, drift: -2.3827ms
+window: 10ms, time: 342.5µs, drift: -1.4839ms
+window: 10ms, time: 540.7µs, drift: -2.298ms
+window: 10ms, time: 371.8µs, drift: -1.9493ms
+window: 10ms, time: 426.9µs, drift: -1.9817ms
+window: 10ms, time: 373.5µs, drift: -1.5681ms
+window: 10ms, time: 342.4µs, drift: -1.6377ms
+window: 10ms, time: 557.6µs, drift: -2.041ms
+Midi callback drift: -814µs
+Midi callback drift: -431µs
+Midi callback drift: -893µs
+Midi callback drift: -485µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.5018ms, drift: -2.6863ms
+window: 10ms, time: 466.2µs, drift: -1.9922ms
+window: 10ms, time: 343.8µs, drift: -1.8361ms
+window: 10ms, time: 408.8µs, drift: -2.0663ms
+window: 10ms, time: 458.7µs, drift: -2.0877ms
+window: 10ms, time: 405.7µs, drift: -1.759ms
+window: 10ms, time: 651.3µs, drift: -2.6344ms
+window: 10ms, time: 442.8µs, drift: -2.0805ms
+window: 10ms, time: 341.8µs, drift: -1.6379ms
+window: 10ms, time: 508.2µs, drift: -2.0089ms
+window: 10ms, time: 502.7µs, drift: -2.2585ms
+window: 10ms, time: 509.4µs, drift: -2.0202ms
+Midi callback drift: -898µs
+Midi callback drift: -1.616ms
+Midi callback drift: -1.221ms
+Midi callback drift: -1.668ms
+Midi callback drift: -212µs
+Midi callback drift: -819µs
+Midi callback drift: -327µs
+Midi callback drift: -624µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.87ms, drift: -4.2214ms
+window: 10ms, time: 364.7µs, drift: -1.386ms
+window: 10ms, time: 516µs, drift: -1.9532ms
+window: 10ms, time: 294.8µs, drift: -1.8566ms
+window: 10ms, time: 315.2µs, drift: -1.7839ms
+window: 10ms, time: 471.6µs, drift: -2.4737ms
+window: 10ms, time: 443.1µs, drift: -2.2575ms
+window: 10ms, time: 418.8µs, drift: -1.9996ms
+window: 10ms, time: 406.2µs, drift: -2.0592ms
+window: 10ms, time: 773.5µs, drift: -2.32ms
+window: 10ms, time: 333µs, drift: -1.5372ms
+window: 10ms, time: 396.8µs, drift: -1.7074ms
+Midi callback drift: -395µs
+Midi callback drift: -1.255ms
+Midi callback drift: -1.043ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.4499ms, drift: -2.7355ms
+window: 10ms, time: 361µs, drift: -1.729ms
+window: 10ms, time: 649.7µs, drift: -1.9258ms
+window: 10ms, time: 437.6µs, drift: -2.2626ms
+window: 10ms, time: 512.9µs, drift: -1.9567ms
+window: 10ms, time: 439.7µs, drift: -1.9474ms
+window: 10ms, time: 405.3µs, drift: -1.9645ms
+window: 10ms, time: 543.3µs, drift: -1.8738ms
+window: 10ms, time: 386.9µs, drift: -1.9531ms
+window: 10ms, time: 400.9µs, drift: -2.0077ms
+window: 10ms, time: 516.5µs, drift: -2.289ms
+window: 10ms, time: 377µs, drift: -2.0296ms
+Midi callback drift: -980µs
+Midi callback drift: -439µs
+Midi callback drift: -1.011ms
+Midi callback drift: -683µs
+Midi callback drift: -347µs
+Midi callback drift: 80µs
+Midi callback drift: -492µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 3.2067ms, drift: -4.3954ms
+window: 10ms, time: 311µs, drift: -1.7138ms
+window: 10ms, time: 316.9µs, drift: -1.6141ms
+window: 10ms, time: 470.7µs, drift: -2.1329ms
+window: 10ms, time: 407µs, drift: -2.031ms
+window: 10ms, time: 522µs, drift: -2.0428ms
+window: 10ms, time: 410.5µs, drift: -2.1176ms
+window: 10ms, time: 415.2µs, drift: -2.176ms
+window: 10ms, time: 404.3µs, drift: -2.1183ms
+window: 10ms, time: 225µs, drift: -1.5472ms
+window: 10ms, time: 102.2µs, drift: -1.2367ms
+window: 10ms, time: 168.3µs, drift: -1.2955ms
+Midi callback drift: -155µs
+Midi callback drift: -291µs
+Midi callback drift: -359µs
+Midi callback drift: -494µs
+Midi callback drift: -668µs
+Midi callback drift: -9µs
+Midi callback drift: -73µs
+Midi callback drift: -121µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 932.2µs, drift: -1.8933ms
+window: 10ms, time: 113.3µs, drift: -1.1663ms
+window: 10ms, time: 194.2µs, drift: -1.3361ms
+window: 10ms, time: 297.4µs, drift: -2.2356ms
+window: 10ms, time: 314.6µs, drift: -1.7162ms
+window: 10ms, time: 320.7µs, drift: -1.2924ms
+window: 10ms, time: 449.1µs, drift: -2.2201ms
+window: 10ms, time: 355.3µs, drift: -2.0543ms
+window: 10ms, time: 524µs, drift: -2.5254ms
+window: 10ms, time: 350.3µs, drift: -1.7339ms
+window: 10ms, time: 134.5µs, drift: -1.5847ms
+window: 10ms, time: 387.5µs, drift: -1.864ms
+Midi callback drift: -821µs
+Midi callback drift: -435µs
+Midi callback drift: -1.022ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.2788ms, drift: -2.8494ms
+window: 10ms, time: 705.4µs, drift: -1.9588ms
+window: 10ms, time: 478.6µs, drift: -2.5123ms
+window: 10ms, time: 331µs, drift: -1.7953ms
+window: 10ms, time: 442.4µs, drift: -2.1428ms
+window: 10ms, time: 330µs, drift: -2.2891ms
+window: 10ms, time: 564.4µs, drift: -2.3103ms
+window: 10ms, time: 518.9µs, drift: -2.4142ms
+window: 10ms, time: 328.9µs, drift: -1.8165ms
+window: 10ms, time: 441.1µs, drift: -1.8216ms
+window: 10ms, time: 400.3µs, drift: -2.0293ms
+window: 10ms, time: 130.7µs, drift: -1.0878ms
+Midi callback drift: -587µs
+Midi callback drift: -1.029ms
+Midi callback drift: -1.435ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 1.0668ms, drift: -2.099ms
+window: 10ms, time: 329.3µs, drift: -1.6923ms
+window: 10ms, time: 421.2µs, drift: -2.1345ms
+window: 10ms, time: 388.3µs, drift: -2.0492ms
+window: 10ms, time: 636.4µs, drift: -2.1652ms
+window: 10ms, time: 376.6µs, drift: -1.6535ms
+window: 10ms, time: 426.9µs, drift: -2.0882ms
+window: 10ms, time: 366.2µs, drift: -1.9134ms
+window: 10ms, time: 360.3µs, drift: -2.123ms
+window: 10ms, time: 571.6µs, drift: -1.9984ms
+window: 10ms, time: 382.1µs, drift: -2.3525ms
+window: 10ms, time: 329.9µs, drift: -2.0668ms
+Midi callback drift: -992µs
+Midi callback drift: -708µs
+Midi callback drift: -413µs
+Midi callback drift: -974µs
+Midi callback drift: -528µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 1.7672ms, drift: -2.9729ms
+window: 10ms, time: 368.8µs, drift: -1.6307ms
+window: 10ms, time: 556.1µs, drift: -2.1898ms
+window: 10ms, time: 398.2µs, drift: -2.1733ms
+window: 10ms, time: 380µs, drift: -1.9328ms
+window: 10ms, time: 402.8µs, drift: -1.8641ms
+window: 10ms, time: 268.7µs, drift: -1.6501ms
+window: 10ms, time: 535.6µs, drift: -2.1469ms
+window: 10ms, time: 419.8µs, drift: -2.1598ms
+window: 10ms, time: 450.9µs, drift: -1.8901ms
+window: 10ms, time: 333.4µs, drift: -2.2282ms
+window: 10ms, time: 514.2µs, drift: -2.4359ms
+Midi callback drift: -968µs
+Midi callback drift: -601µs
+Midi callback drift: -1.418ms
+Midi callback drift: -1.06ms
+Midi callback drift: -595µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 2.2941ms, drift: -3.8553ms
+window: 10ms, time: 356.8µs, drift: -1.996ms
+window: 10ms, time: 270.9µs, drift: -1.6677ms
+window: 10ms, time: 322.4µs, drift: -2.026ms
+window: 10ms, time: 296.4µs, drift: -1.6942ms
+window: 10ms, time: 572.9µs, drift: -2.121ms
+window: 10ms, time: 397µs, drift: -2.1926ms
+window: 10ms, time: 257.5µs, drift: -1.6866ms
+window: 10ms, time: 353.6µs, drift: -2.21ms
+window: 10ms, time: 298.5µs, drift: -1.8223ms
+window: 10ms, time: 509.6µs, drift: -1.9248ms
+window: 10ms, time: 400.1µs, drift: -2.4157ms
+Midi callback drift: -786µs
+Midi callback drift: -455µs
+Midi callback drift: -153µs
+Midi callback drift: -648µs
+Midi callback drift: -1.2ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.2399ms, drift: -2.6578ms
+window: 10ms, time: 371.8µs, drift: -1.4278ms
+window: 10ms, time: 372.1µs, drift: -1.7971ms
+window: 10ms, time: 413.1µs, drift: -2.3966ms
+window: 10ms, time: 416.8µs, drift: -2.1955ms
+window: 10ms, time: 415.4µs, drift: -2.0465ms
+window: 10ms, time: 311.6µs, drift: -1.9454ms
+window: 10ms, time: 210.6µs, drift: -1.6073ms
+window: 10ms, time: 330.8µs, drift: -2.016ms
+window: 10ms, time: 111.1µs, drift: -995.9µs
+window: 10ms, time: 167.4µs, drift: -1.3518ms
+window: 10ms, time: 271.9µs, drift: -1.8423ms
+Midi callback drift: -567µs
+Midi callback drift: -232µs
+Midi callback drift: -913µs
+Midi callback drift: -517µs
+Midi callback drift: -979µs
+Midi callback drift: -1.538ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.8135ms, drift: -3.1694ms
+window: 10ms, time: 473.6µs, drift: -1.9805ms
+window: 10ms, time: 409.3µs, drift: -2.0442ms
+window: 10ms, time: 374.9µs, drift: -2.0723ms
+window: 10ms, time: 218.9µs, drift: -1.5028ms
+window: 10ms, time: 220.1µs, drift: -1.675ms
+window: 10ms, time: 247.4µs, drift: -1.5759ms
+window: 10ms, time: 439.1µs, drift: -2.306ms
+window: 10ms, time: 286.4µs, drift: -2.064ms
+window: 10ms, time: 554.1µs, drift: -2.2804ms
+window: 10ms, time: 330.9µs, drift: -1.7814ms
+window: 10ms, time: 376.2µs, drift: -2.1211ms
+Midi callback drift: -6µs
+Midi callback drift: -694µs
+Midi callback drift: -545µs
+Midi callback drift: -1.295ms
+Midi callback drift: -916µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 2.3659ms, drift: -3.802ms
+window: 10ms, time: 343.7µs, drift: -1.63ms
+window: 10ms, time: 460.9µs, drift: -2.2213ms
+window: 10ms, time: 346.5µs, drift: -2.0118ms
+window: 10ms, time: 416.1µs, drift: -1.9413ms
+window: 10ms, time: 344.3µs, drift: -1.8826ms
+window: 10ms, time: 318.4µs, drift: -2.1314ms
+window: 10ms, time: 445.7µs, drift: -1.7539ms
+window: 10ms, time: 476.9µs, drift: -2.054ms
+window: 10ms, time: 454.6µs, drift: -2.1533ms
+window: 10ms, time: 422.7µs, drift: -2.0388ms
+window: 10ms, time: 348.9µs, drift: -1.6858ms
+Midi callback drift: -1.194ms
+Midi callback drift: -729µs
+Midi callback drift: -1.275ms
+Midi callback drift: -890µs
+Midi callback drift: -470µs
+Midi callback drift: -105µs
+Midi callback drift: -467µs
+Midi callback drift: -32µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+window: 10ms, time: 3.5221ms, drift: -4.9018ms
+window: 10ms, time: 297.5µs, drift: -1.8047ms
+window: 10ms, time: 648.5µs, drift: -2.0356ms
+window: 10ms, time: 516.9µs, drift: -2.5419ms
+window: 10ms, time: 349µs, drift: -2.0827ms
+window: 10ms, time: 421µs, drift: -1.8746ms
+window: 10ms, time: 418.1µs, drift: -1.8169ms
+window: 10ms, time: 262.8µs, drift: -1.7624ms
+window: 10ms, time: 391.7µs, drift: -2.3177ms
+window: 10ms, time: 347.5µs, drift: -2.0339ms
+window: 10ms, time: 364.1µs, drift: -1.8561ms
+window: 10ms, time: 361µs, drift: -1.9044ms
+Midi callback drift: 131µs
+Midi callback drift: -512µs
+Midi callback drift: -165µs
+Midi callback drift: -809µs
+Midi callback drift: -460µs
+Midi callback drift: -146µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.5923ms, drift: -4.0286ms
+window: 10ms, time: 362.8µs, drift: -1.8272ms
+window: 10ms, time: 404.3µs, drift: -2.306ms
+window: 10ms, time: 535.1µs, drift: -2.4281ms
+window: 10ms, time: 368.5µs, drift: -2.0531ms
+window: 10ms, time: 600.1µs, drift: -1.945ms
+window: 10ms, time: 537.6µs, drift: -2.5434ms
+window: 10ms, time: 393.3µs, drift: -1.6216ms
+Midi callback drift: -382µs
+Message time diff: 3.4228ms
+window: 10ms, time: 776.5µs, drift: -1.9561ms
+window: 10ms, time: 488.9µs, drift: -1.7718ms
+window: 10ms, time: 411.6µs, drift: -2.5412ms
+window: 10ms, time: 471.7µs, drift: -2.1302ms
+window: 10ms, time: 302.7µs, drift: -1.9431ms
+window: 10ms, time: 349.5µs, drift: -1.9466ms
+window: 10ms, time: 419.6µs, drift: -2.2866ms
+window: 10ms, time: 463.1µs, drift: -2.0586ms
+Midi callback drift: -527µs
+Midi callback drift: -1.096ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 1.5284ms, drift: -3.1223ms
+window: 10ms, time: 366.8µs, drift: -1.5637ms
+window: 10ms, time: 315.3µs, drift: -1.4667ms
+window: 10ms, time: 368.8µs, drift: -1.7904ms
+window: 10ms, time: 437µs, drift: -1.95ms
+window: 10ms, time: 424.3µs, drift: -2.1176ms
+window: 10ms, time: 317.9µs, drift: -1.8322ms
+window: 10ms, time: 443.4µs, drift: -2.3823ms
+Midi callback drift: -704µs
+Midi callback drift: -343µs
+Midi callback drift: -899µs
+Midi callback drift: -568µs
+Midi callback drift: -1.071ms
+Midi callback drift: -794µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 1.7683ms, drift: -2.953ms
+window: 10ms, time: 683.7µs, drift: -1.9448ms
+window: 10ms, time: 489.5µs, drift: -2.0241ms
+window: 10ms, time: 398.3µs, drift: -2.0599ms
+window: 10ms, time: 438.1µs, drift: -1.9497ms
+window: 10ms, time: 106.7µs, drift: -1.4623ms
+window: 10ms, time: 244µs, drift: -1.7549ms
+window: 10ms, time: 495.5µs, drift: -2.2364ms
+Midi callback drift: -714µs
+Midi callback drift: -216µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.3286ms, drift: -2.8184ms
+window: 10ms, time: 390µs, drift: -1.5744ms
+window: 10ms, time: 378µs, drift: -1.8972ms
+window: 10ms, time: 555.5µs, drift: -2.4805ms
+window: 10ms, time: 450.8µs, drift: -2.2293ms
+window: 10ms, time: 503.3µs, drift: -2.0331ms
+window: 10ms, time: 419.1µs, drift: -2.3092ms
+window: 10ms, time: 338µs, drift: -1.5856ms
+Midi callback drift: -729µs
+Midi callback drift: -361µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.4601ms, drift: -2.8883ms
+window: 10ms, time: 385.7µs, drift: -1.6213ms
+window: 10ms, time: 507.2µs, drift: -2.047ms
+window: 10ms, time: 384.8µs, drift: -1.8322ms
+window: 10ms, time: 373.9µs, drift: -2.0079ms
+window: 10ms, time: 459.2µs, drift: -2.0091ms
+window: 10ms, time: 355.8µs, drift: -2.1221ms
+window: 10ms, time: 487.4µs, drift: -2.2873ms
+Midi callback drift: -1.031ms
+Midi callback drift: -756µs
+Midi callback drift: -624µs
+Midi callback drift: -1.117ms
+Midi callback drift: -721µs
+Midi callback drift: -391µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -1.051ms
+window: 10ms, time: 2.7756ms, drift: -4.288ms
+Midi callback drift: -729µs
+Midi callback drift: -1.179ms
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+window: 10ms, time: 891.6µs, drift: -2.1292ms
+window: 10ms, time: 339.3µs, drift: -1.7309ms
+window: 10ms, time: 441.2µs, drift: -1.6381ms
+window: 10ms, time: 345.6µs, drift: -1.552ms
+window: 10ms, time: 374.4µs, drift: -2.3435ms
+window: 10ms, time: 370.7µs, drift: -2.1457ms
+window: 10ms, time: 374.6µs, drift: -1.9284ms
+window: 10ms, time: 289.8µs, drift: -1.6689ms
+window: 10ms, time: 313µs, drift: -1.4555ms
+window: 10ms, time: 439.9µs, drift: -2.0255ms
+window: 10ms, time: 551.9µs, drift: -1.9843ms
+Midi callback drift: -672µs
+Midi callback drift: -1.386ms
+Midi callback drift: -875µs
+Midi callback drift: -568µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.6094ms, drift: -2.912ms
+window: 10ms, time: 335.5µs, drift: -1.9144ms
+window: 10ms, time: 100.8µs, drift: -969.5µs
+window: 10ms, time: 160.8µs, drift: -1.3825ms
+window: 10ms, time: 195.9µs, drift: -1.5058ms
+window: 10ms, time: 317.3µs, drift: -1.456ms
+window: 10ms, time: 353.3µs, drift: -2.0351ms
+window: 10ms, time: 373.3µs, drift: -2.13ms
+window: 10ms, time: 417µs, drift: -2.3884ms
+window: 10ms, time: 417.5µs, drift: -2.3109ms
+window: 10ms, time: 310.4µs, drift: -1.8311ms
+window: 10ms, time: 484.6µs, drift: -2.198ms
+Midi callback drift: -692µs
+Midi callback drift: -279µs
+Midi callback drift: -819µs
+Midi callback drift: -298µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.6628ms, drift: -2.93ms
+window: 10ms, time: 469µs, drift: -1.9702ms
+window: 10ms, time: 575.3µs, drift: -2.1141ms
+window: 10ms, time: 317.7µs, drift: -1.7421ms
+window: 10ms, time: 439µs, drift: -2.33ms
+window: 10ms, time: 362.6µs, drift: -2.0688ms
+window: 10ms, time: 435.9µs, drift: -1.8902ms
+window: 10ms, time: 374.1µs, drift: -1.9951ms
+window: 10ms, time: 128.1µs, drift: -1.0878ms
+window: 10ms, time: 104.9µs, drift: -910.3µs
+window: 10ms, time: 105.7µs, drift: -1.1046ms
+window: 10ms, time: 146.5µs, drift: -993µs
+Midi callback drift: -323µs
+Midi callback drift: -467µs
+Midi callback drift: -633µs
+Midi callback drift: 51µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 711.3µs, drift: -1.7617ms
+window: 10ms, time: 234.9µs, drift: -1.3579ms
+window: 10ms, time: 518.4µs, drift: -1.6685ms
+window: 10ms, time: 493.2µs, drift: -1.8108ms
+window: 10ms, time: 461.6µs, drift: -2.322ms
+window: 10ms, time: 308.1µs, drift: -1.5798ms
+window: 10ms, time: 366.4µs, drift: -2.0654ms
+window: 10ms, time: 413.2µs, drift: -2.5386ms
+window: 10ms, time: 170.5µs, drift: -1.5617ms
+window: 10ms, time: 196.6µs, drift: -1.3446ms
+window: 10ms, time: 442.9µs, drift: -2.7124ms
+window: 10ms, time: 385.8µs, drift: -2.2087ms
+Midi callback drift: -1.013ms
+Midi callback drift: -816µs
+Midi callback drift: -566µs
+Midi callback drift: -289µs
+Midi callback drift: -949µs
+Midi callback drift: -583µs
+Midi callback drift: -305µs
+Midi callback drift: -887µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+Message time diff: -1.5772ms
+window: 10ms, time: 3.7547ms, drift: -5.3696ms
+window: 10ms, time: 274.9µs, drift: -1.3029ms
+window: 10ms, time: 515.5µs, drift: -2.3867ms
+window: 10ms, time: 447.8µs, drift: -2.0997ms
+window: 10ms, time: 300.9µs, drift: -1.855ms
+window: 10ms, time: 448.6µs, drift: -2.2234ms
+window: 10ms, time: 372.4µs, drift: -1.9471ms
+window: 10ms, time: 448.7µs, drift: -2.5417ms
+window: 10ms, time: 336.8µs, drift: -1.9202ms
+window: 10ms, time: 339.4µs, drift: -1.8036ms
+window: 10ms, time: 426.5µs, drift: -2.0968ms
+window: 10ms, time: 412.7µs, drift: -2.0023ms
+Midi callback drift: -831µs
+Midi callback drift: -553µs
+Midi callback drift: -350µs
+Midi callback drift: -1.002ms
+Midi callback drift: -632µs
+Midi callback drift: -184µs
+Midi callback drift: -853µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.909ms, drift: -4.4322ms
+window: 10ms, time: 347.2µs, drift: -1.6547ms
+window: 10ms, time: 411.6µs, drift: -1.7715ms
+window: 10ms, time: 440.7µs, drift: -2.5259ms
+window: 10ms, time: 349.5µs, drift: -1.9878ms
+window: 10ms, time: 360.9µs, drift: -1.6699ms
+window: 10ms, time: 439.5µs, drift: -2.583ms
+window: 10ms, time: 348.9µs, drift: -2.1386ms
+window: 10ms, time: 398.4µs, drift: -2.292ms
+window: 10ms, time: 400.6µs, drift: -2.2911ms
+window: 10ms, time: 597.5µs, drift: -2.2737ms
+window: 10ms, time: 373.6µs, drift: -2.1537ms
+Midi callback drift: -38µs
+Midi callback drift: -677µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.3859ms, drift: -2.8123ms
+window: 10ms, time: 388.2µs, drift: -1.63ms
+window: 10ms, time: 351.5µs, drift: -2.1702ms
+window: 10ms, time: 554.9µs, drift: -2.3727ms
+window: 10ms, time: 388µs, drift: -2.3308ms
+window: 10ms, time: 498µs, drift: -1.8562ms
+window: 10ms, time: 319µs, drift: -1.5126ms
+window: 10ms, time: 279.2µs, drift: -1.9907ms
+window: 10ms, time: 352.7µs, drift: -1.6961ms
+window: 10ms, time: 259.8µs, drift: -1.5274ms
+window: 10ms, time: 233µs, drift: -1.3254ms
+window: 10ms, time: 242.8µs, drift: -1.4615ms
+Midi callback drift: -41µs
+Midi callback drift: -580µs
+Midi callback drift: -199µs
+Midi callback drift: -866µs
+Midi callback drift: -462µs
+Midi callback drift: 96µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 917.2µs, drift: -1.8929ms
+window: 10ms, time: 307.8µs, drift: -1.8594ms
+window: 10ms, time: 247.4µs, drift: -1.8577ms
+window: 10ms, time: 265.4µs, drift: -1.608ms
+window: 10ms, time: 330.3µs, drift: -2.0733ms
+window: 10ms, time: 339.8µs, drift: -1.8201ms
+window: 10ms, time: 407.8µs, drift: -2.025ms
+window: 10ms, time: 408.8µs, drift: -2.0571ms
+window: 10ms, time: 314.4µs, drift: -1.7331ms
+window: 10ms, time: 392.9µs, drift: -2.023ms
+window: 10ms, time: 267.8µs, drift: -1.7082ms
+window: 10ms, time: 268.5µs, drift: -1.5616ms
+Midi callback drift: -313µs
+Midi callback drift: -679µs
+Midi callback drift: -1.063ms
+Midi callback drift: -441µs
+Midi callback drift: -665µs
+Midi callback drift: -957µs
+Midi callback drift: -1.226ms
+Midi callback drift: -618µs
+Midi callback drift: -983µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.2549ms, drift: -2.1192ms
+window: 10ms, time: 445.8µs, drift: -1.5622ms
+window: 10ms, time: 283.3µs, drift: -1.738ms
+window: 10ms, time: 317.1µs, drift: -2.0506ms
+window: 10ms, time: 413.3µs, drift: -2.1853ms
+window: 10ms, time: 437.6µs, drift: -2.0951ms
+window: 10ms, time: 342.6µs, drift: -1.8142ms
+window: 10ms, time: 153.4µs, drift: -1.4637ms
+window: 10ms, time: 260.2µs, drift: -1.9076ms
+window: 10ms, time: 320.9µs, drift: -1.5725ms
+window: 10ms, time: 499µs, drift: -2.4155ms
+window: 10ms, time: 441.3µs, drift: -1.9769ms
+Midi callback drift: -341µs
+Midi callback drift: -243µs
+Midi callback drift: -1.07ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 2.2144ms, drift: -3.9165ms
+window: 10ms, time: 266.5µs, drift: -1.7749ms
+window: 10ms, time: 424.2µs, drift: -2.1803ms
+window: 10ms, time: 449.7µs, drift: -1.9409ms
+window: 10ms, time: 398µs, drift: -1.9303ms
+window: 10ms, time: 452µs, drift: -2.154ms
+window: 10ms, time: 462.1µs, drift: -2.3145ms
+window: 10ms, time: 162.2µs, drift: -1.0799ms
+window: 10ms, time: 150.9µs, drift: -1.265ms
+window: 10ms, time: 343.2µs, drift: -1.6565ms
+window: 10ms, time: 507.1µs, drift: -2.3402ms
+window: 10ms, time: 453.5µs, drift: -2.0256ms
+Midi callback drift: -88µs
+Midi callback drift: -42µs
+Midi callback drift: -595µs
+Midi callback drift: -1.265ms
+Midi callback drift: -49µs
+Midi callback drift: -640µs
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+Midi callback drift: -16µs
+window: 10ms, time: 2.8351ms, drift: -3.9268ms
+Midi callback drift: -379µs
+Message time diff: 6.4228ms
+window: 10ms, time: 941.2µs, drift: -2.127ms
+window: 10ms, time: 409.9µs, drift: -2.1086ms
+window: 10ms, time: 460µs, drift: -2.0255ms
+window: 10ms, time: 418.5µs, drift: -2.0515ms
+window: 10ms, time: 505.1µs, drift: -2.2897ms
+window: 10ms, time: 419.8µs, drift: -2.3956ms
+window: 10ms, time: 408.4µs, drift: -1.993ms
+window: 10ms, time: 320.6µs, drift: -1.7025ms
+window: 10ms, time: 323.7µs, drift: -1.4989ms
+window: 10ms, time: 264.2µs, drift: -1.6453ms
+window: 10ms, time: 360µs, drift: -2.0113ms
+Midi callback drift: -904µs
+Midi callback drift: -440µs
+Midi callback drift: -965µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.4328ms, drift: -2.8501ms
+window: 10ms, time: 348.1µs, drift: -1.9692ms
+window: 10ms, time: 263.1µs, drift: -1.8307ms
+window: 10ms, time: 247.7µs, drift: -1.4634ms
+window: 10ms, time: 284.6µs, drift: -1.74ms
+window: 10ms, time: 235.4µs, drift: -1.7474ms
+window: 10ms, time: 249.8µs, drift: -1.6229ms
+window: 10ms, time: 335.6µs, drift: -1.813ms
+window: 10ms, time: 350µs, drift: -1.7769ms
+window: 10ms, time: 386.9µs, drift: -1.7889ms
+window: 10ms, time: 412.3µs, drift: -2.1699ms
+window: 10ms, time: 388.1µs, drift: -2.0847ms
+Midi callback drift: -828µs
+Midi callback drift: -601µs
+Midi callback drift: -176µs
+Midi callback drift: -857µs
+Midi callback drift: -409µs
+Midi callback drift: -936µs
+Midi callback drift: -539µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.7806ms, drift: -4.3242ms
+window: 10ms, time: 369.9µs, drift: -1.5473ms
+window: 10ms, time: 344.9µs, drift: -1.8037ms
+window: 10ms, time: 444.8µs, drift: -2.0167ms
+window: 10ms, time: 231.5µs, drift: -1.2511ms
+window: 10ms, time: 382.8µs, drift: -1.83ms
+window: 10ms, time: 428.3µs, drift: -1.9594ms
+window: 10ms, time: 469.2µs, drift: -2.2276ms
+window: 10ms, time: 336.9µs, drift: -1.7323ms
+window: 10ms, time: 505.7µs, drift: -2.0743ms
+window: 10ms, time: 449.5µs, drift: -1.9392ms
+window: 10ms, time: 442.6µs, drift: -2.1205ms
+Midi callback drift: -962µs
+Midi callback drift: -1.707ms
+Midi callback drift: -312µs
+Midi callback drift: -1.032ms
+Midi callback drift: -523µs
+Midi callback drift: -78µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.1436ms, drift: -3.2306ms
+window: 10ms, time: 108µs, drift: -1.3861ms
+window: 10ms, time: 99.5µs, drift: -799.3µs
+window: 10ms, time: 110.4µs, drift: -1.0976ms
+window: 10ms, time: 120.7µs, drift: -1.1289ms
+window: 10ms, time: 177.1µs, drift: -1.0605ms
+window: 10ms, time: 202.6µs, drift: -1.2153ms
+window: 10ms, time: 372µs, drift: -2.146ms
+window: 10ms, time: 249.9µs, drift: -1.5056ms
+window: 10ms, time: 374.1µs, drift: -2.4764ms
+window: 10ms, time: 341µs, drift: -1.7768ms
+window: 10ms, time: 597.6µs, drift: -2.446ms
+Midi callback drift: -271µs
+Midi callback drift: -1.115ms
+Midi callback drift: -855µs
+Midi callback drift: -684µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 1.7568ms, drift: -3.4567ms
+window: 10ms, time: 183.3µs, drift: -1.1626ms
+window: 10ms, time: 422.9µs, drift: -2.2374ms
+window: 10ms, time: 298.6µs, drift: -1.7286ms
+window: 10ms, time: 499µs, drift: -2.2877ms
+window: 10ms, time: 319.3µs, drift: -1.9085ms
+window: 10ms, time: 276.9µs, drift: -2.1303ms
+window: 10ms, time: 334.4µs, drift: -2.1277ms
+window: 10ms, time: 388.5µs, drift: -2.4355ms
+window: 10ms, time: 352.6µs, drift: -2.0738ms
+window: 10ms, time: 324.3µs, drift: -2.2198ms
+window: 10ms, time: 232.2µs, drift: -1.4137ms
+Midi callback drift: -556µs
+Midi callback drift: -1.006ms
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 1.4757ms, drift: -2.8435ms
+window: 10ms, time: 297.3µs, drift: -1.7212ms
+window: 10ms, time: 241.3µs, drift: -1.9904ms
+window: 10ms, time: 297.5µs, drift: -2.1196ms
+window: 10ms, time: 271.1µs, drift: -2.0294ms
+window: 10ms, time: 364.7µs, drift: -1.4393ms
+window: 10ms, time: 297.1µs, drift: -1.9601ms
+window: 10ms, time: 333.6µs, drift: -1.5935ms
+window: 10ms, time: 383.6µs, drift: -2.1338ms
+window: 10ms, time: 286.3µs, drift: -2.0211ms
+window: 10ms, time: 399.4µs, drift: -2.1854ms
+window: 10ms, time: 300µs, drift: -1.8094ms
+Midi callback drift: -823µs
+Midi callback drift: -588µs
+Midi callback drift: -128µs
+Midi callback drift: -805µs
+Midi callback drift: -1.513ms
+Midi callback drift: -269µs
+Midi callback drift: -577µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.1279ms, drift: -3.6918ms
+window: 10ms, time: 355.6µs, drift: -1.8266ms
+window: 10ms, time: 298.2µs, drift: -1.4251ms
+window: 10ms, time: 324.6µs, drift: -2.2083ms
+window: 10ms, time: 239.5µs, drift: -1.35ms
+window: 10ms, time: 334.7µs, drift: -1.6737ms
+window: 10ms, time: 319.3µs, drift: -2.1456ms
+window: 10ms, time: 296.9µs, drift: -1.5905ms
+window: 10ms, time: 475.7µs, drift: -2.1957ms
+window: 10ms, time: 396.5µs, drift: -1.7807ms
+window: 10ms, time: 373.7µs, drift: -2.0651ms
+window: 10ms, time: 350.5µs, drift: -1.9654ms
+window: 10ms, time: 270.3µs, drift: -1.7474ms
+window: 10ms, time: 296.6µs, drift: -1.8574ms
+window: 10ms, time: 320.2µs, drift: -2.0934ms
+window: 10ms, time: 268.9µs, drift: -1.9067ms
+window: 10ms, time: 357.9µs, drift: -1.795ms
+window: 10ms, time: 269µs, drift: -1.6161ms
+window: 10ms, time: 360.8µs, drift: -2.3808ms
+window: 10ms, time: 294.9µs, drift: -1.8782ms
+window: 10ms, time: 508µs, drift: -2.5209ms
+window: 10ms, time: 323.2µs, drift: -1.7255ms
+window: 10ms, time: 86.2µs, drift: -928.8µs
+window: 10ms, time: 150.9µs, drift: -1.238ms
+Midi callback drift: -174µs
+Midi callback drift: -908µs
+Midi callback drift: -390µs
+Midi callback drift: -802µs
+Midi callback drift: -51µs
+Midi callback drift: -461µs
+Midi callback drift: -698µs
+Midi callback drift: -885µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+window: 10ms, time: 735.6µs, drift: -1.8055ms
+window: 10ms, time: 344.5µs, drift: -1.7568ms
+window: 10ms, time: 334µs, drift: -1.8437ms
+window: 10ms, time: 235.6µs, drift: -1.7893ms
+window: 10ms, time: 176.7µs, drift: -1.3254ms
+window: 10ms, time: 236µs, drift: -1.7991ms
+window: 10ms, time: 218.2µs, drift: -1.4858ms
+window: 10ms, time: 305.9µs, drift: -2.2645ms
+window: 10ms, time: 220.5µs, drift: -1.9735ms
+window: 10ms, time: 239µs, drift: -1.6321ms
+window: 10ms, time: 276.4µs, drift: -2.2505ms
+window: 10ms, time: 306.8µs, drift: -1.9221ms
+window: 10ms, time: 305.2µs, drift: -2.2412ms
+window: 10ms, time: 304.2µs, drift: -1.7429ms
+window: 10ms, time: 210.7µs, drift: -1.4519ms
+window: 10ms, time: 249.5µs, drift: -2.0608ms
+window: 10ms, time: 310.7µs, drift: -1.9562ms
+window: 10ms, time: 234.1µs, drift: -1.3187ms
+window: 10ms, time: 265.4µs, drift: -1.5788ms
+window: 10ms, time: 307.5µs, drift: -2.0503ms
+window: 10ms, time: 255.8µs, drift: -1.8428ms
+window: 10ms, time: 254.1µs, drift: -1.7501ms
+window: 10ms, time: 232.5µs, drift: -1.7847ms
+window: 10ms, time: 231.2µs, drift: -1.5621ms
+Midi callback drift: -840µs
+Midi callback drift: -735µs
+Midi callback drift: -524µs
+Midi callback drift: -1.319ms
+Midi callback drift: -140µs
+Midi callback drift: -700µs
+Midi callback drift: -583µs
+Midi callback drift: -184µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+Message time diff: -2.5772ms
+Message time diff: -2.5772ms
+Midi callback drift: -773µs
+Midi callback drift: -540µs
+window: 10ms, time: 3.6661ms, drift: -5.1804ms
+Message time diff: 5.4228ms
+window: 10ms, time: 743.6µs, drift: -2.2896ms
+window: 10ms, time: 246.2µs, drift: -1.6624ms
+window: 10ms, time: 207.7µs, drift: -1.8294ms
+window: 10ms, time: 264.6µs, drift: -1.8119ms
+window: 10ms, time: 317.2µs, drift: -1.8007ms
+window: 10ms, time: 404.7µs, drift: -2.1548ms
+window: 10ms, time: 365µs, drift: -2.1446ms
+window: 10ms, time: 309.3µs, drift: -1.6435ms
+window: 10ms, time: 335.4µs, drift: -1.6269ms
+window: 10ms, time: 359µs, drift: -1.8761ms
+window: 10ms, time: 343.2µs, drift: -1.5846ms
+Midi callback drift: -905µs
+Midi callback drift: -842µs
+Midi callback drift: -1.584ms
+Midi callback drift: -457µs
+Midi callback drift: -349µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.9094ms, drift: -4.3434ms
+window: 10ms, time: 276.2µs, drift: -1.5129ms
+window: 10ms, time: 345.7µs, drift: -1.8048ms
+window: 10ms, time: 448.8µs, drift: -2.0244ms
+window: 10ms, time: 292.2µs, drift: -1.7847ms
+window: 10ms, time: 319.4µs, drift: -1.7963ms
+window: 10ms, time: 477.9µs, drift: -2.3837ms
+window: 10ms, time: 345.5µs, drift: -1.6028ms
+window: 10ms, time: 376.7µs, drift: -2.4509ms
+window: 10ms, time: 381.4µs, drift: -1.8204ms
+window: 10ms, time: 192.8µs, drift: -2.0259ms
+window: 10ms, time: 239.8µs, drift: -1.6145ms
+Midi callback drift: -681µs
+Midi callback drift: -118µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 964.1µs, drift: -2.2716ms
+window: 10ms, time: 443.4µs, drift: -1.8602ms
+window: 10ms, time: 440µs, drift: -2.1798ms
+window: 10ms, time: 339.9µs, drift: -1.8214ms
+window: 10ms, time: 446.9µs, drift: -1.8742ms
+window: 10ms, time: 450.4µs, drift: -2.4023ms
+window: 10ms, time: 448.2µs, drift: -2.0741ms
+window: 10ms, time: 449.4µs, drift: -2.1703ms
+window: 10ms, time: 374.4µs, drift: -2.0467ms
+window: 10ms, time: 407.7µs, drift: -1.8658ms
+window: 10ms, time: 412.8µs, drift: -2.4238ms
+window: 10ms, time: 404.8µs, drift: -2.0269ms
+Midi callback drift: -98µs
+Midi callback drift: 107µs
+Midi callback drift: -637µs
+Midi callback drift: -397µs
+Midi callback drift: 20µs
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.7979ms, drift: -4.0341ms
+window: 10ms, time: 280.3µs, drift: -1.9904ms
+window: 10ms, time: 303.4µs, drift: -1.5873ms
+window: 10ms, time: 332.3µs, drift: -2.0335ms
+window: 10ms, time: 383.6µs, drift: -2.0191ms
+window: 10ms, time: 372.4µs, drift: -1.7523ms
+window: 10ms, time: 306.5µs, drift: -1.8696ms
+window: 10ms, time: 380.1µs, drift: -2.0561ms
+window: 10ms, time: 307.5µs, drift: -1.9442ms
+window: 10ms, time: 365.7µs, drift: -2.0707ms
+window: 10ms, time: 340.6µs, drift: -2.3552ms
+window: 10ms, time: 284.2µs, drift: -1.6085ms
+Midi callback drift: -982µs
+Midi callback drift: -1.77ms
+Midi callback drift: -409µs
+Midi callback drift: -891µs
+Midi callback drift: -521µs
+Midi callback drift: 20µs
+Midi callback drift: -297µs
+Midi callback drift: -571µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 3.0832ms, drift: -4.4388ms
+window: 10ms, time: 408.2µs, drift: -1.3462ms
+window: 10ms, time: 534.7µs, drift: -2.1478ms
+window: 10ms, time: 506.6µs, drift: -2.3519ms
+window: 10ms, time: 374.8µs, drift: -2.177ms
+window: 10ms, time: 431.4µs, drift: -2.1748ms
+window: 10ms, time: 376.2µs, drift: -1.7979ms
+window: 10ms, time: 453.9µs, drift: -2.3328ms
+window: 10ms, time: 376.8µs, drift: -1.7697ms
+window: 10ms, time: 349.1µs, drift: -1.9056ms
+window: 10ms, time: 396.3µs, drift: -2.1642ms
+window: 10ms, time: 402.8µs, drift: -2.0316ms
+Midi callback drift: 66µs
+Midi callback drift: -749µs
+Midi callback drift: -562µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 1.667ms, drift: -2.9424ms
+window: 10ms, time: 422µs, drift: -1.9392ms
+window: 10ms, time: 302.7µs, drift: -1.8999ms
+window: 10ms, time: 439.2µs, drift: -2.0023ms
+window: 10ms, time: 331.9µs, drift: -1.8957ms
+window: 10ms, time: 445.9µs, drift: -2.0686ms
+window: 10ms, time: 380µs, drift: -2.0025ms
+window: 10ms, time: 305.1µs, drift: -1.8617ms
+window: 10ms, time: 397.2µs, drift: -1.853ms
+window: 10ms, time: 447.1µs, drift: -2.3686ms
+window: 10ms, time: 813.2µs, drift: -2.4593ms
+window: 10ms, time: 446.7µs, drift: -2.3394ms
+Midi callback drift: -135µs
+Midi callback drift: -786µs
+Midi callback drift: -272µs
+Midi callback drift: -875µs
+Midi callback drift: -661µs
+Midi callback drift: -964µs
+Midi callback drift: -435µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.1257ms, drift: -3.3479ms
+window: 10ms, time: 473.1µs, drift: -1.8125ms
+window: 10ms, time: 390.6µs, drift: -1.9493ms
+window: 10ms, time: 446.1µs, drift: -1.9924ms
+window: 10ms, time: 372µs, drift: -1.9295ms
+window: 10ms, time: 267.7µs, drift: -1.9402ms
+window: 10ms, time: 236.2µs, drift: -1.8298ms
+window: 10ms, time: 403.2µs, drift: -1.8486ms
+window: 10ms, time: 588.9µs, drift: -2.5938ms
+window: 10ms, time: 401.5µs, drift: -1.8107ms
+window: 10ms, time: 308.9µs, drift: -1.9321ms
+window: 10ms, time: 405.3µs, drift: -2.2931ms
+Midi callback drift: -760µs
+Midi callback drift: -1.541ms
+Midi callback drift: -1.233ms
+Midi callback drift: -750µs
+Midi callback drift: -1.27ms
+Midi callback drift: -758µs
+Midi callback drift: -325µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.2763ms, drift: -3.6689ms
+window: 10ms, time: 147.7µs, drift: -1.2743ms
+window: 10ms, time: 284.4µs, drift: -1.5445ms
+window: 10ms, time: 290.7µs, drift: -1.6524ms
+window: 10ms, time: 355.6µs, drift: -1.9947ms
+window: 10ms, time: 383.5µs, drift: -1.5431ms
+window: 10ms, time: 751.3µs, drift: -2.4057ms
+window: 10ms, time: 512.2µs, drift: -2.2971ms
+window: 10ms, time: 360.1µs, drift: -1.8437ms
+window: 10ms, time: 379.5µs, drift: -2.0124ms
+window: 10ms, time: 383.2µs, drift: -1.7059ms
+window: 10ms, time: 581.8µs, drift: -2.3103ms
+Midi callback drift: -1.204ms
+Midi callback drift: -994µs
+Midi callback drift: -1.443ms
+Midi callback drift: -1.996ms
+Midi callback drift: -566µs
+Midi callback drift: 74µs
+Midi callback drift: -195µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.4647ms, drift: -3.7214ms
+window: 10ms, time: 464.8µs, drift: -1.7984ms
+window: 10ms, time: 445.7µs, drift: -2.0356ms
+window: 10ms, time: 467.6µs, drift: -2.0428ms
+window: 10ms, time: 447.4µs, drift: -2.4345ms
+window: 10ms, time: 478.4µs, drift: -2.3093ms
+window: 10ms, time: 372.6µs, drift: -1.7644ms
+window: 10ms, time: 433.5µs, drift: -1.9242ms
+window: 10ms, time: 449.5µs, drift: -2.4859ms
+window: 10ms, time: 457.1µs, drift: -1.768ms
+window: 10ms, time: 452.7µs, drift: -1.9318ms
+window: 10ms, time: 250.9µs, drift: -1.5947ms
+Midi callback drift: 138µs
+Midi callback drift: -464µs
+Midi callback drift: -29µs
+Midi callback drift: -610µs
+Midi callback drift: -1.07ms
+Midi callback drift: -608µs
+Midi callback drift: -75µs
+Midi callback drift: -523µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -783µs
+window: 10ms, time: 1.4166ms, drift: -2.7461ms
+window: 10ms, time: 344.9µs, drift: -1.8922ms
+window: 10ms, time: 475.3µs, drift: -1.6986ms
+window: 10ms, time: 516.1µs, drift: -2.3355ms
+window: 10ms, time: 456.3µs, drift: -2.104ms
+window: 10ms, time: 463.7µs, drift: -1.7109ms
+window: 10ms, time: 453.2µs, drift: -1.7298ms
+window: 10ms, time: 506.6µs, drift: -2.3469ms
+window: 10ms, time: 387.8µs, drift: -2.0953ms
+window: 10ms, time: 395.2µs, drift: -1.6574ms
+window: 10ms, time: 469.4µs, drift: -2.2898ms
+window: 10ms, time: 441µs, drift: -1.9187ms
+Midi callback drift: -892µs
+Midi callback drift: -792µs
+Midi callback drift: -503µs
+Midi callback drift: -1.229ms
+Midi callback drift: -833µs
+Midi callback drift: -120µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Midi callback drift: -829µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -3.5772ms
+Midi callback drift: -520µs
+window: 10ms, time: 3.7428ms, drift: -5.1223ms
+window: 10ms, time: 509.7µs, drift: -1.8067ms
+window: 10ms, time: 471.6µs, drift: -1.8336ms
+window: 10ms, time: 580.9µs, drift: -2.207ms
+window: 10ms, time: 347.9µs, drift: -1.6516ms
+window: 10ms, time: 516.3µs, drift: -1.8536ms
+window: 10ms, time: 510.1µs, drift: -2.4143ms
+window: 10ms, time: 432.3µs, drift: -1.7203ms
+window: 10ms, time: 571.5µs, drift: -2.388ms
+window: 10ms, time: 523.5µs, drift: -2.037ms
+window: 10ms, time: 578.9µs, drift: -2.3646ms
+window: 10ms, time: 499.9µs, drift: -2.1437ms
+Midi callback drift: -921µs
+Midi callback drift: -521µs
+Midi callback drift: -165µs
+Midi callback drift: -653µs
+Midi callback drift: -1.322ms
+Midi callback drift: -912µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+window: 10ms, time: 3.3181ms, drift: -4.8824ms
+window: 10ms, time: 428.8µs, drift: -1.9501ms
+window: 10ms, time: 452.7µs, drift: -1.8416ms
+window: 10ms, time: 729.1µs, drift: -2.8647ms
+window: 10ms, time: 499.4µs, drift: -2.3633ms
+window: 10ms, time: 383.8µs, drift: -1.8411ms
+window: 10ms, time: 419.4µs, drift: -1.7734ms
+window: 10ms, time: 418.8µs, drift: -1.7988ms
+window: 10ms, time: 629.3µs, drift: -2.2028ms
+window: 10ms, time: 427µs, drift: -2.2501ms
+window: 10ms, time: 463.2µs, drift: -2.1896ms
+window: 10ms, time: 388.3µs, drift: -1.868ms
+Midi callback drift: -1.058ms
+Midi callback drift: -753µs
+Midi callback drift: -1.39ms
+Midi callback drift: -240µs
+Midi callback drift: -819µs
+Midi callback drift: -541µs
+Midi callback drift: -1.182ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 4.1383ms, drift: -5.7163ms
+window: 10ms, time: 777.6µs, drift: -2.1664ms
+window: 10ms, time: 585.4µs, drift: -2.4725ms
+window: 10ms, time: 440.3µs, drift: -1.8863ms
+window: 10ms, time: 558.8µs, drift: -2.2906ms
+window: 10ms, time: 408.8µs, drift: -1.7774ms
+window: 10ms, time: 746.5µs, drift: -2.6423ms
+window: 10ms, time: 590.3µs, drift: -2.307ms
+window: 10ms, time: 467.6µs, drift: -1.8879ms
+window: 10ms, time: 534.2µs, drift: -1.6872ms
+window: 10ms, time: 469.3µs, drift: -1.7466ms
+window: 10ms, time: 651.8µs, drift: -2.1906ms
+Midi callback drift: -1.133ms
+Midi callback drift: -997µs
+Midi callback drift: -610µs
+Midi callback drift: -1.03ms
+Midi callback drift: -716µs
+Midi callback drift: -321µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -741µs
+Midi callback drift: -199µs
+window: 10ms, time: 2.5839ms, drift: -3.8245ms
+Midi callback drift: -417µs
+Midi callback drift: -595µs
+Midi callback drift: -800µs
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+window: 10ms, time: 980.3µs, drift: -2.2561ms
+window: 10ms, time: 526.1µs, drift: -1.6963ms
+window: 10ms, time: 447.8µs, drift: -1.9891ms
+window: 10ms, time: 609.6µs, drift: -2.1733ms
+window: 10ms, time: 528.5µs, drift: -1.9799ms
+window: 10ms, time: 476.1µs, drift: -2.0416ms
+window: 10ms, time: 578.1µs, drift: -2.3748ms
+window: 10ms, time: 462.7µs, drift: -1.8677ms
+window: 10ms, time: 459.2µs, drift: -2.1017ms
+window: 10ms, time: 486.2µs, drift: -1.9771ms
+window: 10ms, time: 410.1µs, drift: -1.6895ms
+Midi callback drift: -477µs
+Midi callback drift: -966µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+window: 10ms, time: 1.3359ms, drift: -2.6983ms
+window: 10ms, time: 366µs, drift: -1.8923ms
+window: 10ms, time: 701.2µs, drift: -2.6875ms
+window: 10ms, time: 551.3µs, drift: -2.3703ms
+window: 10ms, time: 276.4µs, drift: -1.6869ms
+window: 10ms, time: 406µs, drift: -1.7866ms
+window: 10ms, time: 349.4µs, drift: -1.6046ms
+window: 10ms, time: 712.3µs, drift: -2.5551ms
+window: 10ms, time: 392.1µs, drift: -1.9039ms
+window: 10ms, time: 340.1µs, drift: -1.6403ms
+window: 10ms, time: 391.4µs, drift: -1.9819ms
+window: 10ms, time: 280.8µs, drift: -1.372ms
+Midi callback drift: -655µs
+Midi callback drift: -1.071ms
+Midi callback drift: -608µs
+Midi callback drift: -831µs
+Midi callback drift: -510µs
+Midi callback drift: -1.018ms
+Midi callback drift: -1.32ms
+Midi callback drift: -684µs
+Midi callback drift: -19µs
+Midi callback drift: -123µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+window: 10ms, time: 1.6971ms, drift: -2.5185ms
+window: 10ms, time: 461.9µs, drift: -1.7603ms
+window: 10ms, time: 382.4µs, drift: -2.0237ms
+window: 10ms, time: 433.4µs, drift: -1.977ms
+window: 10ms, time: 414.2µs, drift: -1.8638ms
+window: 10ms, time: 433.9µs, drift: -1.7111ms
+window: 10ms, time: 531µs, drift: -2.4257ms
+window: 10ms, time: 435.3µs, drift: -1.9385ms
+window: 10ms, time: 435.1µs, drift: -1.7429ms
+window: 10ms, time: 258.1µs, drift: -1.6422ms
+window: 10ms, time: 139µs, drift: -1.2564ms
+window: 10ms, time: 152.9µs, drift: -1.2078ms
+Midi callback drift: -791µs
+Midi callback drift: -1.417ms
+Midi callback drift: -1.273ms
+Midi callback drift: -825µs
+Midi callback drift: -1.183ms
+Midi callback drift: -547µs
+Midi callback drift: -975µs
+Midi callback drift: -269µs
+Midi callback drift: -409µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -577µs
+Midi callback drift: -723µs
+window: 10ms, time: 1.4039ms, drift: -2.3904ms
+Message time diff: 8.4228ms
+window: 10ms, time: 652.9µs, drift: -1.9785ms
+window: 10ms, time: 391.8µs, drift: -2.0133ms
+window: 10ms, time: 573µs, drift: -2.1958ms
+window: 10ms, time: 546.4µs, drift: -2.6179ms
+window: 10ms, time: 362.2µs, drift: -1.6775ms
+window: 10ms, time: 499.9µs, drift: -2.1176ms
+window: 10ms, time: 432.6µs, drift: -2.1061ms
+window: 10ms, time: 555.7µs, drift: -2.4518ms
+window: 10ms, time: 472µs, drift: -2.236ms
+window: 10ms, time: 117.4µs, drift: -1.0166ms
+window: 10ms, time: 365.8µs, drift: -1.6934ms
+window: 10ms, time: 450.6µs, drift: -2.1331ms
+window: 10ms, time: 438.2µs, drift: -2.1971ms
+window: 10ms, time: 458.7µs, drift: -2.4057ms
+window: 10ms, time: 863.7µs, drift: -2.8976ms
+window: 10ms, time: 449.3µs, drift: -2.1302ms
+window: 10ms, time: 462.6µs, drift: -2.0625ms
+window: 10ms, time: 463.6µs, drift: -2.3355ms
+window: 10ms, time: 453.3µs, drift: -1.7545ms
+window: 10ms, time: 463.7µs, drift: -2.0665ms
+window: 10ms, time: 457.6µs, drift: -1.7521ms
+window: 10ms, time: 389.6µs, drift: -1.7624ms
+window: 10ms, time: 738.9µs, drift: -2.7156ms
+Midi callback drift: -1.093ms
+Midi callback drift: -904µs
+Midi callback drift: -684µs
+Midi callback drift: -513µs
+Midi callback drift: -394µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Midi callback drift: -913µs
+Midi callback drift: -951µs
+window: 10ms, time: 2.1443ms, drift: -3.5408ms
+Midi callback drift: -1.121ms
+Midi callback drift: -649µs
+Midi callback drift: -880µs
+Midi callback drift: -1.103ms
+Midi callback drift: -236µs
+Message time diff: 7.4228ms
+Message time diff: 7.4228ms
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+Message time diff: 6.4228ms
+Message time diff: 5.4228ms
+window: 10ms, time: 2.4525ms, drift: -3.5176ms
+window: 10ms, time: 440.5µs, drift: -1.9842ms
+window: 10ms, time: 379.9µs, drift: -1.8471ms
+window: 10ms, time: 654.9µs, drift: -2.6235ms
+window: 10ms, time: 537.2µs, drift: -2.1784ms
+window: 10ms, time: 352.5µs, drift: -1.7263ms
+window: 10ms, time: 523.5µs, drift: -1.895ms
+window: 10ms, time: 328.4µs, drift: -1.7893ms
+window: 10ms, time: 457.7µs, drift: -2.0103ms
+window: 10ms, time: 485.4µs, drift: -2.0902ms
+window: 10ms, time: 458.3µs, drift: -2.0379ms
+Midi callback drift: -836µs
+Midi callback drift: -1.516ms
+Midi callback drift: -347µs
+Midi callback drift: -961µs
+Midi callback drift: -567µs
+Midi callback drift: -141µs
+Midi callback drift: -810µs
+Message time diff: 3.4228ms
+Message time diff: 3.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+Midi callback drift: -288µs
+window: 10ms, time: 3.069ms, drift: -4.2482ms
+window: 10ms, time: 383.5µs, drift: -1.8343ms
+window: 10ms, time: 795.9µs, drift: -2.3895ms
+window: 10ms, time: 606.5µs, drift: -2.6776ms
+window: 10ms, time: 420µs, drift: -2.07ms
+window: 10ms, time: 336.3µs, drift: -1.398ms
+window: 10ms, time: 125.2µs, drift: -1.4302ms
+window: 10ms, time: 800.9µs, drift: -2.7907ms
+window: 10ms, time: 560.8µs, drift: -2.4231ms
+window: 10ms, time: 424.4µs, drift: -1.639ms
+window: 10ms, time: 619.1µs, drift: -2.8042ms
+window: 10ms, time: 462µs, drift: -2.3026ms
+Midi callback drift: -1.148ms
+Midi callback drift: -830µs
+Midi callback drift: -539µs
+Midi callback drift: -1.1ms
+Midi callback drift: -692µs
+Midi callback drift: -270µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 1.9639ms, drift: -3.7159ms
+window: 10ms, time: 532.9µs, drift: -1.4963ms
+window: 10ms, time: 458.6µs, drift: -1.8996ms
+window: 10ms, time: 544µs, drift: -2.4554ms
+window: 10ms, time: 429.9µs, drift: -1.7762ms
+window: 10ms, time: 657.7µs, drift: -2.1625ms
+window: 10ms, time: 407.1µs, drift: -1.8728ms
+window: 10ms, time: 413.5µs, drift: -1.9077ms
+window: 10ms, time: 490.9µs, drift: -1.9589ms
+window: 10ms, time: 485.8µs, drift: -2.2604ms
+window: 10ms, time: 528.6µs, drift: -2.1167ms
+window: 10ms, time: 496.6µs, drift: -2.13ms
+Midi callback drift: -833µs
+Midi callback drift: -555µs
+Midi callback drift: -190µs
+Midi callback drift: -691µs
+Midi callback drift: -1.327ms
+Midi callback drift: -919µs
+Midi callback drift: -521µs
+Midi callback drift: -1.079ms
+Midi callback drift: -505µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+Message time diff: -577.2µs
+Message time diff: -1.5772ms
+window: 10ms, time: 3.3789ms, drift: -5.3697ms
+window: 10ms, time: 450.4µs, drift: -1.9681ms
+window: 10ms, time: 486.7µs, drift: -1.9688ms
+window: 10ms, time: 689.7µs, drift: -2.4026ms
+window: 10ms, time: 507.6µs, drift: -2.2369ms
+window: 10ms, time: 357.8µs, drift: -1.5277ms
+window: 10ms, time: 538.1µs, drift: -2.3393ms
+window: 10ms, time: 421.2µs, drift: -1.6964ms
+window: 10ms, time: 553.4µs, drift: -2.1021ms
+window: 10ms, time: 505µs, drift: -2ms
+window: 10ms, time: 463µs, drift: -2.1151ms
+window: 10ms, time: 465.2µs, drift: -2.007ms
+Midi callback drift: -1.119ms
+Midi callback drift: -836µs
+Midi callback drift: -1.355ms
+Midi callback drift: -869µs
+Midi callback drift: -453µs
+Midi callback drift: 52µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.9686ms, drift: -4.0127ms
+window: 10ms, time: 749µs, drift: -1.85ms
+window: 10ms, time: 507.1µs, drift: -1.8052ms
+window: 10ms, time: 437.6µs, drift: -1.9523ms
+window: 10ms, time: 442.5µs, drift: -1.7384ms
+window: 10ms, time: 435.3µs, drift: -1.8627ms
+window: 10ms, time: 528.7µs, drift: -2.4489ms
+window: 10ms, time: 643.1µs, drift: -2.3205ms
+window: 10ms, time: 496.2µs, drift: -1.7458ms
+window: 10ms, time: 580.2µs, drift: -2.1113ms
+window: 10ms, time: 567.1µs, drift: -2.2643ms
+window: 10ms, time: 532.2µs, drift: -1.9632ms
+Midi callback drift: -900µs
+Midi callback drift: -469µs
+Midi callback drift: -711µs
+Midi callback drift: -1.061ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 2.5879ms, drift: -4.0311ms
+window: 10ms, time: 356.7µs, drift: -1.8436ms
+window: 10ms, time: 419.2µs, drift: -2.115ms
+window: 10ms, time: 370.2µs, drift: -1.9245ms
+window: 10ms, time: 577.3µs, drift: -1.9231ms
+window: 10ms, time: 313.1µs, drift: -1.679ms
+window: 10ms, time: 356.9µs, drift: -2.1056ms
+window: 10ms, time: 495.7µs, drift: -2.4269ms
+window: 10ms, time: 447.7µs, drift: -2.6078ms
+window: 10ms, time: 637.4µs, drift: -2.1757ms
+window: 10ms, time: 495.9µs, drift: -2.5668ms
+window: 10ms, time: 406.7µs, drift: -1.9486ms
+Midi callback drift: -935µs
+Midi callback drift: -503µs
+Midi callback drift: -76µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 2.0455ms, drift: -3.689ms
+window: 10ms, time: 352.8µs, drift: -1.4725ms
+window: 10ms, time: 542.2µs, drift: -2.0272ms
+window: 10ms, time: 452.8µs, drift: -2.1413ms
+window: 10ms, time: 389.8µs, drift: -1.7066ms
+window: 10ms, time: 409.4µs, drift: -2.1102ms
+window: 10ms, time: 388.6µs, drift: -1.8264ms
+window: 10ms, time: 500.7µs, drift: -1.9607ms
+window: 10ms, time: 475.7µs, drift: -2.2111ms
+window: 10ms, time: 329µs, drift: -1.5013ms
+window: 10ms, time: 474.5µs, drift: -2.1154ms
+window: 10ms, time: 389.8µs, drift: -1.8941ms
+Midi callback drift: -1.054ms
+Midi callback drift: -494µs
+Midi callback drift: -1.109ms
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.5868ms, drift: -3.0893ms
+window: 10ms, time: 446.2µs, drift: -2.3763ms
+window: 10ms, time: 307.9µs, drift: -1.8983ms
+window: 10ms, time: 389.7µs, drift: -1.9179ms
+window: 10ms, time: 366.4µs, drift: -1.7779ms
+window: 10ms, time: 631.7µs, drift: -2.1572ms
+window: 10ms, time: 576.2µs, drift: -2.8052ms
+window: 10ms, time: 335.1µs, drift: -1.8964ms
+window: 10ms, time: 427.3µs, drift: -2.3995ms
+window: 10ms, time: 342.2µs, drift: -2.064ms
+window: 10ms, time: 716.6µs, drift: -1.9916ms
+window: 10ms, time: 417.2µs, drift: -1.8844ms
+Midi callback drift: -794µs
+Midi callback drift: -467µs
+Midi callback drift: -1.032ms
+Midi callback drift: -679µs
+Midi callback drift: -992µs
+Midi callback drift: -273µs
+Midi callback drift: -644µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: 422.8µs
+window: 10ms, time: 3.2166ms, drift: -4.4633ms
+window: 10ms, time: 295µs, drift: -1.7635ms
+window: 10ms, time: 312.7µs, drift: -2.0268ms
+window: 10ms, time: 518µs, drift: -2.2405ms
+window: 10ms, time: 356.3µs, drift: -1.7881ms
+window: 10ms, time: 252.2µs, drift: -1.4524ms
+window: 10ms, time: 161.2µs, drift: -1.618ms
+window: 10ms, time: 272.2µs, drift: -1.8708ms
+window: 10ms, time: 422.7µs, drift: -1.8735ms
+window: 10ms, time: 412.2µs, drift: -1.9301ms
+window: 10ms, time: 277.3µs, drift: -1.5035ms
+window: 10ms, time: 329.5µs, drift: -2.2394ms
+Midi callback drift: -26µs
+Midi callback drift: -384µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.2229ms, drift: -2.563ms
+window: 10ms, time: 411.7µs, drift: -2.0803ms
+window: 10ms, time: 327.8µs, drift: -1.9963ms
+window: 10ms, time: 287.8µs, drift: -1.5376ms
+window: 10ms, time: 367.4µs, drift: -2.3301ms
+window: 10ms, time: 340.8µs, drift: -2.0658ms
+window: 10ms, time: 507.3µs, drift: -2.1101ms
+window: 10ms, time: 306.3µs, drift: -1.9086ms
+window: 10ms, time: 274.9µs, drift: -1.8267ms
+window: 10ms, time: 236.8µs, drift: -1.8248ms
+window: 10ms, time: 336µs, drift: -1.7845ms
+window: 10ms, time: 332.8µs, drift: -2.1384ms
+Midi callback drift: -799µs
+Midi callback drift: -495µs
+Midi callback drift: -1.139ms
+Midi callback drift: -963µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+window: 10ms, time: 2.7509ms, drift: -4.1535ms
+window: 10ms, time: 272.1µs, drift: -1.3013ms
+window: 10ms, time: 392.6µs, drift: -1.996ms
+window: 10ms, time: 329µs, drift: -1.9843ms
+window: 10ms, time: 439.4µs, drift: -2.0784ms
+window: 10ms, time: 292.8µs, drift: -1.8031ms
+window: 10ms, time: 269.3µs, drift: -2.1462ms
+window: 10ms, time: 299.5µs, drift: -1.9499ms
+window: 10ms, time: 353.4µs, drift: -2.0515ms
+window: 10ms, time: 677.1µs, drift: -2.1189ms
+window: 10ms, time: 250.3µs, drift: -1.5802ms
+window: 10ms, time: 277.8µs, drift: -1.5812ms
+Midi callback drift: -810µs
+Midi callback drift: -403µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 797.9µs, drift: -2.2578ms
+window: 10ms, time: 431.5µs, drift: -1.8153ms
+window: 10ms, time: 86.2µs, drift: -1.0535ms
+window: 10ms, time: 249.4µs, drift: -1.6517ms
+window: 10ms, time: 291.4µs, drift: -1.6244ms
+window: 10ms, time: 392.6µs, drift: -1.7227ms
+window: 10ms, time: 319.8µs, drift: -1.8464ms
+window: 10ms, time: 390.3µs, drift: -1.781ms
+window: 10ms, time: 331.1µs, drift: -2.3016ms
+window: 10ms, time: 228.7µs, drift: -1.5096ms
+window: 10ms, time: 358.7µs, drift: -1.7776ms
+window: 10ms, time: 223.4µs, drift: -1.795ms
+Midi callback drift: -87µs
+Midi callback drift: -729µs
+Message time diff: 2.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.2342ms, drift: -2.7975ms
+window: 10ms, time: 319.3µs, drift: -1.4701ms
+window: 10ms, time: 206.2µs, drift: -1.8617ms
+window: 10ms, time: 221µs, drift: -1.6273ms
+window: 10ms, time: 303.1µs, drift: -1.8898ms
+window: 10ms, time: 292.4µs, drift: -1.8967ms
+window: 10ms, time: 356.6µs, drift: -2.4277ms
+window: 10ms, time: 258.1µs, drift: -2.062ms
+window: 10ms, time: 326.4µs, drift: -1.9356ms
+window: 10ms, time: 258.6µs, drift: -1.9072ms
+window: 10ms, time: 462.3µs, drift: -2.1137ms
+window: 10ms, time: 259.7µs, drift: -2.1221ms
+Midi callback drift: -972µs
+Midi callback drift: -543µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+window: 10ms, time: 1.1806ms, drift: -2.5671ms
+window: 10ms, time: 328.8µs, drift: -2.055ms
+window: 10ms, time: 223.4µs, drift: -1.5788ms
+window: 10ms, time: 345.9µs, drift: -2.1168ms
+window: 10ms, time: 327.4µs, drift: -1.8536ms
+window: 10ms, time: 221.7µs, drift: -1.9242ms
+window: 10ms, time: 271.3µs, drift: -1.7264ms
+window: 10ms, time: 295.4µs, drift: -1.5806ms
+window: 10ms, time: 141.4µs, drift: -1.5136ms
+window: 10ms, time: 142µs, drift: -1.2243ms
+window: 10ms, time: 169.6µs, drift: -1.7059ms
+window: 10ms, time: 168.8µs, drift: -1.5908ms
+Midi callback drift: -1.025ms
+Midi callback drift: -765µs
+Midi callback drift: -349µs
+Midi callback drift: -1.072ms
+Midi callback drift: -744µs
+Midi callback drift: -353µs
+Message time diff: 3.4228ms
+Message time diff: 2.4228ms
+Message time diff: 1.4228ms
+Message time diff: 1.4228ms
+Message time diff: 422.8µs
+Message time diff: -577.2µs
+window: 10ms, time: 2.6458ms, drift: -3.9071ms
+window: 10ms, time: 367.9µs, drift: -1.574ms
+window: 10ms, time: 322.8µs, drift: -2.1817ms
+window: 10ms, time: 316.2µs, drift: -1.7843ms
+window: 10ms, time: 221.3µs, drift: -1.6538ms
+window: 10ms, time: 327.9µs, drift: -2.0573ms
+window: 10ms, time: 293.8µs, drift: -1.7871ms
+window: 10ms, time: 218.8µs, drift: -1.9113ms
