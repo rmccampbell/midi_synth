@@ -264,7 +264,7 @@ impl MidiSynth {
         for frame in data.chunks_exact_mut(self.audio_channels()) {
             let y = self.synthesize(self.sample_time());
             frame.fill(T::from_sample(y));
-            self.next_sample();
+            self.sample_index += 1;
         }
 
         // data.fill(T::EQUILIBRIUM);
@@ -352,31 +352,22 @@ impl MidiSynth {
         }
     }
 
-    fn synthesize(&self, t: f64) -> f64 {
+    fn synthesize(&mut self, t: f64) -> f64 {
         let w = &self.wave_props;
         let mut y = 0.;
-        for channel_state in self.midi_channel_states.iter() {
-            for note in channel_state.notes.values().flatten() {
-                // let freq = note.frequency * channel_state.pitch_bend;
-                let amp = note.velocity * w.amplitude; // * Self::inv_a_weighting(freq);
-                let t_on = t - note.on_time;
-                let t_off = t - note.off_time.unwrap_or(f64::INFINITY);
-                let env = self.envelope(t_on, t_off);
-                y += amp * env * (w.waveform)(note.phase, w);
-            }
-        }
-        y
-    }
-
-    fn next_sample(&mut self) {
-        self.sample_index += 1;
         let delta_t = 1. / self.sample_rate();
         for channel_state in self.midi_channel_states.iter_mut() {
             for note in channel_state.notes.values_mut().flatten() {
                 let freq = note.frequency * channel_state.pitch_bend;
+                let amp = note.velocity * w.amplitude; // * Self::inv_a_weighting(freq);
+                let t_on = t - note.on_time;
+                let t_off = t - note.off_time.unwrap_or(f64::INFINITY);
+                let env = Self::envelope(&self.wave_props, t_on, t_off);
+                y += amp * env * (w.waveform)(note.phase, w);
                 note.phase += freq * delta_t;
             }
         }
+        y
     }
 
     // fn synthesize_note<T: SupportedSample>(
@@ -393,7 +384,7 @@ impl MidiSynth {
     //     for (i, frame) in data.chunks_exact_mut(self.audio_channels()).enumerate() {
     //         let delta_t = i as f64 / self.sample_rate();
     //         let t = t0 + delta_t;
-    //         let env = self.envelope(t - on, t - off);
+    //         let env = Self::envelope(&self.wave_props, t - on, t - off);
     //         let y = amp * env * (w.waveform)(note.phase + freq * delta_t, w);
     //         let y = T::Signed::from_sample(y);
     //         frame.iter_mut().for_each(|s| *s = (*s).add_amp(y));
@@ -411,8 +402,8 @@ impl MidiSynth {
     //     }
     // }
 
-    fn envelope(&self, t_on: f64, t_off: f64) -> f64 {
-        let w = &self.wave_props;
+    fn envelope(w: &WaveProps, t_on: f64, t_off: f64) -> f64 {
+        // let w = &self.wave_props;
         if t_on < 0.0 {
             0.0
         } else if t_on < w.attack {
