@@ -357,7 +357,8 @@ impl MidiSynth {
         let mut y = 0.;
         for channel_state in self.midi_channel_states.iter() {
             for note in channel_state.notes.values().flatten() {
-                let amp = note.velocity * w.amplitude;
+                // let freq = note.frequency * channel_state.pitch_bend;
+                let amp = note.velocity * w.amplitude; // * Self::inv_a_weighting(freq);
                 let t_on = t - note.on_time;
                 let t_off = t - note.off_time.unwrap_or(f64::INFINITY);
                 let env = self.envelope(t_on, t_off);
@@ -426,6 +427,19 @@ impl MidiSynth {
             0.0
         }
     }
+
+    // fn inv_a_weighting(f: f64) -> f64 {
+    //     let c1 = 20.598997_f64.powi(2);
+    //     let c2 = 107.65265_f64.powi(2);
+    //     let c3 = 737.86223_f64.powi(2);
+    //     let c4 = 12194.217_f64.powi(2);
+
+    //     let f2 = f * f;
+    //     let denom = c4 * f2 * f2;
+    //     let num = (f2 + c1) * (f2 + c4) * ((f2 + c2) * (f2 + c3)).sqrt();
+
+    //     return 0.7943597 * num / denom;
+    // }
 }
 
 fn make_midi_connection(
