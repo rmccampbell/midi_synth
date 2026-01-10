@@ -1,5 +1,4 @@
 use std::collections::HashMap;
-use std::convert::TryFrom;
 use std::f64::consts::TAU;
 use std::fmt::{Debug, Display};
 use std::sync::mpsc::{self, Receiver, Sender};
@@ -12,7 +11,7 @@ use cpal::{Device, FromSample, Sample, SampleFormat, SizedSample, Stream, Suppor
 #[cfg(unix)]
 use midir::os::unix::VirtualInput;
 use midir::{MidiInput, MidiInputConnection};
-use wmidi::MidiMessage;
+use midly::{live::LiveEvent, num::u7, MidiMessage};
 
 struct SignedDuration {
     dur: Duration,
@@ -75,9 +74,9 @@ struct SynthOpts {
     release: f64,
     #[clap(short = 'A', long, default_value_t = 0.5)]
     amplitude: f64,
-    #[cfg_attr(feature = "debug", clap(short = 'D', long))]
+    #[cfg_attr(feature = "debug", clap(short = 'D', long, default_value_t = 0))]
     #[cfg_attr(not(feature = "debug"), clap(skip))]
-    debug: bool,
+    debug: u32,
 }
 
 #[derive(ValueEnum, Copy, Clone, Debug)]
@@ -146,7 +145,7 @@ struct NoteState {
 }
 
 struct MidiChannelState {
-    notes: HashMap<wmidi::Note, Vec<NoteState>>,
+    notes: HashMap<u7, Vec<NoteState>>,
     pitch_bend: f64,
     program: u8,
 }
@@ -170,9 +169,9 @@ struct MidiSynth {
     wave_props: WaveProps,
     sample_index: usize,
     start_time: Option<Instant>,
-    receiver: Receiver<(MidiMessage<'static>, Instant)>,
+    receiver: Receiver<(LiveEvent<'static>, Instant)>,
     midi_channel_states: [MidiChannelState; 16],
-    debug: bool,
+    debug: u32,
 }
 
 impl MidiSynth {
@@ -181,7 +180,7 @@ impl MidiSynth {
     pub fn new(
         opts: SynthOpts,
         stream_config: SupportedStreamConfig,
-        receiver: Receiver<(MidiMessage<'static>, Instant)>,
+        receiver: Receiver<(LiveEvent<'static>, Instant)>,
     ) -> MidiSynth {
         MidiSynth {
             stream_config,
@@ -275,7 +274,7 @@ impl MidiSynth {
         // }
         // self.advance(data.len() / self.audio_channels())
 
-        if cfg!(feature = "debug") && self.debug {
+        if cfg!(feature = "debug") && self.debug >= 2 {
             let nframes = data.len() / self.audio_channels();
             let seq_num = self.sample_index / nframes;
             if any_messages || seq_num % 10 == 0 {
@@ -293,48 +292,50 @@ impl MidiSynth {
 
     fn process_messages(&mut self, start_time: Instant) -> bool {
         let mut any_messages = false;
-        for (msg, time) in self.receiver.try_iter() {
+        for (event, time) in self.receiver.try_iter() {
             any_messages = true;
             let rel_time = time.saturating_duration_since(start_time).as_secs_f64();
             let sched_time = rel_time + Self::DELAY;
-            if cfg!(feature = "debug") && self.debug {
+            if cfg!(feature = "debug") && self.debug >= 2 {
                 println!(
-                    "Process message: {msg:?}, time: {rel_time}, sample time delta: {}",
+                    "Process message: {event:?}, time: {rel_time}, sample time delta: {}",
                     signed_secs_f64(rel_time - self.sample_time())
                 );
             }
 
-            let Some(chan) = msg.channel() else { continue };
-            let chan_state = &mut self.midi_channel_states[chan as usize];
-            match msg {
-                MidiMessage::NoteOn(_ch, note, velocity) => {
-                    let notes = chan_state.notes.entry(note).or_default();
-                    notes.push(NoteState {
-                        frequency: note.to_freq_f64(),
-                        velocity: u8::from(velocity) as f64 / 127.,
-                        phase: 0.,
-                        on_time: sched_time,
-                        off_time: None,
-                    });
-                }
-                MidiMessage::NoteOff(_ch, note, _) => {
-                    if let Some(notes) = chan_state.notes.get_mut(&note) {
-                        notes
-                            .iter_mut()
-                            .find(|n| n.off_time.is_none())
-                            .map(|n| n.off_time = Some(sched_time));
+            let LiveEvent::Midi { channel, message } = event else {
+                continue;
+            };
+            let chan_state = &mut self.midi_channel_states[channel.as_int() as usize];
+            match message {
+                MidiMessage::NoteOff { key, vel } | MidiMessage::NoteOn { key, vel } => {
+                    if matches!(message, MidiMessage::NoteOff { .. }) || vel.as_int() == 0 {
+                        // Note off
+                        if let Some(notes) = chan_state.notes.get_mut(&key) {
+                            notes
+                                .iter_mut()
+                                .find(|n| n.off_time.is_none())
+                                .map(|n| n.off_time = Some(sched_time));
+                        }
+                    } else {
+                        // Note on
+                        let notes = chan_state.notes.entry(key).or_default();
+                        notes.push(NoteState {
+                            frequency: Self::note_to_freq(key),
+                            velocity: vel.as_int() as f64 / 127.,
+                            phase: 0.,
+                            on_time: sched_time,
+                            off_time: None,
+                        });
                     }
                 }
-                MidiMessage::PitchBendChange(_ch, pitch_bend) => {
-                    let pitch_bend: u16 = pitch_bend.into();
-                    let pitch_bend_norm = pitch_bend as f64 / 8192.0 - 1.0;
-                    let pitch_bend_mult = (pitch_bend_norm / 6.).exp2();
-                    chan_state.pitch_bend = pitch_bend_mult;
+                MidiMessage::PitchBend { bend } => {
+                    chan_state.pitch_bend = (bend.as_f64() / 6.).exp2();
                 }
-                MidiMessage::ProgramChange(_ch, prog) => {
-                    chan_state.program = prog.into();
+                MidiMessage::ProgramChange { program } => {
+                    chan_state.program = program.into();
                 }
-                MidiMessage::ControlChange(_ch, _ctrl, _val) => {}
+                MidiMessage::Controller { .. } => {}
                 _ => {}
             }
         }
@@ -419,6 +420,10 @@ impl MidiSynth {
         }
     }
 
+    fn note_to_freq(key: u7) -> f64 {
+        440. * (2f64).powf((key.as_int() as f64 - 69.) / 12.)
+    }
+
     // fn inv_a_weighting(f: f64) -> f64 {
     //     let c1 = 20.598997_f64.powi(2);
     //     let c2 = 107.65265_f64.powi(2);
@@ -434,7 +439,7 @@ impl MidiSynth {
 }
 
 fn make_midi_connection(
-    sender: Sender<(MidiMessage<'static>, Instant)>,
+    sender: Sender<(LiveEvent<'static>, Instant)>,
     opts: &Opts,
 ) -> anyhow::Result<MidiInputConnection<()>> {
     let debug = opts.synth_opts.debug;
@@ -445,10 +450,10 @@ fn make_midi_connection(
         let ts_start = *ts_start.get_or_insert_with(|| Instant::now() - timestamp);
         let time = ts_start + timestamp;
 
-        let message = MidiMessage::try_from(message).unwrap();
-        sender.send((message.to_owned(), time)).unwrap();
+        let message = LiveEvent::parse(message).unwrap().to_static();
+        sender.send((message, time)).unwrap();
 
-        if cfg!(feature = "debug") && debug {
+        if cfg!(feature = "debug") && debug >= 1 {
             println!(
                 "Midi callback: {message:?}, time: {timestamp:?}, time drift: {}",
                 signed_time_diff(time, Instant::now()),
