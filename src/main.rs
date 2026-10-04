@@ -1,3 +1,4 @@
+use std::cell::RefCell;
 use std::collections::HashMap;
 use std::f64::consts::TAU;
 use std::fmt::{Debug, Display};
@@ -173,6 +174,7 @@ struct MidiSynth {
     receiver: Receiver<(LiveEvent<'static>, Instant)>,
     midi_channel_states: [MidiChannelState; 16],
     debug: u32,
+    buffer: RefCell<Vec<f64>>,
 }
 
 impl MidiSynth {
@@ -200,6 +202,7 @@ impl MidiSynth {
             receiver,
             midi_channel_states: Default::default(),
             debug: opts.debug,
+            buffer: RefCell::new(Vec::new()),
         }
     }
 
@@ -263,11 +266,7 @@ impl MidiSynth {
         let any_messages = self.process_messages(start_time);
         self.flush_notes();
 
-        for frame in data.chunks_exact_mut(self.audio_channels()) {
-            let y = self.synthesize(self.sample_time());
-            frame.fill(T::from_sample(y));
-            self.sample_index += 1;
-        }
+        self.synthesize(data);
 
         if cfg!(feature = "debug") && self.debug >= 2 {
             let nframes = data.len() / self.audio_channels();
@@ -361,25 +360,59 @@ impl MidiSynth {
         }
     }
 
-    fn synthesize(&mut self, t: f64) -> f64 {
+    fn synthesize<T: Sample + FromSample<f64>>(&mut self, data: &mut [T]) {
+        let nframes = data.len() / self.audio_channels();
+        {
+            let mut buffer = self.buffer.borrow_mut();
+            buffer.clear();
+            buffer.resize(nframes, 0.);
+
+            for channel_state in self.midi_channel_states.iter() {
+                for note in channel_state.notes.values().flatten() {
+                    self.synthesize_note(note, channel_state, &mut buffer);
+                }
+            }
+
+            let frames = data.chunks_exact_mut(self.audio_channels());
+            for (frame, sample) in frames.zip(&*buffer) {
+                frame.fill(T::from_sample(*sample));
+            }
+        }
+        self.advance(nframes);
+    }
+
+    fn synthesize_note(
+        &self,
+        note: &NoteState,
+        channel_state: &MidiChannelState,
+        buffer: &mut [f64],
+    ) {
         let w = &self.wave_opts;
-        let mut y = 0.;
-        let delta_t = 1. / self.sample_rate();
+        let freq = note.frequency * channel_state.pitch_bend;
+        let mut amp = note.velocity * w.amplitude;
+        if w.freq_weighting {
+            amp *= Self::inv_a_weighting(freq);
+        }
+        let (on, off) = (note.on_time, note.off_time.unwrap_or(f64::INFINITY));
+        let t0 = self.sample_index as f64 / self.sample_rate();
+        for (i, frame) in buffer.iter_mut().enumerate() {
+            let delta_t = i as f64 / self.sample_rate();
+            let t = t0 + delta_t;
+            let env = Self::envelope(w, t - on, t - off);
+            let y = amp * env * (w.waveform)(note.phase + freq * delta_t, w);
+            *frame += y;
+        }
+    }
+
+    fn advance(&mut self, nframes: usize) {
+        self.sample_index += nframes;
+        let delta_t = nframes as f64 / self.sample_rate();
         for channel_state in self.midi_channel_states.iter_mut() {
             for note in channel_state.notes.values_mut().flatten() {
                 let freq = note.frequency * channel_state.pitch_bend;
-                let mut amp = note.velocity * w.amplitude;
-                if w.freq_weighting {
-                    amp *= Self::inv_a_weighting(freq);
-                }
-                let t_on = t - note.on_time;
-                let t_off = t - note.off_time.unwrap_or(f64::INFINITY);
-                let env = Self::envelope(&self.wave_opts, t_on, t_off);
-                y += amp * env * (w.waveform)(note.phase, w);
                 note.phase += freq * delta_t;
             }
         }
-        y
     }
 
     fn envelope(w: &WaveOpts, t_on: f64, t_off: f64) -> f64 {
