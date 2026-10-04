@@ -6,7 +6,7 @@ use std::sync::mpsc::{self, Receiver, Sender};
 use std::time::{Duration, Instant};
 
 use anyhow::anyhow;
-use clap::{Parser, ValueEnum};
+use clap::{Args, Parser, ValueEnum};
 use cpal::traits::{DeviceTrait, HostTrait, StreamTrait};
 use cpal::{Device, FromSample, Sample, SampleFormat, SizedSample, Stream, SupportedStreamConfig};
 #[cfg(unix)]
@@ -42,43 +42,43 @@ fn signed_time_diff(x: Instant, y: Instant) -> SignedDuration {
 
 /// A simple midi synthesizer
 #[derive(Parser, Debug)]
-#[clap(author, version, about)]
+#[command(author, version, about)]
 struct Opts {
-    #[clap(short, long, default_value_t = 0)]
+    #[arg(short, long, default_value_t = 0)]
     input_port: usize,
     #[cfg(unix)]
-    #[clap(short, long, num_args=0..=1, default_missing_value="midi_synth")]
+    #[arg(short, long, num_args=0..=1, default_missing_value="midi_synth")]
     virtual_port: Option<String>,
-    #[clap(short, long)]
+    #[arg(short, long)]
     output_device: Option<usize>,
-    #[clap(short = 'l', long)]
+    #[arg(short = 'l', long)]
     list_input_ports: bool,
-    #[clap(short = 'L', long)]
+    #[arg(short = 'L', long)]
     list_output_devices: bool,
-    #[clap(flatten)]
+    #[command(flatten)]
     synth_opts: SynthOpts,
 }
 
-#[derive(Parser, Debug, Clone, Copy)]
+#[derive(Args, Debug, Clone, Copy)]
 struct SynthOpts {
-    #[clap(short, long, value_enum, default_value_t = Waveform::Tri)]
+    #[arg(short, long, value_enum, default_value_t = Waveform::Tri)]
     waveform: Waveform,
-    #[clap(short, long, default_value_t = 0.5)]
+    #[arg(short, long, default_value_t = 0.5)]
     pulse_width: f64,
-    #[clap(short, long, default_value_t = 0.05)]
+    #[arg(short, long, default_value_t = 0.05)]
     attack: f64,
-    #[clap(short, long, default_value_t = 0.2)]
+    #[arg(short, long, default_value_t = 0.2)]
     decay: f64,
-    #[clap(short, long, default_value_t = 0.8)]
+    #[arg(short, long, default_value_t = 0.8)]
     sustain: f64,
-    #[clap(short, long, default_value_t = 0.5)]
+    #[arg(short, long, default_value_t = 0.5)]
     release: f64,
-    #[clap(short = 'A', long, default_value_t = 0.5)]
+    #[arg(short = 'A', long, default_value_t = 0.5)]
     amplitude: f64,
-    #[clap(short = 'W', long, default_value_t = false)]
+    #[arg(short = 'W', long, default_value_t = false)]
     freq_weighting: bool,
-    #[cfg_attr(feature = "debug", clap(short = 'D', long, default_value_t = 0))]
-    #[cfg_attr(not(feature = "debug"), clap(skip))]
+    #[cfg_attr(feature = "debug", arg(short = 'D', long, default_value_t = 0))]
+    #[cfg_attr(not(feature = "debug"), arg(skip))]
     debug: u32,
 }
 
@@ -86,9 +86,9 @@ struct SynthOpts {
 enum Waveform {
     Sine,
     Square,
-    #[clap(alias = "sawtooth")]
+    #[value(alias = "sawtooth")]
     Saw,
-    #[clap(alias = "triangle")]
+    #[value(alias = "triangle")]
     Tri,
     Pulse,
 }
