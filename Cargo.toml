@@ -10,9 +10,9 @@ edition = "2021"
 debug = []
 
 [dependencies]
-anyhow = "1.0.99"
-clap = { version = "4.5.47", features = ["derive"] }
-cpal = "0.16.0"
-ctrlc = "3.5.0"
-midir = "0.10.2"
-midly = "0.5.3"
+anyhow = "1.0"
+clap = { version = "4.6", features = ["derive"] }
+cpal = "0.18"
+ctrlc = "3.5"
+midir = "0.11"
+midly = "0.5"

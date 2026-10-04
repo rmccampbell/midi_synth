@@ -74,6 +74,8 @@ struct SynthOpts {
     release: f64,
     #[clap(short = 'A', long, default_value_t = 0.5)]
     amplitude: f64,
+    #[clap(short = 'W', long, default_value_t = false)]
+    freq_weighting: bool,
     #[cfg_attr(feature = "debug", clap(short = 'D', long, default_value_t = 0))]
     #[cfg_attr(not(feature = "debug"), clap(skip))]
     debug: u32,
@@ -83,12 +85,14 @@ struct SynthOpts {
 enum Waveform {
     Sine,
     Square,
+    #[clap(alias = "sawtooth")]
     Saw,
+    #[clap(alias = "triangle")]
     Tri,
     Pulse,
 }
 
-type WaveformFunc = fn(f64, &WaveProps) -> f64;
+type WaveformFunc = fn(f64, &WaveOpts) -> f64;
 
 impl Into<WaveformFunc> for Waveform {
     fn into(self) -> WaveformFunc {
@@ -102,23 +106,23 @@ impl Into<WaveformFunc> for Waveform {
     }
 }
 
-fn waveform_sine(t: f64, _: &WaveProps) -> f64 {
+fn waveform_sine(t: f64, _: &WaveOpts) -> f64 {
     (TAU * t).sin()
 }
 
-fn waveform_square(t: f64, _: &WaveProps) -> f64 {
+fn waveform_square(t: f64, _: &WaveOpts) -> f64 {
     1. - 2. * (2. * t % 2.).floor()
 }
 
-fn waveform_saw(t: f64, _: &WaveProps) -> f64 {
+fn waveform_saw(t: f64, _: &WaveOpts) -> f64 {
     (t + 0.5) % 1. * 2. - 1.
 }
 
-fn waveform_tri(t: f64, _: &WaveProps) -> f64 {
+fn waveform_tri(t: f64, _: &WaveOpts) -> f64 {
     ((4. * t + 3.) % 4. - 2.).abs() - 1.
 }
 
-fn waveform_pulse(t: f64, w: &WaveProps) -> f64 {
+fn waveform_pulse(t: f64, w: &WaveOpts) -> f64 {
     if t % 1. < w.pulse_width {
         1.
     } else {
@@ -126,7 +130,7 @@ fn waveform_pulse(t: f64, w: &WaveProps) -> f64 {
     }
 }
 
-struct WaveProps {
+struct WaveOpts {
     waveform: WaveformFunc,
     pulse_width: f64,
     attack: f64,
@@ -134,6 +138,7 @@ struct WaveProps {
     sustain: f64,
     release: f64,
     amplitude: f64,
+    freq_weighting: bool,
 }
 
 struct NoteState {
@@ -160,13 +165,9 @@ impl Default for MidiChannelState {
     }
 }
 
-trait SupportedSample: Sample<Signed: FromSample<f64>> + SizedSample + FromSample<f64> {}
-
-impl<T: Sample<Signed: FromSample<f64>> + SizedSample + FromSample<f64>> SupportedSample for T {}
-
 struct MidiSynth {
     stream_config: SupportedStreamConfig,
-    wave_props: WaveProps,
+    wave_opts: WaveOpts,
     sample_index: usize,
     start_time: Option<Instant>,
     receiver: Receiver<(LiveEvent<'static>, Instant)>,
@@ -184,7 +185,7 @@ impl MidiSynth {
     ) -> MidiSynth {
         MidiSynth {
             stream_config,
-            wave_props: WaveProps {
+            wave_opts: WaveOpts {
                 waveform: opts.waveform.into(),
                 pulse_width: opts.pulse_width,
                 attack: opts.attack,
@@ -192,6 +193,7 @@ impl MidiSynth {
                 sustain: opts.sustain,
                 release: opts.release,
                 amplitude: opts.amplitude,
+                freq_weighting: opts.freq_weighting,
             },
             sample_index: 0,
             start_time: None,
@@ -206,7 +208,7 @@ impl MidiSynth {
     }
 
     fn sample_rate(&self) -> f64 {
-        self.stream_config.sample_rate().0.into()
+        self.stream_config.sample_rate().into()
     }
 
     fn sample_time(&self) -> f64 {
@@ -232,30 +234,31 @@ impl MidiSynth {
         })
     }
 
-    fn make_stream_fmt<T: SupportedSample>(
+    fn make_stream_fmt<T: SizedSample + FromSample<f64>>(
         mut self,
         device: &Device,
-    ) -> Result<Stream, cpal::BuildStreamError> {
+    ) -> Result<Stream, cpal::Error> {
         device.build_output_stream(
-            &self.stream_config.config(),
+            self.stream_config.config(),
             move |data, info| self.output_callback::<T>(data, info),
             Self::error_callback,
             None,
         )
     }
 
-    fn error_callback(err: cpal::StreamError) {
+    fn error_callback(err: cpal::Error) {
         eprintln!("Error: audio output stream: {}", err);
     }
 
-    fn output_callback<T: SupportedSample>(
+    fn output_callback<T: Sample + FromSample<f64>>(
         &mut self,
         data: &mut [T],
         info: &cpal::OutputCallbackInfo,
     ) {
         let start_time = *self.start_time.get_or_insert_with(Instant::now);
-        let fn_start = Instant::now();
+        let fn_start_time = Instant::now();
         let samp_time = self.sample_time();
+        let samp_index = self.sample_index;
 
         let any_messages = self.process_messages(start_time);
         self.flush_notes();
@@ -266,24 +269,16 @@ impl MidiSynth {
             self.sample_index += 1;
         }
 
-        // data.fill(T::EQUILIBRIUM);
-        // for channel_state in self.midi_channel_states.iter() {
-        //     for note in channel_state.notes.values().flatten() {
-        //         self.synthesize_note(note, channel_state, data);
-        //     }
-        // }
-        // self.advance(data.len() / self.audio_channels())
-
         if cfg!(feature = "debug") && self.debug >= 2 {
             let nframes = data.len() / self.audio_channels();
-            let seq_num = self.sample_index / nframes;
+            let seq_num = samp_index / nframes;
             if any_messages || seq_num % 10 == 0 {
-                let ts = &info.timestamp();
-                let real_time = (fn_start - start_time).as_secs_f64();
+                let real_time = (fn_start_time - start_time).as_secs_f64();
                 println!(
-                    "Output {seq_num}: nframes: {nframes}, latency: {:?}, compute time: {:?}, time drift: {}",
-                    ts.playback.duration_since(&ts.callback).unwrap(),
-                    fn_start.elapsed(),
+                    "Output {seq_num}: sample time: {samp_time:.3}, nframes: {nframes}, \
+                    latency: {:?}, compute time: {:?}, time drift: {}",
+                    info.timestamp().playback - info.timestamp().callback,
+                    fn_start_time.elapsed(),
                     signed_secs_f64(samp_time - real_time)
                 );
             }
@@ -307,6 +302,7 @@ impl MidiSynth {
                 continue;
             };
             let chan_state = &mut self.midi_channel_states[channel.as_int() as usize];
+
             match message {
                 MidiMessage::NoteOff { key, vel } | MidiMessage::NoteOn { key, vel } => {
                     if matches!(message, MidiMessage::NoteOff { .. }) || vel.as_int() == 0 {
@@ -335,16 +331,28 @@ impl MidiSynth {
                 MidiMessage::ProgramChange { program } => {
                     chan_state.program = program.into();
                 }
-                MidiMessage::Controller { .. } => {}
+                MidiMessage::Controller { controller, value } => {
+                    Self::control_change(chan_state, controller.into(), value.into());
+                }
                 _ => {}
             }
         }
         any_messages
     }
 
+    fn control_change(chan_state: &mut MidiChannelState, controller: u8, _value: u8) {
+        match controller {
+            // All sound off
+            120 => {
+                chan_state.notes.clear();
+            }
+            _ => {}
+        }
+    }
+
     fn flush_notes(&mut self) {
         let t = self.sample_time();
-        let release = self.wave_props.release;
+        let release = self.wave_opts.release;
         for ch in self.midi_channel_states.iter_mut() {
             ch.notes.retain(|_, notes| {
                 notes.retain(|n| n.off_time.map_or(true, |off_t| t - off_t < release));
@@ -354,16 +362,19 @@ impl MidiSynth {
     }
 
     fn synthesize(&mut self, t: f64) -> f64 {
-        let w = &self.wave_props;
+        let w = &self.wave_opts;
         let mut y = 0.;
         let delta_t = 1. / self.sample_rate();
         for channel_state in self.midi_channel_states.iter_mut() {
             for note in channel_state.notes.values_mut().flatten() {
                 let freq = note.frequency * channel_state.pitch_bend;
-                let amp = note.velocity * w.amplitude; // * Self::inv_a_weighting(freq);
+                let mut amp = note.velocity * w.amplitude;
+                if w.freq_weighting {
+                    amp *= Self::inv_a_weighting(freq);
+                }
                 let t_on = t - note.on_time;
                 let t_off = t - note.off_time.unwrap_or(f64::INFINITY);
-                let env = Self::envelope(&self.wave_props, t_on, t_off);
+                let env = Self::envelope(&self.wave_opts, t_on, t_off);
                 y += amp * env * (w.waveform)(note.phase, w);
                 note.phase += freq * delta_t;
             }
@@ -371,71 +382,42 @@ impl MidiSynth {
         y
     }
 
-    // fn synthesize_note<T: SupportedSample>(
-    //     &self,
-    //     note: &NoteState,
-    //     channel_state: &MidiChannelState,
-    //     data: &mut [T],
-    // ) {
-    //     let w = &self.wave_props;
-    //     let amp = note.velocity * w.amplitude;
-    //     let freq = note.frequency * channel_state.pitch_bend;
-    //     let (on, off) = (note.on_time, note.off_time.unwrap_or(f64::INFINITY));
-    //     let t0 = self.sample_index as f64 / self.sample_rate();
-    //     for (i, frame) in data.chunks_exact_mut(self.audio_channels()).enumerate() {
-    //         let delta_t = i as f64 / self.sample_rate();
-    //         let t = t0 + delta_t;
-    //         let env = Self::envelope(&self.wave_props, t - on, t - off);
-    //         let y = amp * env * (w.waveform)(note.phase + freq * delta_t, w);
-    //         let y = T::Signed::from_sample(y);
-    //         frame.iter_mut().for_each(|s| *s = (*s).add_amp(y));
-    //     }
-    // }
-
-    // fn advance(&mut self, nframes: usize) {
-    //     self.sample_index += nframes;
-    //     let delta_t = nframes as f64 / self.sample_rate();
-    //     for channel_state in self.midi_channel_states.iter_mut() {
-    //         for note in channel_state.notes.values_mut().flatten() {
-    //             let freq = note.frequency * channel_state.pitch_bend;
-    //             note.phase += freq * delta_t;
-    //         }
-    //     }
-    // }
-
-    fn envelope(w: &WaveProps, t_on: f64, t_off: f64) -> f64 {
-        // let w = &self.wave_props;
-        if t_on < 0.0 {
-            0.0
+    fn envelope(w: &WaveOpts, t_on: f64, t_off: f64) -> f64 {
+        let ads = if t_on < 0. {
+            0.
         } else if t_on < w.attack {
             t_on / w.attack
         } else if t_on < w.attack + w.decay {
             1. - (1. - w.sustain) * (t_on - w.attack) / w.decay
-        } else if t_off < 0.0 {
-            w.sustain
-        } else if t_off < w.release {
-            w.sustain * (1. - t_off / w.release)
         } else {
-            0.0
-        }
+            w.sustain
+        };
+        let r = if t_off < 0. {
+            1.
+        } else if t_off < w.release {
+            1. - t_off / w.release
+        } else {
+            0.
+        };
+        ads * r
     }
 
     fn note_to_freq(key: u7) -> f64 {
-        440. * (2f64).powf((key.as_int() as f64 - 69.) / 12.)
+        440. * 2_f64.powf((key.as_int() as f64 - 69.) / 12.)
     }
 
-    // fn inv_a_weighting(f: f64) -> f64 {
-    //     let c1 = 20.598997_f64.powi(2);
-    //     let c2 = 107.65265_f64.powi(2);
-    //     let c3 = 737.86223_f64.powi(2);
-    //     let c4 = 12194.217_f64.powi(2);
+    fn inv_a_weighting(f: f64) -> f64 {
+        let c1 = 20.598997_f64.powi(2);
+        let c2 = 107.65265_f64.powi(2);
+        let c3 = 737.86223_f64.powi(2);
+        let c4 = 12194.217_f64.powi(2);
 
-    //     let f2 = f * f;
-    //     let denom = c4 * f2 * f2;
-    //     let num = (f2 + c1) * (f2 + c4) * ((f2 + c2) * (f2 + c3)).sqrt();
+        let f2 = f * f;
+        let denom = c4 * f2 * f2;
+        let num = (f2 + c1) * (f2 + c4) * ((f2 + c2) * (f2 + c3)).sqrt();
 
-    //     return 0.7943597 * num / denom;
-    // }
+        return 0.7943597 * num / denom;
+    }
 }
 
 fn make_midi_connection(
@@ -495,11 +477,11 @@ fn main() -> anyhow::Result<()> {
     if opts.list_output_devices {
         let host = cpal::default_host();
         println!("Host: {:?}", host.id());
-        let def_dev_name = host.default_output_device().and_then(|d| d.name().ok());
+        let def_dev_id = host.default_output_device().and_then(|d| d.id().ok());
         for dev in host.output_devices()? {
-            let isdef = Some(dev.name()?) == def_dev_name;
+            let isdef = Some(dev.id()?) == def_dev_id;
             let c = if isdef { '*' } else { ' ' };
-            println!("{} {}", c, dev.name()?);
+            println!("{} {}", c, dev.description()?.name());
         }
         return Ok(());
     }
