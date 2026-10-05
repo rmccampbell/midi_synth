@@ -2,6 +2,7 @@ use std::cell::RefCell;
 use std::collections::HashMap;
 use std::f64::consts::TAU;
 use std::fmt::{Debug, Display};
+use std::path::PathBuf;
 use std::sync::mpsc::{self, Receiver, Sender};
 use std::time::{Duration, Instant};
 
@@ -12,7 +13,9 @@ use cpal::{Device, FromSample, Sample, SampleFormat, SizedSample, Stream, Suppor
 #[cfg(unix)]
 use midir::os::unix::VirtualInput;
 use midir::{MidiInput, MidiInputConnection};
-use midly::{live::LiveEvent, num::u7, MidiMessage};
+use midly::{live::LiveEvent, num::u7, MidiMessage, Smf};
+
+mod play;
 
 struct SignedDuration {
     dur: Duration,
@@ -55,6 +58,8 @@ struct Opts {
     list_input_ports: bool,
     #[arg(short = 'L', long)]
     list_output_devices: bool,
+    #[arg(short, long, value_name = "MIDI_FILE")]
+    play: Option<PathBuf>,
     #[command(flatten)]
     synth_opts: SynthOpts,
 }
@@ -63,7 +68,7 @@ struct Opts {
 struct SynthOpts {
     #[arg(short, long, value_enum, default_value_t = Waveform::Tri)]
     waveform: Waveform,
-    #[arg(short, long, default_value_t = 0.5)]
+    #[arg(short = 'P', long, default_value_t = 0.5)]
     pulse_width: f64,
     #[arg(short, long, default_value_t = 0.05)]
     attack: f64,
@@ -541,11 +546,17 @@ fn main() -> anyhow::Result<()> {
     let stream = synth.make_stream(&device)?;
     stream.play()?;
 
-    let _midi_conn = make_midi_connection(sender, &opts)?;
-
-    println!("Receiving midi messages... Press Ctr+C to exit");
-    wait_for_ctrlc()?;
-    println!("Exiting");
+    if let Some(midi_file) = opts.play {
+        println!("Playing MIDI file: {}", midi_file.to_string_lossy());
+        let midi_data = std::fs::read(&midi_file)?;
+        let smf = Smf::parse(&midi_data)?;
+        play::play_midi_file(&smf, sender, true)?;
+    } else {
+        let _midi_conn = make_midi_connection(sender, &opts)?;
+        println!("Receiving midi messages... Press Ctr+C to exit");
+        wait_for_ctrlc()?;
+        println!("Exiting");
+    }
 
     Ok(())
 }
