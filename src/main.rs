@@ -547,9 +547,9 @@ fn main() -> anyhow::Result<()> {
     stream.play()?;
 
     if let Some(midi_file) = opts.play {
-        println!("Playing MIDI file: {}", midi_file.to_string_lossy());
         let midi_data = std::fs::read(&midi_file)?;
         let smf = Smf::parse(&midi_data)?;
+        println!("Playing MIDI file: {}", midi_file.to_string_lossy());
         play::play_midi_file(&smf, sender, true)?;
     } else {
         let _midi_conn = make_midi_connection(sender, &opts)?;
